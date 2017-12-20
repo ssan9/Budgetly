@@ -1,0 +1,51 @@
+body{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	/*background-color: lightgreen;*/
+	/*background-color: #defbde;*/
+	background-color: #aad8aa;
+	/*background-color: #cae0ca;*/
+}
+
+nav {
+  box-sizing: border-box;
+  text-align: right;
+  position: fixed;
+  height: 50px;
+  /*background-color: #106710;*/
+  background-color: #274227;
+  width: 100%;
+}
+
+nav ul li{
+  display: inline-block;
+}
+
+nav ul li a{
+  text-decoration: none;
+  margin-right: 80px;
+}
+
+#app-name{
+  width: 100px;
+  position: absolute;
+  left: 75px;
+  font-size: 25px;
+  top: 12px;
+  font-weight: 700;
+  color: white;
+}
+
+.container{
+	padding:10%;
+}
+
+.black-box{
+	/*padding: 20%;*/
+	background-color: black;
+	width:60%;
+	height: 480px;
+	margin: 0 auto;
+}
+

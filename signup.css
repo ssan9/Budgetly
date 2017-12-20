@@ -1,0 +1,38 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color: #aad8aa;
+  font-family: 'Titillium Web', sans-serif;
+
+}
+
+nav {
+  box-sizing: border-box;
+  text-align: right;
+  position: fixed;
+  height: 50px;
+  background-color: #274227;
+  width: 100%;
+}
+
+nav ul li{
+  display: inline-block;
+}
+
+nav ul li a{
+  text-decoration: none;
+  margin-right: 80px;
+}
+
+#app-name{
+  width: 100px;
+  position: absolute;
+  left: 75px;
+  font-size: 25px;
+  top: 12px;
+  font-weight: 700;
+  color: white;
+}
+
+  
