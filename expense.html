@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budgetly</title>
+  <link rel="stylesheet" type="text/css" href="expense.css">
+
+</head>
+<body>
+    <nav role="navigation" class="nav_bar">
+        <ul>
+          <li><a href="index.html" id="app-name">Budgetly</a></li>
+          <li><a href="signup.html" id="signup">Signup/Login</a></li>
+           <li><a href="expense.html" id="expense" class="current">Expense</a></li>
+           <li><a href="expense-history.html" id="expense-history">History</a></li>
+           <li><a href="dashboard.html" id="dashboard">Dashboard</a></li>
+
+        </ul>
+    </nav>
+
+      <main role="main">
+
+          <div class="container">
+
+              <ul class="tab-group">
+                  <li class="current tab"><a href="#add">Add</a></li>
+                  <li class="tab"><a href="#edit">Edit</a></li>
+              </ul>
+        
+      <div class="content">
+        <div id="add">   
+          <h1>Add a new expense</h1>
+          
+          <form action="/" method="post">
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <label class="date">
+                <span class="req">*</span>
+              </label>
+              <input type="date" name="date" id="date" class="date" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Amount<span class="req">*</span>
+              </label>
+              <input type="number" name="amount" class="amount" id="amount" required autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Category<span class="req">*</span>
+            </label>
+            <input type="category" name="category" class="category" id="category" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Description<span class="req">*</span>
+            </label>
+            <input type="password" name="description" class="description" id="amount" required autocomplete="off"/>
+          </div>
+          
+          <button type="submit" class="button button-block cancel"/>Cancel</button>
+          <button type="submit" class="button button-block update"/>Update</button>
+
+          </form>
+
+        </div>
+        
+        <div id="edit">   
+          <h1>Edit an Expense</h1>
+          
+          <form action="/" method="post">
+
+            <div class="top-row">
+             <div class="field-wrap">
+            <label>
+              Date<span class="req">*</span>
+            </label>
+              <input type="date" name="date" id="date" class="date" required autocomplete="off" />
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Amount<span class="req">*</span>
+            </label>
+              <input type="number" name="amount" class="amount" id="amount" required autocomplete="off"/>
+          </div>
+          </div>
+          <div class="field-wrap">
+            <label>
+              Category<span class="req">*</span>
+            </label>
+            <input type="category" name="category" class="category" id="category" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Description<span class="req">*</span>
+            </label>
+            <input type="password" name="description" class="description" id="amount" required autocomplete="off"/>
+          </div>
+          <!-- <div class="status"> -->
+            <button type="submit" class="button button-block cancel"/>Cancel</button>
+            <button type="submit" class="button button-block update"/>Update</button>
+        <!-- </div> -->
+
+          </form>
+
+        </div>
+        
+      </div>
+      
+</div>     
+</body>   
+</html>

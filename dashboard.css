@@ -1,0 +1,179 @@
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*background-color: lightgreen;*/
+  /*background-color: #defbde;*/
+  /*background-color: #aad8aa;*/
+  background-color: #cae0ca;
+  background-image: url("https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  box-sizing: border-box;
+  text-align: right;
+  position: fixed;
+  height: 50px;
+  /*background-color: #106710;*/
+  background-color: #274227;
+  width: 100%;
+  top:0;
+}
+
+nav ul li{
+  display: inline-block;
+}
+
+nav ul li a{
+  text-decoration: none;
+  margin-right: 80px;
+  color: white;
+  padding: 0;
+}
+
+.nav_bar a:hover{
+  color: cyan;
+}
+
+.nav_bar .current{
+  color: #34f634;
+}
+
+#app-name{
+  width: 100px;
+  position: absolute;
+  left: 75px;
+  font-size: 25px;
+  top: 12px;
+  font-weight: 700;
+  color: white;
+}
+
+.container {
+  background:rgba(19, 35, 47, 0.9);
+  padding: 40px;
+  max-width:600px;
+  margin:100px auto;
+  border-radius: 4px;
+  box-shadow:0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  color:white;
+}
+
+.heading{
+  text-align: center;
+}
+
+.amount-spent h1 {
+  text-align:center;
+  color:orange;
+  font-weight: 200;
+  margin:0;
+}
+
+.expense-amount{
+  text-align: center;
+  margin: 0 auto;
+  width: 600px;
+}
+
+.bar-group{
+  padding: 0;
+}
+
+.savings-bar{
+  margin: 80px auto;
+  display: inline-block;
+  width: 100%; 
+  font-size: 0;
+    padding-left: 0;
+
+}
+
+.bar{
+  display: inline-block;
+  width: 24%;
+  border:1px solid white;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  vertical-align: middle;
+  padding-left: 0;
+}
+
+.safe{
+  background-color: green;
+  text-align: center;
+    height: 40px;
+
+}
+
+.still-safe{
+  background-color: #cccc1d;
+    height: 40px;
+
+
+}
+
+.near-danger{
+  background-color: orange;
+  height: 40px;
+}
+
+.danger{
+  background-color:red;
+  padding:7px;
+  height: 45.5px;
+}
+
+label {
+  position:absolute;
+  left: 150px;
+  color:rgba(255, 255, 255, 0.5);
+  padding: 4px;
+  font-size:22px;
+}
+
+
+label.highlight {
+  color: white;
+}
+
+input {
+  font-size:22px;
+  display:block;
+  height:100%;
+  padding:5px 10px;
+  background:none;
+  border: 1px solid #a0b3b0;
+  color:white;
+  border-radius:0;
+  margin: 0 auto;
+
+}
+  input:focus {
+    outline:0;
+    border-color:#1ab188;
+  }
+
+
+input {
+  border:2px solid rgb(160, 179, 176);;
+  resize: vertical;
+
+}
+
+.field-wrap {
+  position:relative;
+  margin-bottom:40px;
+}
+
+.top-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+

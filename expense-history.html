@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budgetly</title>
+  <link rel="stylesheet" type="text/css" href="expense-history.css ">
+</head>
+<body>
+    <nav role="navigation" class="nav_bar">
+        <ul>
+          <li><a href="index.html" id="app-name">Budgetly</a></li>
+          <li><a href="signup.html" id="signup">Signup/Login</a></li>
+          <li><a href="expense.html" id="expense">Expense</a></li>
+           <li><a href="expense-history.html" id="expense-history" class="current">History</a></li>
+           <li><a href="dashboard.html" id="dashboard">Dashboard</a></li>
+        </ul>
+    </nav>
+
+      <main role="main">
+
+          <div class="container">
+  
+      <div class="content">
+          <form action="/" method="post" class="expense-search">
+          
+          <div class="top-row">
+
+            <div id="history">   
+                <h1>Expenses for May 2018</h1>
+            </div>
+
+            <div class="month">
+              <label class="switch-month">
+                Switch to Month: 
+              </label>
+              <input type="month" name="month" id="month" class="month">  
+            </div>
+
+          </div>
+        </div>
+
+           <div class="field-wrap">
+            <label>
+              <span class="req"></span>
+            </label>
+            <input type="text" name="" autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              <span class="req"></span>
+            </label>
+            <input type="text" autocomplete="off"/>
+          </div>
