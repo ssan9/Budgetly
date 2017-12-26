@@ -1,0 +1,51 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #aad8aa;
+  background-image: url("https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg");
+    /*background-image: url("http://www.photos-public-domain.com/wp-content/uploads/2011/03/green-parchment-paper-texture.jpg");*/
+    /*background-image: url("https://cdn.pixabay.com/photo/2016/12/20/22/03/background-1921589_960_720.jpg");*/
+/*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRakgon7ezGcCH1CA1PtE_GnDI7IncJOzaEOZ77HyVkxOU24IVq");*/
+  background-repeat: no-repeat;
+  background-size: cover;
+/*  font-family: 'Titillium Web', sans-serif;
+*/
+}
+
+nav {
+  box-sizing: border-box;
+  text-align: right;
+  position: fixed;
+  height: 50px;
+  background-color: #274227;
+  width: 100%;
+}
+
+nav ul li{
+  display: inline-block;
+}
+
+nav ul li a{
+  text-decoration: none;
+  margin-right: 80px;
+  color: white;
+}
+
+.nav_bar a:hover{
+  color: cyan;
+  }
+
+.nav_bar .current{
+  color: #34f634;
+}
+
+#app-name{
+  width: 100px;
+  position: absolute;
+  left: 75px;
+  font-size: 25px;
+  top: 12px;
+  font-weight: 700;
+  color: white;
+}
