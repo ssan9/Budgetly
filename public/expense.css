@@ -231,7 +231,9 @@ input {
   text-align:right;
 }
 
-
+.hidden{
+  display: none;
+}
 /*.tab-content > div:last-child {
   display:none;
 }

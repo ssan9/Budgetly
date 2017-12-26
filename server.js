@@ -11,8 +11,11 @@ const {Budgetly} = require('./models');
 
 const app = express();
 
+
 app.use(morgan('common'));
 app.use(bodyParser.json());
+
+app.use(express.static('public'))
 
 app.get('/data', (req, res) => {
 	Budgetly
