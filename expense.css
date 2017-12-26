@@ -90,14 +90,14 @@ nav ul li a{
       color:white;
     }
   
-  .tab-group .current a {
+  .tab-group .active a {
       background:#1ab188;
     color:white;
   }
     
-  .tab-content > div:last-child {
+  /*.tab-content > div:last-child {
     display:none;
-}
+}*/
 
 
 h1 {
@@ -126,7 +126,7 @@ label.date .req{
   }
 
 
-label.current {
+label.active {
   left:2px;
   font-size:14px;
 }
@@ -181,7 +181,6 @@ input {
       margin:0;
     }
   
-/
 .button {
   margin:0 0 40px 0;
   font-size: 0;
@@ -223,9 +222,9 @@ input {
       color:white;
     }
     
-  .tab-content > div:last-child {
+  /*.tab-content > div:last-child {
     display:none;
-}
+}*/
 
 .forgot {
   margin-top:-20px;
@@ -233,8 +232,8 @@ input {
 }
 
 
-.tab-content > div:last-child {
+/*.tab-content > div:last-child {
   display:none;
 }
-
+*/
 
