@@ -30,7 +30,7 @@
         <div id="add">   
           <h1>Add a new expense</h1>
           
-          <form action="/" method="post">
+          <form action="/" method="post" class="expense-form">
 
             <div class="top-row">
               <div class="field-wrap">
@@ -49,21 +49,21 @@
             </div>
 
             <div class="field-wrap">
-              <label>
+              <label class="category">
                 Category<span class="req">*</span>
               </label>
-              <input type="category" name="category" class="category" id="category" required autocomplete="off"/>
+              <input type="text" name="category" class="category" id="category" required autocomplete="off"/>
             </div>
 
             <div class="field-wrap">
               <label>
                 Description<span class="req">*</span>
               </label>
-              <input type="password" name="description" class="description" id="amount" required autocomplete="off"/>
+              <input type="text" name="description" class="description" id="amount" required autocomplete="off"/>
             </div>
 
-            <button type="submit" class="button button-block cancel"/>Cancel</button>
-            <button type="submit" class="button button-block update"/>Update</button>
+            <button type="button" class="button button-block cancel" id="cancel">Cancel</button>
+            <button type="button" class="button button-block update" id="save">Save</button>
 
           </form>
 
@@ -73,7 +73,7 @@
           <h1>Edit an Expense</h1>
           
           <form action="/" method="post">
-
+            <section>
             <div class="top-row">
              <div class="field-wrap">
               <label>
@@ -89,23 +89,44 @@
               <input type="number" name="amount" class="amount" id="amount" required autocomplete="off"/>
             </div>
           </div>
-          <div class="field-wrap">
-            <label>
+        </section>
+        <section>
+          <div class="field-wrap category-wrap">
+
+          <label class="category" for="category">Category</label>
+            <select name="category" id='category' required>
+              <option value="0">Grocery</option>
+              <option value="1">Gas</option>
+              <option value="2">Entertainment</option>
+              <option value="3">Home Decor</option>
+              <option value="4">Restaurants and Bar</option>
+              <option value="5">Travel</option>
+              <option value="6">Other</option>
+          </select>
+          
+            <!-- <label>
               Category<span class="req">*</span>
             </label>
-            <input type="category" name="category" class="category" id="category" required autocomplete="off"/>
+            <input type="category" name="category" class="category" id="category" required autocomplete="off"/> -->
           </div>
-          
+          </section>
+
+          <section>
           <div class="field-wrap">
             <label>
               Description<span class="req">*</span>
             </label>
-            <input type="password" name="description" class="description" id="amount" required autocomplete="off"/>
+            <input type="text" name="description" class="description" id="amount" required autocomplete="off"/>
           </div>
           <!-- <div class="status"> -->
-            <button type="submit" class="button button-block cancel"/>Cancel</button>
+            <button type="submit" class="button button-block cancel" id="cancel-two">Cancel</button>
             <button type="submit" class="button button-block update"/>Update</button>
             <!-- </div> -->
+          </section>
+
+          <div class="field-wrap" id="expense-data">
+            
+          </div>
 
           </form>
 

@@ -80,6 +80,7 @@ nav ul li a{
     float:left;
     width:50%;
     height:40px;
+    transition:.5s ease;
     padding-top:10px;
     text-align:center;
     cursor:pointer;
@@ -111,8 +112,11 @@ label {
   position:absolute;
   left:13px;
   color:rgba(255, 255, 255, 0.5);
-  pointer-events: none;
+  transform:translateY(6px);
   font-size:22px;
+  transition:all 0.25s ease;
+
+  /*padding: 5px 0;*/
 }
 
 label.date .req{
@@ -129,6 +133,8 @@ label.date .req{
 label.active {
   left:2px;
   font-size:14px;
+  transform:translateY(45px);
+
 }
 
   label.req {
@@ -180,6 +186,24 @@ input {
     .top-row:last-child { 
       margin:0;
     }
+
+    .category-wrap{
+      border: 1px solid white;
+      width: 590px;
+      position: relative;
+      height: 40px;
+    }
+  .category-wrap select {
+    position: absolute;
+  display: block;
+  width: 340px;
+  margin-bottom: 15px;
+  height: 40px;
+  left: 250px;
+  font-size: 18px;
+  /*margin: 2px 0;*/
+  /*border: 1px solid black;*/
+}
   
 .button {
   margin:0 0 40px 0;

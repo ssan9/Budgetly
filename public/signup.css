@@ -91,7 +91,7 @@ nav ul li a{
     cursor:pointer;
     height:40px;
     padding-top:10px;
-    /*transition:.5s ease;*/
+    transition:.5s ease;
   }
     .tab-group li a:hover {
       background:#24896d;
@@ -103,12 +103,7 @@ nav ul li a{
       color:white;
   }
     
-  /*.content > div:last-child {
-    display:none;
-}*/
-
-
-h1 {
+  h1 {
   text-align:center;
   color:white;
   font-weight: 200;
@@ -121,10 +116,9 @@ label {
   /*transform:translateY(6px);*/
   left:13px;
   color:rgba(255, 255, 255, 0.5);
-  /*transition:all 0.25s ease;
-  -webkit-backface-visibility: hidden;
-  pointer-events: none;*/
+    transition:all 0.25s ease;
   font-size:22px;
+  padding: 5px 0;
 }
 
   label.req {
@@ -134,7 +128,7 @@ label {
 
 
 label.active {
-  /*transform:translateY(50px);*/
+  transform:translateY(40px);
   left:2px;
   font-size:14px;
 }

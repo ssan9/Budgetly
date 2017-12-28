@@ -246,3 +246,10 @@ input {
       margin:0;
     }
 
+#expense-data{
+  color: white;
+}
+
+#expense-data span{
+  margin: 0 7%;
+}
