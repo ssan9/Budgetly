@@ -44,17 +44,30 @@
                 <label>
                   Amount<span class="req">*</span>
                 </label>
-                <input type="number" name="amount" class="amount" id="amount" required autocomplete="off"/>
+               <input type="number" name="amount" class="amount" id="amount" value="$" required autocomplete="off"/>
+                <!-- <span class="currencyinput">$<input type="text" name="currency"></span> -->
+
               </div>
             </div>
 
-            <div class="field-wrap">
-              <label class="category">
+            <section>
+              <div class="field-wrap category-wrap">
+              <!-- <label class="category">
                 Category<span class="req">*</span>
-              </label>
-              <input type="text" name="category" class="category" id="category" required autocomplete="off"/>
-            </div>
-
+              </label> -->
+                <select name="category" id='category' required>
+                  <option value="0">Category<span class="req">*</span></option>
+                  <option value="1">Gas</option>
+                  <option value="2">Entertainment</option>
+                  <option value="3">Home Decor</option>
+                  <option value="4">Restaurants and Bar</option>
+                  <option value="5">Travel</option>
+                  <option value="6">Grocery</option>
+                  <option value="7">Other</option>
+                </select>
+                <!-- <input type="text" name="category" class="category" id="category" required autocomplete="off"/> -->
+              </div>
+            </section>
             <div class="field-wrap">
               <label>
                 Description<span class="req">*</span>
@@ -74,68 +87,70 @@
           
           <form action="/" method="post">
             <section>
-            <div class="top-row">
-             <div class="field-wrap">
-              <label>
-                Date<span class="req">*</span>
-              </label>
-              <input type="date" name="date" id="date" class="date" required autocomplete="off" />
-            </div>
+              <div class="top-row">
+               <div class="field-wrap">
+                <label class="date">
+                  <span class="req">*</span>
+                </label>
+                <input type="date" name="date" id="date" class="date" required autocomplete="off" />
+              </div>
 
-            <div class="field-wrap">
-              <label>
-                Amount<span class="req">*</span>
-              </label>
-              <input type="number" name="amount" class="amount" id="amount" required autocomplete="off"/>
+              <div class="field-wrap">
+                <label>
+                  Amount<span class="req">*</span>
+                </label>
+                <input type="number" name="amount" class="amount" id="amount" required autocomplete="off"/>
+              </div>
             </div>
-          </div>
-        </section>
-        <section>
-          <div class="field-wrap category-wrap">
+          </section>
+          <section>
+            <div class="field-wrap category-wrap">
 
-          <label class="category" for="category">Category</label>
-            <select name="category" id='category' required>
-              <option value="0">Grocery</option>
-              <option value="1">Gas</option>
-              <option value="2">Entertainment</option>
-              <option value="3">Home Decor</option>
-              <option value="4">Restaurants and Bar</option>
-              <option value="5">Travel</option>
-              <option value="6">Other</option>
-          </select>
-          
+              <!-- <label class="category" for="category" required>Category</label> -->
+              <select name="category" id='category' required>
+                <option value="0">Category<span class="req">*</span></option>
+                <option value="1">Gas</option>
+                <option value="2">Entertainment</option>
+                <option value="3">Home Decor</option>
+                <option value="4">Restaurants and Bar</option>
+                <option value="5">Travel</option>
+                <option value="6">Grocery</option>
+                <option value="7">Other</option>
+              </select>
+
             <!-- <label>
               Category<span class="req">*</span>
             </label>
             <input type="category" name="category" class="category" id="category" required autocomplete="off"/> -->
           </div>
-          </section>
+        </section>
 
           <section>
-          <div class="field-wrap">
-            <label>
-              Description<span class="req">*</span>
-            </label>
-            <input type="text" name="description" class="description" id="amount" required autocomplete="off"/>
-          </div>
-          <!-- <div class="status"> -->
+            <div class="field-wrap">
+              <label>
+                Description<span class="req">*</span>
+              </label>
+              <input type="text" name="description" class="description" id="amount" autocomplete="off"/>
+            </div>
+                <!-- <div class="status"> -->
             <button type="submit" class="button button-block cancel" id="cancel-two">Cancel</button>
-            <button type="submit" class="button button-block update"/>Update</button>
+            <button type="submit" class="button button-block update">Update</button>
             <!-- </div> -->
           </section>
 
-          <div class="field-wrap" id="expense-data">
-            
-          </div>
+            <div class="field-wrap" id="expense-data">
+
+            </div>
 
           </form>
 
         </div>
-        
-      </div>
-      
+
+    
+
     </div> 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
-    <script type="text/javascript" src="expense.js"></script>    
-  </body>   
-  </html>
+  </main>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+  <script type="text/javascript" src="expense.js"></script>    
+</body>   
+</html>

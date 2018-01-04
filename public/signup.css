@@ -183,6 +183,9 @@ input{
       margin:0;
   }
     
+  #login.hidden{
+    display: none;
+  }
   
 
 .button {
@@ -208,6 +211,7 @@ input{
   display:block;
   width:100%;
 }
+
 
 .forgot {
   margin-top:-20px;

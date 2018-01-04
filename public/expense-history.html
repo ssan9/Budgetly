@@ -24,8 +24,12 @@
           
           <div class="top-row">
 
-            <div id="history">   
+            <!-- <div id="history">   
                 <h1>Expenses for May 2018</h1>
+            </div> -->
+
+            <div id="monthly-record">
+
             </div>
 
             <div class="month">
@@ -38,6 +42,15 @@
           </div>
         </div>
 
+        <div class="headings">
+        <ul>
+          <li id="date"><h2>Date</h2></li>
+          <li id="amount"><h2>Amount</h2></li>
+          <li id="category"><h2>Category</h2></li>
+          <li id="description"><h2>Description</h2></li>
+        </ul>
+        </div>
+
            <div class="field-wrap" id="expense-data">
             
           </div>
@@ -45,5 +58,7 @@
           </form>
           <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
           <script type="text/javascript" src="expense-history.js"></script>
+          <script src="moment.js"></script>
+
         </body>
         </html>

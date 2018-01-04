@@ -54,7 +54,7 @@ nav ul li a{
 .container {
   background:rgba(19, 35, 47, 0.9);
   padding: 40px;
-  max-width:900px;
+  max-width:1200px;
   margin:100px auto;
   border-radius: 4px;
   box-shadow:0 4px 10px 4px rgba(19, 35, 47, 0.3);
@@ -170,8 +170,9 @@ input {
 
 h1 {
   text-align: left;
-  color: white;
-  font-weight:$thin;
+  color: #14be14;
+  /*color: #f89a84;*/
+  font-weight:900;
   margin:0 0 40px;
 }
 
@@ -225,6 +226,30 @@ input {
   resize: vertical;
 }
 
+/* */
+
+.headings ul li{
+  display: inline-block;
+  margin: 0 6.8%;
+  /*color: #14be14;*/
+ color: #1ace6a;
+}
+
+.headings ul li#date{
+  margin: 0 2.5%;
+}
+
+.headings ul li#amount{
+  margin: 0 9% 0 11.3%;
+}
+
+.headings ul li#category{
+  margin: 0 0.5%;
+}
+
+.headings ul li#description{
+  margin: 0 13%;
+}
 .field-wrap {
   position:relative;
   margin-bottom:40px;
@@ -246,10 +271,80 @@ input {
       margin:0;
     }
 
-#expense-data{
+.expense-details{
   color: white;
+  width:1200px;
+  /*display: inline-block;*/
+  /*text-align: center;*/
+  /*margin: auto 1% auto 1%;*/
+
+  font-size:20px;
 }
 
-#expense-data span{
-  margin: 0 7%;
+div#date{
+  /*margin-left: 0;*/
+  width: 25%;
+  display: inline-block;
+  margin:2% 0;
+
+}
+
+div#amount{
+  width: 16%;
+  display: inline-block;
+  margin: 2% auto;
+}
+
+div#category{
+  /*text-align: center;*/
+  width: 16%;
+  display: inline-block;
+    margin: 2% auto;
+
+  /*padding: 0 10px;*/
+}
+
+div#description{
+  width: 16%;
+  display: inline-block;
+    margin: 2% 5%;
+}
+
+button{
+  /*float: right;*/
+  /*clear: right;*/
+  display: inline-block;
+  font-size: 0;
+  margin-left: 35px;
+  /*width: 75px;*/
+  /*padding: 2% 2%;*/
+  /*width: 16%;*/
+  /*position: relative;*/
+  /*top: -40px;*/
+  /*margin: 0 1%;*/
+}
+
+button#edit{
+  background-color: #1ab188;
+  width: 60px;
+  background-color: #155544;
+  color: white; 
+  font-size: 16px;
+}
+
+button#delete{
+  background-color: #f15757;
+  background-color: #841111;
+    color: white;
+
+font-size: 16px;
+
+}
+
+#edit:focus{
+  background-color:  #1ab188;
+}
+
+#delete:focus{
+  background-color: #f15757;
 }

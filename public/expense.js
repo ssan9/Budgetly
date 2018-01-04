@@ -38,20 +38,19 @@ $(function() {
 
 
   $('.active a').on('click', function(e) {
-    event.preventDefault();
+    e.preventDefault();
     $('#add').show();
     $('#edit').hide();
   });
 
   $('.inactive a').on('click', function(e) {
-    event.preventDefault();
-    $('#add').hide().removeClass('.active');
-    $('#edit').show().addClass('.active');
+    e.preventDefault();
+    $('#add').hide().removeClass('.active a');
+    $('#edit').show().addClass('.active a');
   });
 
-
   
-  $("#save").click(function(e) {
+  $("#save").click(function(e) { //taking values from input fields and also setting parameters 
     e.preventDefault();
     let newExpense = {
       date: $("#date").val(),

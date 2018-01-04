@@ -96,22 +96,23 @@ $(function() {
  //    });
  // });
 
- $(function() {
+//  $(function() {
 
-  $('.active a').on('click', function(e) {
-  event.preventDefault();
-    $('#signup').show();
-    $('#login').hide();
-  });
-});
+//   $('.active a').on('click', function(e) {
+//   event.preventDefault();
+//     $('#signup').show();
+//     $('#login').hide();
+//   });
+// // });
 
- $(function() {
-    $('.inactive a').on('click', function(e) {
-      event.preventDefault();
-      $('#signup').hide().removeClass('.active');
-      $('#login').show().addClass('.active');
-    });
- });
+
+//     $('.inactive a').on('click', function(e) {
+//       event.preventDefault();
+//       $('#signup').hide().removeClass('.active');
+//       $('#login').show().addClass('.active');
+//     });
+
+//  });
     
   
 
@@ -122,3 +123,23 @@ $(function() {
  //    $('#login').show();
  //  })
  // })
+
+ $(function() {
+  $('#login').hide();
+
+
+
+  $('.active a').on('click', function(e) {
+    e.preventDefault();
+    $('#signup').show();
+    $('#login').hide();
+  });
+
+  $('.inactive a').on('click', function(e) {
+    e.preventDefault();
+    $('#signup').hide().removeClass('.active a');
+    $('#login').show().addClass('.active a');
+  });
+});  
+
+ 
