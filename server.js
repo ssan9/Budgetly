@@ -28,6 +28,19 @@ app.get('/data', (req, res) => {
 			res.status(500).json({ error: 'something went terribly wrong' });
 		});
 });
+app.get('/data/:month/:year', (req, res) => {
+	console.log(req.params.month);
+	console.log(req.params.year);
+	Budgetly
+		.find()
+		.then(data => {
+			res.json(data.map(datum => datum.serialize()));
+		})
+		.catch(err => {
+			console.error(err);
+			res.status(500).json({ error: 'something went terribly wrong' });
+		});
+});
 
 app.get('/data/:id', (req, res) => {
 	Budgetly

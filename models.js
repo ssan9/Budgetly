@@ -22,4 +22,20 @@ budgetlySchema.methods.serialize = function() {
 
 const Budgetly = mongoose.model('Budgetly', budgetlySchema);
 
+
+function next() {
+	const date = new Date;
+	date.setDate(1);
+	Budgetly.aggregate({ $match: { date : { $gt : date } } }).group({_id : "$_id", 
+		amount, categoty, description}).exec(function(err, res) {
+			if(err) throw err;
+			console.log(res);
+			Budgetly.remove(function(err) {
+				if(err) throw err;
+				mongoose.disconnect();
+			});
+		});
+
+}
+
 module.exports = {Budgetly};

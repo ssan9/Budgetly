@@ -22,7 +22,8 @@ $.ajax
 
 // const month=$(".switch-month").val();
 //   filter.month
-function makeAjaxRequest(opts){
+function makeAjaxRequest(selectedMonth){
+  var strDate=moment(selectedMonth).format('MMMM, YYYY');
   var url = "/data";
   $.ajax({
     type: "GET",
@@ -30,18 +31,17 @@ function makeAjaxRequest(opts){
     url: url,
     success: function(data) {
       console.log(data);
-      const monthHtml = data.map(function(record) {
-      return `<div id= "history"><h1>Expenses for ${record.month}</h1></div>`;
-      })
-      console.log(record.month);
-      $("#monthly-record").html(monthHtml);
+      $("#monthly-record").html(`<h1>Expenses for ${strDate}</h1>`);
     }
   });
 }
 
 $(".month").on("change", function(){
   var selected = $(this).val();
-  makeAjaxRequest(selected);
+  if(selected) {
+    makeAjaxRequest(selected);
+  }
+ console.log(selected);
 });
 
 })
