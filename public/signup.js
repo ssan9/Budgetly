@@ -126,17 +126,21 @@
 
  $(function() {
   $('#login').hide();
-
+  // $('#su a').addClass('active');
+  $('#su a').css('background-color', '#24896d');
   console.log($('#login'));
+  console.log($('#su'));
 
 
   $('.active a').on('click', function(e) {
     e.preventDefault();
     console.log($('li'));
     // alert("active");
-    $('#su').removeClass('inactive').addClass('active');
+    // $('#su').removeClass('inactive').addClass('active');
 
     $('#signup-tab').show();
+      $('#su a').css('background-color', '#24896d');
+
     console.log($('#signup-tab'));
 
     $('#login').hide();
@@ -146,9 +150,9 @@
     e.preventDefault();
         // alert("inactive");
 
-    $('lg').removeClass('inactive').addClass('active');
+    // $('lg').removeClass('inactive').addClass('active');
     // toggleClass('.active');
-
+    $('#su a').css('background-color' , 'rgba(160, 179, 176, 0.25)');
     console.log($('#signup-tab'));
     $('#signup-tab').hide();
     $('#login').show();

@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #aad8aa;
+  /*background-color:#176e57*/
   background-image: url("https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg");
     /*background-image: url("http://www.photos-public-domain.com/wp-content/uploads/2011/03/green-parchment-paper-texture.jpg");*/
     /*background-image: url("https://cdn.pixabay.com/photo/2016/12/20/22/03/background-1921589_960_720.jpg");*/
@@ -19,6 +20,12 @@ nav {
   position: fixed;
   height: 50px;
   background-color: #155544;
+    /*background-color:#2c7e68;*/
+    /*background-color: #3c957d;*/
+        background-color:#267e67;
+      /*background-color:  #2d866f;*/
+
+
   width: 100%;
 }
 
@@ -126,7 +133,12 @@ nav ul li a{
     
 
 .options{
-  background-color: darkgreen;
+  background-image: url("http://www.creativeglassshop.co.uk/userfiles/productlargeimages/product_2717.jpg");
+  /*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqldoHiTVyBgbU0zsIN7TcDEQjf36NG8KbuM8c7A06RQwsEmSU");*/
+  /*background-image: url("https://images.designtrends.com/wp-content/uploads/2015/11/30154002/Dark-Green-Wallpaper-.jpg");*/
+  /*background: linear-gradient (rgba(255, 0, 0, 0), rgba(255,0,0, 1));*/
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 1px solid green;
   height:500px;
 }
@@ -154,6 +166,9 @@ margin: 7% auto;
 }
 
 .expenses{
+  background-image: url("http://www.creativeglassshop.co.uk/userfiles/productlargeimages/product_2717.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 445px;
   padding-top: 3%;
   border: 2px solid black;
@@ -193,6 +208,7 @@ margin: 7% auto;
 
 .footer{
   height: 50px;
-  background-color: green;
+  background-color:#267e67;
+
 }
 
