@@ -1,28 +1,41 @@
 $(function() {
 	var url = "/api/expenses";
-
 	$.ajax({
 		type: "GET",
 		url: url,
 		success: function(data)
 		{
-			console.log(data);
-			const expenseHtml = data.map(function(entry) {
-				var strDate=moment(entry.date).format('MMMM Do, YYYY');
+			showExpenses(data)
+		}
+	});
 
-				return `<div class="expense-details"><div id="date">${strDate}</div><div id="amount">$${entry.amount}</div><div id="category">${entry.category}</div><div id="description">${entry.description}</div>
-				<button id="edit">Edit</button><button id="delete">Delete</button></div>`;
-			})
-			$("#expense-data").html(expenseHtml);
+	$(".month").on("change", function(){
+		var selected = $(this).val();
+		if(selected) {
+			makeAjaxRequest(selected);
 		}
 	});
 
 
+function showExpenses(data){
+	const expenseHtml = data.map(function(entry) {
+		var strDate=moment(entry.date).format('MMMM Do, YYYY');
+		return `<div class="expense-details">
+							<div id="date">${strDate}</div>
+							<div id="amount">$${entry.amount}</div>
+							<div id="category">${entry.category}</div>
+							<div id="description">${entry.description}</div>
+							<button id="edit">Edit</button>
+							<button id="delete">Delete</button>
+						</div>`;
+	})
+	$("#expense-data").html(expenseHtml);
+}
 
 	// const month=$(".switch-month").val();
 	//   filter.month
 	function makeAjaxRequest(selectedMonth){
-		// var strDate=moment(selectedMonth).format('MMMM, YYYY');
+		var strMonth=moment(selectedMonth).format('MMMM');
 		var strDateMonth=moment(selectedMonth).format('MM');
 		var strDateYear=moment(selectedMonth).format('YYYY');
 		// const isoDate=moment(strDate).format()
@@ -31,18 +44,13 @@ $(function() {
 			type: "GET",
 			url: url + "/" + strDateMonth + "/" + strDateYear,
 			success: function(data) {
-				console.log(data);
-				$("#monthly-record").html(`${data}`);
+				showExpenses(data)
+				$("#monthly-record").html(strMonth);
 			}
 		});
 	}
 
-	$(".month").on("change", function(){
-		var selected = $(this).val();
-		if(selected) {
-			makeAjaxRequest(selected);
-		}
-	});
+
 
 })
 
