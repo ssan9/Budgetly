@@ -82,7 +82,7 @@ nav ul li a{
   .tab-group li a {
     display:block;
     text-decoration:none;
-    background:rgba(160, 179, 176, 0.25);
+    /*background:rgba(160, 179, 176, 0.25);*/
     color: #a0b3b0;
     font-size:20px;
     float:left;
@@ -93,16 +93,33 @@ nav ul li a{
     padding-top:10px;
     transition:.5s ease;
   }
+
+  #su li a{
+    background-color: #24896d; 
+  }
     .tab-group li a:hover {
       background:#24896d;
       color:white;
     }
+
+    .tab-group li a:focus {
+      background:#24896d;
+      color:white;
+    }
   
-  .tab-group .active a {
+  .tab-group li .active a {
       background:#1ab188;
       color:white;
   }
-    
+  
+  .tab-group li .inactive a {
+      background:rgba(160, 179, 176, 0.25);
+
+      color:white;
+      /*border: 1px solid transparent;*/
+  } 
+
+
   h1 {
   text-align:center;
   color:white;
@@ -183,7 +200,7 @@ input{
       margin:0;
   }
     
-  #login.hidden{
+  #signup-tab#login.hidden{
     display: none;
   }
   

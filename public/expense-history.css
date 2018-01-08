@@ -314,7 +314,7 @@ button{
   /*float: right;*/
   /*clear: right;*/
   display: inline-block;
-  font-size: 0;
+  font-size: 16px;
   margin-left: 35px;
   /*width: 75px;*/
   /*padding: 2% 2%;*/
@@ -325,19 +325,19 @@ button{
 }
 
 button#edit{
-  background-color: #1ab188;
+  /*background-color: #1ab188;*/
   width: 60px;
   background-color: #155544;
   color: white; 
-  font-size: 16px;
+  /*font-size: 16px;*/
 }
 
 button#delete{
-  background-color: #f15757;
+  /*background-color: #f15757;*/
   background-color: #841111;
     color: white;
 
-font-size: 16px;
+/*font-size: 16px;*/
 
 }
 

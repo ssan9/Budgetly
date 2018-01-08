@@ -1,47 +1,47 @@
-$(function() {
+// $(function() {
 
-  $('.container').find('input').on('keyup blur focus', function (e) {
+//   $('.container').find('input').on('keyup blur focus', function (e) {
 
-    var $this = $(this),
-    label = $this.prev('label');
+//     var $this = $(this),
+//     label = $this.prev('label');
 
-    if (e.type === 'keyup') {
+//     if (e.type === 'keyup') {
 
-      if ($this.val() === '') {
-        label.removeClass('active highlight');
-      } 
+//       if ($this.val() === '') {
+//         label.removeClass('active highlight');
+//       } 
 
-      else {
-        label.addClass('active highlight');
-      }
-    }
+//       else {
+//         label.addClass('active highlight');
+//       }
+//     }
 
-    else if (e.type === 'blur') {
+//     else if (e.type === 'blur') {
 
-      if( $this.val() === '' ) {
-        label.removeClass('active highlight'); 
-      } 
+//       if( $this.val() === '' ) {
+//         label.removeClass('active highlight'); 
+//       } 
 
-      else {
-        label.removeClass('highlight');   
-      }  
+//       else {
+//         label.removeClass('highlight');   
+//       }  
 
-    } 
+//     } 
 
-    else if (e.type === 'focus') {
+//     else if (e.type === 'focus') {
 
-      if( $this.val() === '' ) {
-        label.removeClass('highlight'); 
-      } 
+//       if( $this.val() === '' ) {
+//         label.removeClass('highlight'); 
+//       } 
 
-      else if( $this.val() !== '' ) {
-        label.addClass('highlight');
-      }
-    }
+//       else if( $this.val() !== '' ) {
+//         label.addClass('highlight');
+//       }
+//     }
 
-  });
+//   });
 
-});
+// });
 
 // $(function() {
 
@@ -127,19 +127,34 @@ $(function() {
  $(function() {
   $('#login').hide();
 
+  console.log($('#login'));
 
 
   $('.active a').on('click', function(e) {
     e.preventDefault();
-    $('#signup').show();
+    console.log($('li'));
+    // alert("active");
+    $('#su').removeClass('inactive').addClass('active');
+
+    $('#signup-tab').show();
+    console.log($('#signup-tab'));
+
     $('#login').hide();
   });
 
   $('.inactive a').on('click', function(e) {
     e.preventDefault();
-    $('#signup').hide().removeClass('.active a');
-    $('#login').show().addClass('.active a');
+        // alert("inactive");
+
+    $('lg').removeClass('inactive').addClass('active');
+    // toggleClass('.active');
+
+    console.log($('#signup-tab'));
+    $('#signup-tab').hide();
+    $('#login').show();
   });
+
+  
 });  
 
  

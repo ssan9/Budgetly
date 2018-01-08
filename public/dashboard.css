@@ -164,6 +164,10 @@ input {
 
 }
 
+label{
+  margin-left: 2%;
+}
+
 .field-wrap {
   position:relative;
   margin-bottom:40px;
@@ -174,6 +178,7 @@ input {
     display: table;
     clear: both;
   }
+
 
 
 

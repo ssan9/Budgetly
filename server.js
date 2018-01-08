@@ -16,7 +16,7 @@ app.use(morgan('common'));
 app.use(bodyParser.json());
 
 app.use(express.static('public'))
-
+//get all the expenses no matter the date
 app.get('/data', (req, res) => {
 	Budgetly
 		.find()
@@ -28,11 +28,25 @@ app.get('/data', (req, res) => {
 			res.status(500).json({ error: 'something went terribly wrong' });
 		});
 });
-app.get('/data/:month/:year', (req, res) => {
+//get all expenses by isoDate
+app.get('/data-by-isodate/:isoDate', (req, res) => {
+	console.log(req.params.isoDate);
+	Budgetly
+		.find()
+		.then(data => {
+			res.json(data.map(datum => datum.serialize()));
+		})
+		.catch(err => {
+			console.error(err);
+			res.status(500).json({ error: 'something went terribly wrong' });
+		});
+});
+//get all expenses by month and year
+app.get('/data-by-monthyear/:month/:year', (req, res) => {
 	console.log(req.params.month);
 	console.log(req.params.year);
 	Budgetly
-		.find()
+		.find({"date": req.params.year + "-" + req.params.month/.*/})
 		.then(data => {
 			res.json(data.map(datum => datum.serialize()));
 		})

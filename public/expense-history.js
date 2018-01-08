@@ -23,15 +23,23 @@ $.ajax
 // const month=$(".switch-month").val();
 //   filter.month
 function makeAjaxRequest(selectedMonth){
-  var strDate=moment(selectedMonth).format('MMMM, YYYY');
-  var url = "/data";
+  // var strDate=moment(selectedMonth).format('MMMM, YYYY');
+  var strDateMonth=moment(selectedMonth).format('MM');
+  var strDateYear=moment(selectedMonth).format('YYYY');
+
+  console.log(strDateMonth);
+  console.log(strDateYear);
+
+  // const isoDate=moment(strDate).format()
+  const isoDate = strDate; //moment.js syntax
+  var url = "/data-by-monthyear";
   $.ajax({
     type: "GET",
     // data: { opts: opts },
-    url: url,
+    url: url + "/" + month + "/" + year,
     success: function(data) {
       console.log(data);
-      $("#monthly-record").html(`<h1>Expenses for ${strDate}</h1>`);
+      $("#monthly-record").html(`${strDate}`);
     }
   });
 }
@@ -43,5 +51,37 @@ $(".month").on("change", function(){
   }
  console.log(selected);
 });
-
 })
+
+
+
+$("#edit").click(function(e) { //taking values from input fields and also setting parameters 
+    e.preventDefault();
+    console.log('${#edit}');
+    let update = {
+      date: $("#date").val(),
+      amount: $(".amount").val(),
+      category: $("#category").val(),
+      description: $(".description").val()
+    }
+    var url = "/data";
+
+    $.ajax({
+      type: "PUT",
+      url: url,
+      data: JSON.stringify(update),
+      contentType: "application/json; charset=utf-8",
+
+      success: function(data)
+      {
+        console.log(data);
+        // window.location="/expense-history.html"
+        $( "#expense-data" ).html(data);
+      },
+          failure: function(errMsg) {
+        alert(errMsg);
+    }
+
+    });
+  })
+
