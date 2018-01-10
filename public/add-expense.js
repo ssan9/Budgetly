@@ -1,19 +1,6 @@
 
 $(function() {
-  //   $('#edit').hide();
-
-  //   $('.active a').on('click', function(e) {
-  //     e.preventDefault();
-  //     $('#add').show();
-  //     $('#edit').hide();
-  //   });
-
-  //   $('.inactive a').on('click', function(e) {
-  //     e.preventDefault();
-  //     $('#add').hide().removeClass('.active a');
-  //     $('#edit').show().addClass('.active a');
-  //   });
-
+  
 
   $("#save").click(function(e) { //taking values from input fields and also setting parameters
     e.preventDefault();

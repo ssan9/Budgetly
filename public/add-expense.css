@@ -12,7 +12,6 @@ nav {
   text-align: right;
   position: fixed;
   height: 50px;
-  background-color: #267e67;
   background-color: #307c68;
   width: 100%;
   top: 0;
@@ -71,16 +70,26 @@ label {
   font-size:22px;
 }
 
-.entry-form{
-  height: 33px;
-  font-family: Times New Roman;
 
+
+label#date{
+  margin-left: 120px;
+  display: inline-block;
 }
+
+
 
 input[type=number]{
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='16px' width='85px'><text x='2' y='13' fill='gray' font-size='12' font-family='arial'>$</text></svg>");
   background-repeat: no-repeat;
 }
+
+input.expense-form{
+  height: 33px;
+  font-family: Times New Roman;
+
+}
+
 
 label.active {
   left:2px;
@@ -171,6 +180,8 @@ option:first-child{
 
 .button-block {
   display:inline-block;
+  background:rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
   width:49.6%;
   height:40px;
   text-align:center;

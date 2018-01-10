@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budgetly</title>
+  <link rel="stylesheet" type="text/css" href="add-expense.css">
+
+</head>
+<body>
+  <nav role="navigation" class="nav_bar">
+    <ul>
+      <li><a href="index.html" id="app-name">Budgetly</a></li>
+      <li><a href="signup.html" id="signup">Signup/Login</a></li>
+      <li><a href="monthly-budget.html" id="monthly-budget">Monthly Budget</a></li>
+      <li><a href="add-expense.html" id="add-expense" class="current">Add Expense</a></li>
+      <li><a href="expense-history.html" id="expense-history">History</a></li>
+      <li><a href="dashboard.html" id="dashboard">Dashboard</a></li>
+
+    </ul>
+  </nav>
+
+  <main role="main">
+
+    <div class="container">
+
+      <div class="content">
+        <div id="add">   
+          <h1>Add a new expense</h1>
+          
+          <form action="/" method="post" class="expense-form">
+
+            <div class="top-row">
+              <div class="field-wrap">
+                <label for="date"></label>
+                <input type="date" name="date" id="date" class="expense-form" placeholder="Date" required autocomplete="off" />
+              </div>
+
+              <div class="field-wrap">
+                <label for="amount"></label>
+
+                <input type="number" name="amount" class="expense-form" id="amount" placeholder="Amount" required autocomplete="off"/>
+
+              </div>
+            </div>
+
+            <section>
+              <div class="field-wrap category-wrap">
+                <label for="category">
+                </label>
+                <select name="category" id='category' class="expense-form" required>
+                  <option value="0">Category</option>
+                  <option value="Gas">Gas</option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="Home Decor">Home Decor</option>
+                  <option value="Restaurants and Bar">Restaurants and Bar</option>
+                  <option value="Travel">Travel</option>
+                  <option value="Grocery">Grocery</option>
+                  <option value="Other">Other</option>
+                </select>
+                
+              </div>
+            </section>
+            <div class="field-wrap">
+              <label for="description"></label>
+              <input type="text" name="description" class="expense-form" id="description" placeholder="Description" required autocomplete="off"/>
+            </div>
+
+            <button type="submit" class="button button-block cancel" id="cancel">Cancel</button>
+            <button type="submit" class="button button-block update" id="update">Save</button>
+
+          </form>
+
+        </div>
+        
+      </div> 
+    </main>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+    <script type="text/javascript" src="expense.js"></script>    
+  </body>   
+  </html>

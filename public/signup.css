@@ -2,10 +2,6 @@ body{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /*background-color: lightgreen;*/
-  /*background-color: #defbde;*/
-  /*background-color: #aad8aa;*/
-  /*background-color: #cae0ca;*/
   background-image: url("https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,8 +12,7 @@ nav {
   text-align: right;
   position: fixed;
   height: 50px;
-  /*background-color: #106710;*/
-  background-color: #274227;
+  background-color: #307c68;
   width: 100%;
   top: 0;
 }
@@ -29,13 +24,13 @@ nav ul li{
 nav ul li a{
   text-decoration: none;
   margin-right: 80px;
-    color: white;
+  color: white;
 
 }
 
 .nav_bar a:hover{
   color: cyan;
-  }
+}
 
 .nav_bar .current{
   color: #34f634;
@@ -50,14 +45,6 @@ nav ul li a{
   font-weight: 700;
   color: white;
 }
-
-/*.black-box{*/
-  /*padding: 20%;*/
-  /*background-color: black;
-  width:60%;
-  height: 480px;
-  margin: 0 auto;
-}*/
 
 .container {
   background:rgba(19, 35, 47, 0.9);
@@ -75,55 +62,36 @@ nav ul li a{
   height:20px;
 }
 .tab-group:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .tab-group li a {
-    display:block;
-    text-decoration:none;
-    background:rgba(160, 179, 176, 0.25);
-    color: #a0b3b0;
-    font-size:20px;
-    float:left;
-    width:50%;
-    text-align:center;
-    cursor:pointer;
-    height:40px;
-    padding-top:10px;
-    transition:.5s ease;
-  }
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-group li a {
+  display:block;
+  text-decoration:none;
+  background:rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size:20px;
+  float:left;
+  width:50%;
+  text-align:center;
+  cursor:pointer;
+  height:40px;
+  padding-top:10px;
+  transition:.5s ease;
+}
 
- #su a{
-    background-color: #24896d; 
-  }
-.tab-group li .active a {
-    background: #24896d;
-      /*background:#1ab188;*/
-      color:white;
-  }
-  
-    .tab-group li a:hover {
-      background:#24896d;
-      color:white;
-    }
+#su a{
+  background-color: #307c68; 
+  color: white;
+}
 
-    .tab-group li a:focus {
-      background:#24896d;
-      color:white;
-    }
-  
-  
-  
-  .tab-group li .inactive a {
-      /*background:rgba(160, 179, 176, 0.25);*/
+#su a:hover{              
+  background: #155544;
+  color:white;
+}  
 
-      color:white;
-      /*border: 1px solid transparent;*/
-  } 
-
-
-  h1 {
+h1 {
   text-align:center;
   color:white;
   font-weight: 200;
@@ -133,19 +101,12 @@ nav ul li a{
 
 label {
   position:absolute;
-  /*transform:translateY(6px);*/
   left:13px;
   color:rgba(255, 255, 255, 0.5);
-    transition:all 0.25s ease;
+  transition:all 0.25s ease;
   font-size:22px;
   padding: 5px 0;
 }
-
-  label.req {
-    margin:2px;
-    color:#1ab188;
-  }
-
 
 label.active {
   transform:translateY(40px);
@@ -153,9 +114,9 @@ label.active {
   font-size:14px;
 }
 
-label.active.req {
-    opacity:0;
-  }
+label.active. {
+  opacity:0;
+}
 
 label.highlight {
   color: white;
@@ -172,15 +133,17 @@ input{
   border: 1px solid #a0b3b0;
   color:white;
   border-radius:0;
-  /*transition:border-color .25s ease, box-shadow .25s ease;*/
-  /*border:2px solid rgb(160, 179, 176);;*/
   resize: vertical;
 }
-  input:focus {
-    outline:0;
-    border-color:#1ab188;
-  }
+input:focus {
+  outline:0;
+  border-color:#1ab188;
+}
 
+.particulars{
+  height: 33px;
+  font-family: Times New Roman;
+}
 
 .field-wrap {
   position:relative;
@@ -188,50 +151,48 @@ input{
 }
 
 .top-row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  .top-row> div {
-    float:left;
-    width:48%;
-    margin-right:4%;
-  }
+.top-row> div {
+  float:left;
+  width:48%;
+  margin-right:4%;
+}
 
-  .top-row div:last-child { 
-      margin:0;
-  }
-    
-  #signup-tab#login.hidden{
-    display: none;
-  }
-  
+.top-row div:last-child { 
+  margin:0;
+}
+
+#signup-tab#login.hidden{
+  display: none;
+}
 
 .button {
-  border:0;
-  outline:none;
-  border-radius:0;
-  padding:15px 0;
-  font-size:2rem;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  background:#1ab188;
-  color: white;
-  /*transition:all.5s ease;*/
-  /*-webkit-appearance: none;*/
+  margin:0 auto;
+  /*font-size: 0;*/
+  background: #307c68;
+  color:white;
+  font-size:20px;
 }
-  button:hover, button:focus {
-    background:#1ab188;
-  }
 
 
 .button-block {
-  display:block;
-  width:100%;
+  display: block;
+  width:49.6%;
+  height:40px;
+  text-align:center;
+  cursor:pointer;
+  margin: 0 auto;
+  /*font-size: 0;*/
 }
 
+
+button:hover, button:focus {
+  background: #155544;
+}
 
 .forgot {
   margin-top:-20px;
@@ -245,7 +206,7 @@ input{
 }
 
 .forgot a:hover{
-   color: #6bd5b8;
-  }
+ color: #6bd5b8;
+}
 
 

@@ -3,70 +3,123 @@
 <head>
 	<title>Budgetly</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="float-grid.css" type="text/css"/>
 </head>
 <body>
-		<nav role="navigation" class="nav_bar">
-    		<ul>
-     			<li><a href="index.html" id="app-name" class="current">Budgetly</a></li>
-          <li><a href="signup.html" id="signup">Signup/Login</a></li>
-          <li><a href="monthly-budget.html" id="monthly-budget">Monthly Budget</a></li>
-          <li><a href="expense.html" id="expense">Expense</a></li>
-          <li><a href="expense-history.html" id="expense-history">History</a></li>
-          <li><a href="dashboard.html" id="expense">Dashboard</a></li>
-
-
-    		</ul>
-  	</nav>
-
-  		<main role="main">
-          <div class="container">
-            <header role="banner">
-              <div class="intro"><h1>Need to get your Finances on Track</h1></div>
-            </header>  
-              <ul class="tab-group">
-                <li class="signup tab"><a href="">Signup</a></li>
-                <li class="login tab"><a href="">Login</a></li>
-              </ul>
-            </div>
-          <div class="options">
-            
+  <nav role="navigation" class="nav_bar">
+    <ul>
+      <li><a href="index.html" id="app-name" class="current">Budgetly</a></li>
+      <li><a href="signup.html" id="signup">Signup/Login</a></li>
+      <li><a href="monthly-budget.html" id="monthly-budget">Monthly Budget</a></li>
+      <li><a href="add-expense.html" id="add-expense">Add Expense</a></li>
+      <li><a href="expense-history.html" id="expense-history">History</a></li>
+      <li><a href="dashboard.html" id="expense">Dashboard</a></li>
+          <!-- <li class="dropdown"><a href="#" class="icon">&#9776;</a>
+            <li><a href="#" class="dropdown-content">Monthly Budget</a></li>
+            <li><a href="#" class="dropdown-content">Add Expense</a></li>
+            <li><a href="#" class="dropdown-content">History</a></li>
+            <li><a href="#" class="dropdown-content">Dashboard</a></li>
+          </li> -->
+        <!-- <div class="dropdown">
+            <button class="dropbtn">
+              <i class="fa fa-caret-down"></i>
+            </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
           </div>
+        </div>
+      -->
 
-          <div class="budget">
-            <div class="monthly-budget">
-              <img src="images\dashboard.JPG" alt ="monthly-expenses" height= "400" width="550">
-            </div>
+    </ul>
+  </nav>
 
-            <div class="intro-two">
-              <h1>Keep Track of your</h1> 
-             <h1>Monthly Budget</h1> 
+  <main role="main">
+    <div class="container">
+      <header role="banner">
+        <div class="intro"><h1>Need to get your Finances on Track</h1></div>
+      </header>  
+      <ul class="tab-group">
+        <li class="signup tab"><a href="">Signup</a></li>
+        <li class="login tab"><a href="">Login</a></li>
+      </ul>
+    </div>
+
+    <div class="options">
+      <div class="row">
+        <div class="col-4">
+          <div class="create-budget">
+            <div class="create-budget-pic pic">
+              <img src="images\notepad.png" alt="create your monthly budget" height="100"> 
             </div>
-        
+            <div class="intro-part-one options-intro">
+              <h1>Create your  <span id="budget">Monthly Budget</span></h1>
+            </div>
           </div>
-
-          <div class="expenses">
-            <div class="monthly-expenses">
-              <img src="images\monthly-budget.JPG" alt ="monthly-expenses" height= "400" width="600">
-            </div>
-            
-            <div class="intro-four">
-              <h1>Keep track of your</h1> 
-             <h1>Expenses</h1> 
-            </div>
         </div>
 
-        <div class="add-expenses">
-            <div class="add-monthly">
-              <img src="images\add-expenses.JPG" alt ="add-expenses" height= "400" width="600">
+        <div class="col-4">
+          <div class="add-edit-expense">
+            <div class="add-edit pic">
+              <img src="images\edit.png" alt="add/edit your expenses" height= "100"> 
             </div>
-            
-            <div class="intro-five">
-              <h1>Save details of</h1> 
-             <h1> a new Expense</h1> 
+            <div class="intro-part-two options-intro">
+              <h1>Add/Edit your <span id="budget">Expenses</span></h1>
             </div>
+          </div>
         </div>
-        <div class="footer">
-          
+
+        <div class="col-4">
+          <div class="view-monthly-budget">
+            <div class="view-monthly pic">
+              <img src="images\budget.png" alt="view your monthly budget dashboard" height="100"> 
+            </div>
+            <div class="intro-part-three options-intro">
+              <h1>View your Monthly  <span id="budget">Budget Dashboard</span></h1>
+            </div>
+          </div>
         </div>
+
+      </div>
+
+    </div>
+
+    <div class="budget">
+      <div class="monthly-budget">
+        <img src="images\dashboard.JPG" alt ="monthly-expenses" height= "400" width="550">
+      </div>
+
+      <div class="intro-two">
+        <h1>Keep track of your  <span id="budget">Monthly Budget</span></h1>
+
+      </div>
+      
+    </div>
+
+    <div class="expenses">
+      <div class="monthly-expenses">
+        <img src="images\monthly-expenses.JPG" alt ="monthly-expenses" height= "350" width="600"\>
+      </div>
+      
+      <div class="intro-four">
+       <h1>Keep track of your  <span id="expenses">Expenses</span></h1>
+
+     </div>
+   </div>
+
+   <div class="add-expenses">
+    <div class="add-monthly">
+      <img src="images\add-expenses.JPG" alt ="add-expenses" height= "400" width="600">
+    </div>
+    
+    <div class="intro-five"> 
+     <h1>Save details of  <span id="add-expenses">a new Expense</span></h1>
+
+   </div>
+ </div>
+ <div class="footer">
+  
+ </div>
 </body>		
 </html>

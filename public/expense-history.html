@@ -5,34 +5,31 @@
   <link rel="stylesheet" type="text/css" href="expense-history.css ">
 </head>
 <body>
-    <nav role="navigation" class="nav_bar">
-        <ul>
-          <li><a href="index.html" id="app-name">Budgetly</a></li>
-          <li><a href="signup.html" id="signup">Signup/Login</a></li>
-          <li><a href="monthly-budget.html" id="monthly-budget">Monthly Budget</a></li>
-          <li><a href="expense.html" id="expense">Expense</a></li>
-          <li><a href="expense-history.html" id="expense-history" class="current">History</a></li>
-          <li><a href="dashboard.html" id="dashboard">Dashboard</a></li>
-        </ul>
-    </nav>
+  <nav role="navigation" class="nav_bar">
+    <ul>
+      <li><a href="index.html" id="app-name">Budgetly</a></li>
+      <li><a href="signup.html" id="signup">Signup/Login</a></li>
+      <li><a href="monthly-budget.html" id="monthly-budget">Monthly Budget</a></li>
+      <li><a href="add-expense.html" id="add-expense">Add Expense</a></li>
+      <li><a href="expense-history-two.html" id="expense-history" class="current">History</a></li>
+      <li><a href="dashboard.html" id="dashboard">Dashboard</a></li>
+    </ul>
+  </nav>
 
-      <main role="main">
+  <main role="main">
 
-          <div class="container">
+    <div class="container">
 
       <div class="content">
-          <form action="/" method="post" class="expense-search">
+        <form action="/" method="post" class="expense-search">
 
           <div class="top-row">
-
+            
             <div id="history">
-                <h1>Expenses for <span id="monthly-record">all months</span></h1>
+              <h1>Expenses for <span id="monthly-record">all months</span></h1>
             </div>
 
-            <!-- <div id="monthly-record">
-
-            </div>
- -->
+            
             <div class="month">
               <label class="switch-month">
                 Switch to Month:
@@ -41,25 +38,27 @@
             </div>
 
           </div>
-        </div>
+          
 
-        <div class="headings">
-        <ul>
-          <li id="date"><h2>Date</h2></li>
-          <li id="amount"><h2>Amount</h2></li>
-          <li id="category"><h2>Category</h2></li>
-          <li id="description"><h2>Description</h2></li>
-        </ul>
-        </div>
+          <div class="headings">
+            <ul>
+              <li id="date"><h2>Date</h2></li>
+              <li id="amount"><h2>Amount</h2></li>
+              <li id="category"><h2>Category</h2></li>
+              <li id="description"><h2>Description</h2></li>
+            </ul>
+          </div>
 
-           <div class="field-wrap" id="expense-data">
+          <div class="field-wrap" id="expense-data">
 
           </div>
 
-          </form>
-          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-          <script type="text/javascript" src="expense-history.js"></script>
-          <script src="moment.js"></script>
+        </form>
+      </div>
+    </div> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="expense-history.js"></script>
+    <script src="moment.js"></script>
 
-        </body>
-        </html>
+  </body>
+  </html>

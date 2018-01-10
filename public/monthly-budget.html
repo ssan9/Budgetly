@@ -11,7 +11,7 @@
       <li><a href="index.html" id="app-name">Budgetly</a></li>
       <li><a href="signup.html" id="signup">Signup/Login</a></li>
       <li><a href="monthly-budget.html" id="monthly-budget" class="current">Monthly Budget</a></li>
-      <li><a href="expense.html" id="expense">Expense</a></li>
+      <li><a href="add-expense.html" id="add-expense">Add Expense</a></li>
       <li><a href="expense-history.html" id="expense-history">History</a></li>
       <li><a href="dashboard.html" id="dashboard">Dashboard</a></li>
 
@@ -30,45 +30,22 @@
 
             <div class="top-row">
               <div class="field-wrap">
-                <label class="month">
-                  Month<span class="req">*</span>
-                </label>
-                <input type="month" name="month" id="month" class="month" required autocomplete="off" />
+                <label for="month"></label>
+                <input type="month" name="month" id="month" class="entry-form" placeholder="month" value="2018-01" required autocomplete="off" />
+                <!-- couldn't use anything beside a number in value. how can i get the current month over there automatically? or is this fixed month fine? -->
               </div>
 
               <div class="field-wrap">
-                <label>
-                  Monthly Salary<span class="req">*</span>
-                </label>
-               <input type="number" name="amount" class="amount" id="amount" required autocomplete="off"/>
-                <!-- <span class="currencyinput">$<input type="text" name="currency"></span> -->
-
+                <label for="salary"></label>
+                <input type="number" name="salary" class="entry-form" id="salary" placeholder="Monthly Salary" required autocomplete="off"/>
+                
               </div>
             </div>
 
-            <!-- <section>
-              <div class="field-wrap category-wrap">
-             -->  <!-- <label class="category">
-                Category<span class="req">*</span>
-              </label> -->
-                <!-- <select name="category" id='category' required>
-                  <option value="0">Category<span class="req">*</span></option>
-                  <option value="1">Gas</option>
-                  <option value="2">Entertainment</option>
-                  <option value="3">Home Decor</option>
-                  <option value="4">Restaurants and Bar</option>
-                  <option value="5">Travel</option>
-                  <option value="6">Grocery</option>
-                  <option value="7">Other</option>
-                </select> -->
-                <!-- <input type="text" name="category" class="category" id="category" required autocomplete="off"/> -->
-              <!-- </div>
-            </section> -->
             <div class="field-wrap">
-              <label>
-                Cuurent Month's Budget<span class="req">*</span>
+              <label for="description">
               </label>
-              <input type="text" name="description" class="description" id="amount" required autocomplete="off"/>
+              <input type="text" name="description" class="entry-form" id="description" placeholder="Description" required autocomplete="off"/>
             </div>
 
             <button type="button" class="button button-block cancel" id="cancel">Cancel</button>
@@ -78,10 +55,10 @@
 
         </div>
         
-                
-    </div> 
-  </main>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
-  <script type="text/javascript" src="monthly-budget.js"></script>    
-</body>   
-</html>
+        
+      </div> 
+    </main>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+    <script type="text/javascript" src="monthly-budget.js"></script>    
+  </body>   
+  </html>

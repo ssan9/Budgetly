@@ -27,6 +27,8 @@ router.get('/:month/:year', (req, res) => {
         "$gte": new Date(req.params.year, req.params.month-1, 0),
         "$lt": new Date(req.params.year, req.params.month-1, 31)}
     })
+
+
 		.then(data => {
 			res.json(data.map(datum => datum.serialize()));
 		})
