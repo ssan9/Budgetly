@@ -5,51 +5,51 @@
   <link rel="stylesheet" type="text/css" href="dashboard.css">
 </head>
 <body>
-    <nav role="navigation" class="nav_bar">
-        <ul>
-          <li><a href="index.html" id="app-name">Budgetly</a></li>
-          <li><a href="signup.html" id="signup">Signup/Login</a></li>
-          <li><a href="monthly-budget.html" id="monthly-budget">Monthly Budget</a></li>
-          <li><a href="expense.html" id="expense">Expense</a></li>
-           <li><a href="expense-history.html" id="expense-history">History</a></li>
-           <li><a href="dashboard.html" id="dashboard" class="current">Dashboard</a></li>
+  <nav role="navigation" class="nav_bar">
+    <ul>
+      <li><a href="index.html" id="app-name">Budgetly</a></li>
+      <li><a href="signup.html" id="signup">Signup/Login</a></li>
+      <li><a href="monthly-budget.html" id="monthly-budget">Monthly Budget</a></li>
+      <li><a href="add-expense.html" id="add-expense">Add Expense</a></li>
+      <li><a href="expense-history.html" id="expense-history">History</a></li>
+      <li><a href="dashboard.html" id="dashboard" class="current">Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <main role="main">
+
+    <div class="container">
+
+      <div class="heading">
+        <h2>Dashboard</h2>
+      </div>
+      
+      <div class="amount-spent">
+        <h1>$700</h1> 
+        <p class="expense-amount">in Monthly Expenses</p> 
+      </div>
+
+      <div class="savings-bar">
+        <ul class="bar-group">
+          <li class="safe bar">Saving Money!</li>
+          <li class="still-safe bar">Fine</li>
+          <li class="near-danger bar">Almost at Budget</li>
+          <li class="danger bar">Spending your Total Income!</li>
         </ul>
-    </nav>
+      </div>
 
-      <main role="main">
+      <form class="budget-form" id="budget-form" action="/" method="post">
 
-          <div class="container">
-
-            <div class="heading">
-              <h2>Dashboard</h2>
-            </div>
-            
-            <div class="amount-spent">
-              <h1>$700</h1> 
-              <p class="expense-amount">in Monthly Expenses</p> 
-            </div>
-
-            <div class="savings-bar">
-              <ul class="bar-group">
-                <li class="safe bar">Saving Money!</li>
-                <li class="still-safe bar">Fine</li>
-                <li class="near-danger bar">Almost at Budget</li>
-                <li class="danger bar">Spending your Total Income!</li>
-             </ul>
-            </div>
-
-            <form class="budget-form" id="budget-form" action="/" method="post">
-
-            <div class="your-budget">
-              
-                <div class="top-row">
+        <div class="your-budget">
+          
+          <div class="top-row">
             <div class="field-wrap">
               <label>
                 Monthly Income: 
               </label>
               <input type="text" name="income" id="income" class="income" required autocomplete="off" />
             </div>
-        
+            
             <div class="field-wrap">
               <label>
                 Monthly Budget: 
@@ -67,12 +67,12 @@
           
           <div class="field-wrap">
             <label>
-            Savings:
+              Savings:
             </label>
             <input type="password" name="income" id="income" class="income" required autocomplete="off"/>
           </div>
-            
-            </form>  
-            </div>  
+          
+        </form>  
+      </div>  
 
-              
+      
