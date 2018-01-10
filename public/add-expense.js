@@ -1,14 +1,15 @@
 
 $(function() {
-  
 
-  $("#save").click(function(e) { //taking values from input fields and also setting parameters
+  $("#expense-form").submit(function(e) { //taking values from input fields and also setting parameters
+    alert("hello");  
+
     e.preventDefault();
     let newExpense = {
       date: $("#date").val(),
-      amount: $(".amount").val(),
+      amount: $("#amount").val(),
       category: $("#category").val(),
-      description: $(".description").val()
+      description: $("#description").val()
     }
     var url = "/api/expenses";
 

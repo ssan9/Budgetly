@@ -229,26 +229,26 @@ input {
   font-size:20px;
 }
 
-div#date{
+div.date{
   width: 25%;
   display: inline-block;
   margin:2% 0;
 
 }
 
-div#amount{
+div.amount{
   width: 16%;
   display: inline-block;
   margin: 2% auto;
 }
 
-div#category{
+div.category{
   width: 16%;
   display: inline-block;
   margin: 2% auto;
 }
 
-div#description{
+div.description{
   width: 16%;
   display: inline-block;
   margin: 2% 5%;
@@ -260,22 +260,22 @@ button{
   margin-left: 25px;
 }
 
-button#edit{
+button.edit{
   width: 60px;
   background-color: #307c68;
   color: white; 
 }
 
-button#delete{
+button.delete{
   background-color: #a10b0b;
   color: white;
 }
 
-#edit:focus{
+.edit:focus{
   background-color: #155544;
 }
 
-#delete:focus{
+.delete:focus{
   background-color: #841111;
 }
 

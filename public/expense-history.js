@@ -1,5 +1,7 @@
 $(function() {
 	var url = "/api/expenses";
+	getData();
+	function getData() {
 	$.ajax({
 		type: "GET",
 		url: url,
@@ -8,6 +10,7 @@ $(function() {
 			showExpenses(data)
 		}
 	});
+}
 
 	$(".month").on("change", function(){
 		var selected = $(this).val();
@@ -17,20 +20,20 @@ $(function() {
 	});
 
 
-function showExpenses(data){
-	const expenseHtml = data.map(function(entry) {
-		var strDate=moment(entry.date).format('MMMM Do, YYYY');
-		return `<div class="expense-details">
-							<div id="date">${strDate}</div>
-							<div id="amount">$${entry.amount}</div>
-							<div id="category">${entry.category}</div>
-							<div id="description">${entry.description}</div>
-							<button id="edit">Edit</button>
-							<button id="delete">Delete</button>
-						</div>`;
-	})
-	$("#expense-data").html(expenseHtml);
-}
+	function showExpenses(data){
+		const expenseHtml = data.map(function(entry) {
+			var strDate=moment(entry.date).format('MMMM Do, YYYY');
+			return `<div class="expense-details" data-id="${entry.id}">
+			<div class="date">${strDate}</div>
+			<div class="amount">$${entry.amount}</div>
+			<div class="category">${entry.category}</div>
+			<div class="description">${entry.description}</div>
+			<button class="edit">Edit</button>
+			<button class="delete">Delete</button>
+			</div>`;
+		})
+		$("#expense-data").html(expenseHtml);
+	}
 
 	function makeAjaxRequest(selectedMonth){
 		var strMonth=moment(selectedMonth).format('MMMM');
@@ -46,38 +49,51 @@ function showExpenses(data){
 		});
 	}
 
-
-
-
-
-
-
-$("#edit").click(function(e) { //taking values from input fields and also setting parameters
+$("#expense-data").on("click", ".delete", function(e) {
 	e.preventDefault();
-	console.log('${#edit}');
-	let update = {
-		date: $("#date").val(),
-		amount: $(".amount").val(),
-		category: $("#category").val(),
-		description: $(".description").val()
-	}
-	var url = "/api/expenses/";
-
+	var expenseId = $(e.currentTarget).parent('.expense-details').attr('data-id');
 	$.ajax({
-		type: "PUT",
-		url: url,
-		data: JSON.stringify(update),
-		contentType: "application/json; charset=utf-8",
-
-		success: function(data)
-		{
-			console.log(data);
-			// window.location="/expense-history.html"
-			$( "#expense-data" ).html(data);
-		},
-		failure: function(errMsg) {
-			alert(errMsg);
+		type: "DELETE",
+		url: url + "/" + expenseId,
+		success: function(data) {
+			getData();
+		}, 
+		error: function(err) {
+			console.log(err);
 		}
-	});
+	})
 })
+
+
+
+
+
+// $("#edit").click(function(e) { //taking values from input fields and also setting parameters
+// 	e.preventDefault();
+// 	console.log('${#edit}');
+// 	let update = {
+// 		date: $("#date").val(),
+// 		amount: $(".amount").val(),
+// 		category: $("#category").val(),
+// 		description: $(".description").val()
+// 	}
+// 	var url = "/api/expenses/";
+
+// 	$.ajax({
+// 		type: "PUT",
+// 		url: url,
+// 		data: JSON.stringify(update),
+// 		contentType: "application/json; charset=utf-8",
+
+// 		success: function(data)
+// 		{
+// 			console.log(data);
+// 			// window.location="/expense-history.html"
+// 			$( "#expense-data" ).html(data);
+// 		},
+// 		failure: function(errMsg) {
+// 			alert(errMsg);
+// 		}
+// 	});
+// })
 })
