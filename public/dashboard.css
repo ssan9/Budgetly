@@ -2,9 +2,6 @@ body{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /*background-color: lightgreen;*/
-  /*background-color: #defbde;*/
-  /*background-color: #aad8aa;*/
   background-color: #cae0ca;
   background-image: url("https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg");
   background-repeat: no-repeat;
@@ -16,8 +13,7 @@ nav {
   text-align: right;
   position: fixed;
   height: 50px;
-  /*background-color: #106710;*/
-  background-color: #274227;
+  background-color: #307c68;
   width: 100%;
   top:0;
 }
@@ -87,7 +83,7 @@ nav ul li a{
   display: inline-block;
   width: 100%; 
   font-size: 0;
-    padding-left: 0;
+  padding-left: 0;
 
 }
 
@@ -103,15 +99,15 @@ nav ul li a{
 }
 
 .safe{
-  background-color: green;
+  background-color: #307c68; 
   text-align: center;
-    height: 40px;
+  height: 40px;
 
 }
 
 .still-safe{
   background-color: #cccc1d;
-    height: 40px;
+  height: 40px;
 
 
 }
@@ -122,7 +118,7 @@ nav ul li a{
 }
 
 .danger{
-  background-color:red;
+  background-color: #a10b0b;
   padding:7px;
   height: 45.5px;
 }
@@ -152,10 +148,10 @@ input {
   margin: 0 auto;
 
 }
-  input:focus {
-    outline:0;
-    border-color:#1ab188;
-  }
+input:focus {
+  outline:0;
+  border-color:#1ab188;
+}
 
 
 input {
@@ -174,10 +170,10 @@ label{
 }
 
 .top-row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  content: "";
+  display: table;
+  clear: both;
+}
 
 
 
