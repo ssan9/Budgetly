@@ -2,10 +2,6 @@ body{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /*background-color: lightgreen;*/
-  /*background-color: #defbde;*/
-  /*background-color: #aad8aa;*/
-  /*background-color: #cae0ca;*/
   background-image: url("https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,8 +12,7 @@ nav {
   text-align: right;
   position: fixed;
   height: 50px;
-  /*background-color: #106710;*/
-  background-color: #274227;
+  background-color: #307c68;
   width: 100%;
   top: 0;
 }
@@ -29,7 +24,7 @@ nav ul li{
 nav ul li a{
   text-decoration: none;
   margin-right: 80px;
-    color: white;
+  color: white;
 
 }
 
@@ -74,10 +69,10 @@ nav ul li a{
 
 
 .top-row> div, label {
-    float:left;
-    margin-right: 0;
-  }
-    
+  float:left;
+  margin-right: 0;
+}
+
 
 
 .field-wrap label {
@@ -85,26 +80,6 @@ nav ul li a{
   left:13px;
   color:rgba(255, 255, 255, 0.5);
   font-size:22px;
-}
-
-  label.req {
-    margin:2px;
-    color:#1ab188;
-  }
-
-
-label.current {
-  left:2px;
-  font-size:14px;
-}
-
-  label.req {
-    opacity:0;
-  }
-
-
-label.highlight {
-  color: white;
 }
 
 input {
@@ -120,11 +95,10 @@ input {
   border-radius:0;
   transition:border-color .25s ease, box-shadow .25s ease;
 }
-  input:focus {
-    outline:0;
-    border-color:#1ab188;
-  }
-
+input:focus {
+  outline:0;
+  border-color:#1ab188;
+}
 
 input {
   border:2px solid rgb(160, 179, 176);;
@@ -148,9 +122,9 @@ input {
   background:#1ab188;
   color: white;
 }
-  button:hover, button:focus {
-    background:#1ab188;
-  }
+button:hover, button:focus {
+  background:#1ab188;
+}
 
 
 .button-block {
@@ -170,7 +144,7 @@ input {
 
 h1 {
   text-align: left;
-  color: #14be14;
+  color: #62a795;
   /*color: #f89a84;*/
   font-weight:900;
   margin:0 0 40px;
@@ -181,26 +155,6 @@ h1 {
   left:13px;
   color:rgba(255, 255, 255, 0.5);
   font-size:22px;
-}
-
-  label.req {
-    margin:2px;
-    color:#1ab188;
-  }
-
-
-label.current {
-  left:2px;
-  font-size:14px;
-}
- 
- label.current.req {
-    opacity:0;
-  }
-
-
-label.highlight {
-  color: white;
 }
 
 input {
@@ -215,10 +169,10 @@ input {
   color:white;
   border-radius:0;
 }
-  input:focus {
-    outline:0;
-    border-color:#1ab188;
-  }
+input:focus {
+  outline:0;
+  border-color:#1ab188;
+}
 }
 
 input {
@@ -226,13 +180,11 @@ input {
   resize: vertical;
 }
 
-/* */
-
 .headings ul li{
   display: inline-block;
   margin: 0 6.8%;
   /*color: #14be14;*/
- color: #1ace6a;
+  color: #62a795;
 }
 
 .headings ul li#date{
@@ -256,33 +208,28 @@ input {
 }
 
 
-  .top-row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  .top-row> div {
-    float:left;
-    width:48%;
-    margin-right:4%;
-  }
-    .top-row div:last-child { 
-      margin:0;
-    }
+.top-row> div {
+  float:left;
+  width:48%;
+  margin-right:4%;
+}
+.top-row div:last-child { 
+  margin:0;
+}
 
 .expense-details{
   color: white;
   width:1200px;
-  /*display: inline-block;*/
-  /*text-align: center;*/
-  /*margin: auto 1% auto 1%;*/
-
   font-size:20px;
 }
 
 div#date{
-  /*margin-left: 0;*/
   width: 25%;
   display: inline-block;
   margin:2% 0;
@@ -296,55 +243,45 @@ div#amount{
 }
 
 div#category{
-  /*text-align: center;*/
   width: 16%;
   display: inline-block;
-    margin: 2% auto;
-
-  /*padding: 0 10px;*/
+  margin: 2% auto;
 }
 
 div#description{
   width: 16%;
   display: inline-block;
-    margin: 2% 5%;
+  margin: 2% 5%;
 }
 
 button{
-  /*float: right;*/
-  /*clear: right;*/
   display: inline-block;
   font-size: 16px;
-  margin-left: 35px;
-  /*width: 75px;*/
-  /*padding: 2% 2%;*/
-  /*width: 16%;*/
-  /*position: relative;*/
-  /*top: -40px;*/
-  /*margin: 0 1%;*/
+  margin-left: 25px;
 }
 
 button#edit{
-  /*background-color: #1ab188;*/
   width: 60px;
-  background-color: #155544;
+  background-color: #307c68;
   color: white; 
-  /*font-size: 16px;*/
 }
 
 button#delete{
-  /*background-color: #f15757;*/
-  background-color: #841111;
-    color: white;
-
-/*font-size: 16px;*/
-
+  background-color: #a10b0b;
+  color: white;
 }
 
 #edit:focus{
-  background-color:  #1ab188;
+  background-color: #155544;
 }
 
 #delete:focus{
-  background-color: #f15757;
+  background-color: #841111;
 }
+
+@media only screen and (max-width: 1050px) {
+  .container{
+    margin: 0 auto;
+    width: 100%;
+    padding: 2%;
+  }
