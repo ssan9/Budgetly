@@ -35,6 +35,7 @@ $(function() {
 		$("#expense-data").html(expenseHtml);
 	}
 
+
 	function makeAjaxRequest(selectedMonth){
 		var strMonth=moment(selectedMonth).format('MMMM');
 		var strDateMonth=moment(selectedMonth).format('MM');
@@ -47,7 +48,41 @@ $(function() {
 				$("#monthly-record").html(strMonth);
 			}
 		});
+
 	}
+
+	// $(".edit").click(e) => {
+	// 		e.preventDefault();
+	// 		var button=e.currentTarget;
+	// 		var editRow=$(button).parent("expense-details");
+	// 		var params={
+	// 			strDate: $(editRow).find(".date").text(),
+	// 			amount: $(editRow).find(".amount").text(),
+	// 			category: $(editRow).find(".category").text(),
+	// 			description: $(editRow).find(".description").text()
+	// 		};
+
+	// 		// var newForm=renderForm(params);
+
+	// 		// editRow.html(newForm);
+
+	// 		$(".save").click(e)=> {
+	// 			e.preventDefault();
+	// 			var expenseId = $(e.currentTarget).parent('.expense-details').attr('data-id');
+
+	// 			$.ajax({
+	// 				type: "PUT",
+	// 				url: url + "/" + expenseId,
+	// 				success: function(data) {
+	// 					getData();
+	// 				},
+	// 				error: function(err) {
+	// 					console.log(err);
+	// 				}
+	// 			})
+	// 		}
+	// 	}
+
 
 $("#expense-data").on("click", ".delete", function(e) {
 	e.preventDefault();
@@ -63,6 +98,39 @@ $("#expense-data").on("click", ".delete", function(e) {
 		}
 	})
 })
+})
+
+// $(".edit").click(e) => {
+		// 	e.preventDefault();
+		// 	var button=e.currentTarget;
+		// 	var editRow=$(button).parent();
+		// 	var params={
+		// 		strDate: $(editRow).find(".date").text(),
+		// 		amount: $(editRow).find(".amount").text(),
+		// 		category: $(editRow).find(".category").text(),
+		// 		description: $(editRow).find(".description").text()
+		// 	};
+
+		// 	var newForm=renderForm(params);
+
+		// 	editRow.html(newForm);
+
+		// 	$(".save").click(e)=> {
+		// 		e.preventDefault();
+		// 		var expenseId = $(e.currentTarget).parent('.expense-details').attr('data-id');
+
+		// 		$.ajax({
+		// 			type: "PUT",
+		// 			url: url + "/" + expenseId,
+		// 			success: function(data) {
+		// 				getData();
+		// 			},
+		// 			error: function(err) {
+		// 				console.log(err);
+		// 			}
+		// 		})
+		// 	}
+		// }
 
 
 
@@ -96,4 +164,4 @@ $("#expense-data").on("click", ".delete", function(e) {
 // 		}
 // 	});
 // })
-})
+

@@ -85,8 +85,6 @@ input[type=number]{
 label.active {
   left:2px;
   font-size:14px;
-  transform:translateY(45px);
-
 }
 
 input {
@@ -126,7 +124,7 @@ input:focus {
 
 .top-row> div {
   float:left;
-  width:47.5%;
+  width: 100%;
   margin-right:2%;
 }
 .top-row:last-child { 

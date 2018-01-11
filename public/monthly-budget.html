@@ -29,23 +29,18 @@
           <form action="/" method="post" class="expense-form">
 
             <div class="top-row">
-              <div class="field-wrap">
-                <label for="month"></label>
-                <input type="month" name="month" id="month" class="entry-form" placeholder="month" value="2018-01" required autocomplete="off" />
-                <!-- couldn't use anything beside a number in value. how can i get the current month over there automatically? or is this fixed month fine? -->
-              </div>
 
               <div class="field-wrap">
-                <label for="salary"></label>
-                <input type="number" name="salary" class="entry-form" id="salary" placeholder="Monthly Salary" required autocomplete="off"/>
+                <label for="income"></label>
+                <input type="number" name="income" class="entry-form" id="income" placeholder="Monthly Income" required autocomplete="off"/>
                 
               </div>
             </div>
 
             <div class="field-wrap">
-              <label for="description">
+              <label for="budget">
               </label>
-              <input type="text" name="description" class="entry-form" id="description" placeholder="Description" required autocomplete="off"/>
+              <input type="number" name="budget" class="entry-form" id="budget" placeholder="Monthly Budget" required autocomplete="off"/>
             </div>
 
             <button type="button" class="button button-block cancel" id="cancel">Cancel</button>
