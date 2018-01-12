@@ -182,25 +182,27 @@ input {
 
 .headings ul li{
   display: inline-block;
-  margin: 0 6.8%;
+  /*text-align: center;*/
+  /*margin-left: 0;*/
+  width: 15%;
   /*color: #14be14;*/
   color: #62a795;
 }
 
-.headings ul li#date{
-  margin: 0 2.5%;
+.headings ul li.date{
+  
 }
 
-.headings ul li#amount{
-  margin: 0 9% 0 11.3%;
+.headings ul li.amount{
+  margin: 0 5%;
 }
 
-.headings ul li#category{
-  margin: 0 0.5%;
+.headings ul li.category{
+  margin: 0 2%;
 }
 
-.headings ul li#description{
-  margin: 0 13%;
+.headings ul li.description{
+  margin: 0 %;
 }
 .field-wrap {
   position:relative;
@@ -257,7 +259,7 @@ div.description{
 button{
   display: inline-block;
   font-size: 16px;
-  margin-left: 25px;
+  margin-left: 5px;
 }
 
 button.edit{
@@ -279,9 +281,30 @@ button.delete{
   background-color: #841111;
 }
 
+@media only screen and (max-width: 1290px) {
+button{
+  margin: auto 1%;
+}
+
+/*@media only screen and (max-width: 1285px) {
+  button{
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 1280px) {
+  button{
+  margin-left: 18px;
+}
+
+@media only screen and (max-width: 1275px) {
+  button{
+  margin-left: 18px;
+}*/
+
 @media only screen and (max-width: 1050px) {
   .container{
     margin: 0 auto;
     width: 100%;
     padding: 2%;
   }
+

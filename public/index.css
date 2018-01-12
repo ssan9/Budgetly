@@ -163,7 +163,7 @@ nav ul li a{
   }
 
   .intro{
-    padding-top:8%;
+    padding-top:9%;
     text-align: center;
   }
 
@@ -221,7 +221,7 @@ nav ul li a{
   .pic{
     padding-left: 7%;
     padding-top: 40%;
-    color: white;
+    /*color: white;*/
   }
 
   .budget{
@@ -282,7 +282,7 @@ span#expenses{
 .add-expenses{
   height: 500px;
   padding-top: 3%;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
 }
 
 .add-monthly{
@@ -302,13 +302,51 @@ span#add-expenses{
   display: block;
 }
 
-.footer{
+footer{
+  text-align: center;
+  margin: 5px;
+  padding: 12px;
+  background-color: #0e9aef;
+  margin: 0 auto;
+  color: white;
   height: 50px;
   background-color:#267e67;
-
 }
 
+footer a{
+  font-size: 15px;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 1300px) {
+  .intro{
+  padding-top: 11%;
+}
+}
+@media only screen and (max-width: 1200px) {
+  .intro{
+  padding-top: 10%;
+}
+}
+
+@media only screen and (max-width: 1100px) {
+  .intro{
+  padding-top: 12%;
+}
+}
+
+@media only screen and (max-width: 1070px) {
+  .intro-two{
+  padding-top: 8%;
+  width: 40%; 
+}
+}
+
+
 @media only screen and (max-width: 1050px) {
+  .intro{
+  padding-top: 13%;
+} 
 
   .nav_bar .menu-icon {
   display: block;
@@ -326,7 +364,7 @@ position: fixed;
 width: 100%;
 z-index: 3;
 text-align: center;
-padding-left: 6%;
+padding-left: 2%;
 }
 
 .nav_bar ul {
@@ -350,6 +388,7 @@ padding: 20px 20px;
 border-right: 1px solid #f4f4f4;
 text-decoration: none;
 color: #307c68;
+width: 100%;
 }
 
 .nav_bar li a:hover {
@@ -461,11 +500,87 @@ top: 0;
   
 }
 
+
+@media only screen and (max-width: 1000px) {
+
+.intro{
+    padding-top: 15%;
+  }
+
+}
+
 @media only screen and (max-width: 975px) {
 
   .nav_bar {
     padding-left: 7%;
   }
+}
+
+@media only screen and (max-width: 955px) {
+  .intro-two{
+  padding-top: 9%;
+  width: 35%;
+}
+
+.intro-five{
+  padding-top: 9%;
+  width: 35%;
+}
+}
+
+@media only screen and (max-width: 900px) {
+  .budget{
+    height: 530px;
+  }
+  .monthly-budget{
+    float: none;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 1.5%;
+    text-align: center;
+  }
+
+  /*.monthly-budget{
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }*/
+  .intro-two{
+  float: none;
+  width: 100%;
+  padding-top: 0;
+    display: inline;
+    text-align: center;
+  } 
+
+  span#budget{
+    display: inline;
+  }
+
+.add-expenses{
+  height: 530px;
+}
+
+.add-monthly{
+  float: none;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 1.5%;
+    text-align: center;
+}
+
+.intro-five{
+  float: none;
+  width: 100%;
+  padding-top: 0;
+    display: inline;
+    text-align: center;
+  }
+
+  span#add-expenses{
+    display: inline;
+  }
+
 }
 
 @media only screen and (max-width: 880px) {
@@ -480,7 +595,7 @@ top: 0;
   .nav_bar {
     padding-left: 8%;
   }
-}
+
   .intro{
     padding-top: 15%;
   }
@@ -497,15 +612,7 @@ top: 0;
   }
 
 
-  .intro-two{
-    float: none;
-    display: inline;
-    text-align: center;
-  } 
-
-  span#budget{
-    display: inline;
-  }
+  
 
   
 
@@ -551,6 +658,29 @@ top: 0;
   span#add-expenses{
     display: inline;
   }
+}
+
+
+@media only screen and (max-width: 799px) {
+
+  .monthly-expenses {
+    padding-left: 11%;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+
+  .monthly-expenses {
+    padding-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+
+  .monthly-expenses {
+    padding-left: 9%;
+  }
+}
 
 @media only screen and (max-width: 750px) {
 
@@ -559,9 +689,20 @@ top: 0;
   }
 }
 
+ 
+
+
+
 @media only screen and (max-width: 749px) {
 
   .nav_bar {
+    padding-left: 8%;
+  }
+}
+
+ @media only screen and (max-width: 740px) {
+
+  .monthly-expenses {
     padding-left: 8%;
   }
 }
@@ -571,12 +712,125 @@ top: 0;
   .nav_bar {
     padding-left: 9%;
   }
+
+  .intro{
+    padding-top: 17%;
+  }
+
+  .monthly-expenses{
+    padding-left: 8%;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+
+.monthly-expenses {
+    padding-left: 7%;
+  }
+
+
+@media only screen and (max-width: 700px) {
+  .intro{
+    padding-top: 18%;
+  }
+
+  .options{
+    height: 600px;
+  }
+  .pic{
+      padding-top: 4%;
+  }
+
+  .monthly-expenses{
+    padding-left: 6%;
+  }
+
+}
+
+
+@media only screen and (max-width: 693px) {
+
+  .monthly-expenses {
+    padding-left: 5%;
+  }
 }
 
 @media only screen and (max-width: 685px) {
 
   .nav_bar {
     padding-left: 10%;
+  }
+
+  .monthly-expenses {
+    padding-left: 4%;
+  }
+}
+
+@media only screen and (max-width: 684px) {
+
+.monthly-expenses {
+    padding-left: 4%;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+
+.monthly-expenses {
+    padding-left: 6%;
+  }
+}
+  @media only screen and (max-width: 674px) {
+
+.monthly-expenses {
+    padding-left: 4%;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+
+.monthly-expenses {
+    /*padding-left: 4%;*/
+    width: 550px !important; 
+   padding-left: 2%;
+  }
+}
+
+@media only screen and (max-width: 665px) {
+
+.monthly-expenses {
+    padding-left: 3.5%;
+    float:none;
+  }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+.monthly-expenses {
+      width: 500px !important; 
+
+    padding-left: 3%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+.monthly-expenses {
+    padding-left: 1%;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+
+.monthly-expenses {
+    padding-left: 0.5%;
+  }
+
+@media only screen and (max-width: 620px) {
+
+.monthly-expenses {
+    padding-left: 0;
+
   }
 }
 
@@ -585,12 +839,43 @@ top: 0;
   .nav_bar {
     padding-left: 10%;
   }
+
+  .intro{
+    padding-top: 19%;
+  }
+}
+
+@media only screen and (max-width: 609px) {
+
+.monthly-expenses{
+   width: 550px !important; 
+   padding-left: 2%;
+  }
+}
+
+@media only screen and (max-width: 608px) {
+
+.monthly-expenses {
+    padding-left: 3.5%
+  }
+}
+
+@media only screen and (max-width: 605px) {
+
+.monthly-expenses{
+   width: 545px !important;
+   padding-left: 0%; 
+  }
 }
 
 @media only screen and (max-width: 585px) {
 
   .nav_bar {
     padding-left: 11%;
+  }
+
+  .intro{
+    padding-top: 23%;
   }
 }
 
@@ -613,19 +898,33 @@ top: 0;
   .nav_bar {
     padding-left: 12%;
   }
+
+  .intro{
+    padding-top: 25%;
+  }
 }
+
 
 @media only screen and (max-width: 500px) {
 
   .nav_bar {
     padding-left: 13%;
   }
+
+  .intro{
+    padding-top: 25%;
+  }
+
 }
 
 @media only screen and (max-width: 460px) {
 
   .nav_bar {
     padding-left: 14%;
+  }
+
+  .intro{
+    padding-top: 30%;
   }
 }
 
@@ -638,8 +937,12 @@ top: 0;
 
 @media only screen and (max-width: 395px) {
 
-  .nav_bar {
+.nav_bar {
     padding-left: 16%;
+  }
+
+  .intro{
+    padding-top: 35%;
   }
 }
 
@@ -647,6 +950,9 @@ top: 0;
 
   .nav_bar {
     padding-left: 17%;
+  }
+  .options{
+    height: 610px;
   }
 }
 

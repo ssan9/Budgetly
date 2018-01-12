@@ -117,13 +117,14 @@ input:focus {
 #category{
   text-align: left;
   background-color: transparent;
+  height: 45px;
 }
 .field-wrap {
   position:relative;
   margin-bottom:40px;
 }
 
-.amount {
+#amount {
   height: 32px;
 }
 
@@ -144,11 +145,11 @@ input:focus {
 
 .category-wrap{
   border: 1px white;
-  width: 590px;
+  width: 99.2%;
   height: 40px;
 }
 .category-wrap select {
-  width: 590px;
+  width: 99.2%;
   margin-bottom: 15px;
   height: 40px;
   padding-left: 13px;
@@ -218,3 +219,106 @@ option:first-child{
 }
 
 
+@media only screen and (max-width: 670px) {
+
+.category-wrap select {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 595px) {
+
+.button-block{
+  width: 100%;
+  display: block;
+}
+}
+
+
+@media only screen and (max-width: 540px) {
+
+.top-row>div {
+    width: 100%;
+    display: block;
+    float: none;
+  }
+
+.button-block{
+  width: 100%;
+  display: block;
+}
+}
+
+@media only screen and (max-width: 535px) {
+  .category-wrap select {
+    width: 101%;
+  }
+  .button-block{
+    width: 101%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+.category-wrap select {
+    width: 101%;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+
+.category-wrap select {
+    width: 102%;
+  }
+  .button-block{
+    width: 102%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+.category-wrap select {
+    width: 103%;
+  }
+  .button-block{
+    width: 102%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+
+.category-wrap select {
+    width: 104%;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+
+.button-block{
+    width: 103%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+
+.category-wrap select {
+    width: 105%;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+
+.button-block{
+    width: 104%;
+  }
+}
+
+
+
+@media only screen and (max-width: 315px) {
+
+.category-wrap select {
+    width: 106%;
+  }
+}
