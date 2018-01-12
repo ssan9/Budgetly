@@ -1,3 +1,28 @@
+
+.black-cover{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.modal{
+  background-color:white;
+  width: 60%;
+  margin: 100px auto;
+}
+
+.hidden{
+  display:none;
+}
+
+
+
+
+
+
 body{
   box-sizing: border-box;
   margin: 0;
@@ -108,7 +133,7 @@ input {
 .field-wrap {
   position:relative;
   margin-bottom:40px;
-} 
+}
 
 .button {
   border:0;
@@ -190,7 +215,7 @@ input {
 }
 
 .headings ul li.date{
-  
+
 }
 
 .headings ul li.amount{
@@ -221,7 +246,7 @@ input {
   width:48%;
   margin-right:4%;
 }
-.top-row div:last-child { 
+.top-row div:last-child {
   margin:0;
 }
 
@@ -265,7 +290,7 @@ button{
 button.edit{
   width: 60px;
   background-color: #307c68;
-  color: white; 
+  color: white;
 }
 
 button.delete{
@@ -307,4 +332,3 @@ button{
     width: 100%;
     padding: 2%;
   }
-

@@ -2,15 +2,15 @@ $(function() {
 	var url = "/api/expenses";
 	getData();
 	function getData() {
-	$.ajax({
-		type: "GET",
-		url: url,
-		success: function(data)
-		{
-			showExpenses(data)
-		}
-	});
-}
+		$.ajax({
+			type: "GET",
+			url: url,
+			success: function(data)
+			{
+				showExpenses(data)
+			}
+		});
+	}
 
 	$(".month").on("change", function(){
 		var selected = $(this).val();
@@ -19,28 +19,6 @@ $(function() {
 		}
 	});
 
-	function renderForm(params) {
-		const expenseHtml = `<div class="expense-details" params-id="${params.id}">
-			<input type="date" name="date" id="date" class="expense-form">
-			<input type="amount" name="amount" id="amount" placeholder="Amount" class="expense-form">
-			<select name="category" id='category' class="expense-form" required>
-                  <option value="0">Category</option>
-                  <option value="Gas">Gas</option>
-                  <option value="Entertainment">Entertainment</option>
-                  <option value="Home Decor">Home Decor</option>
-                  <option value="Restaurants and Bar">Restaurants and Bar</option>
-                  <option value="Travel">Travel</option>
-                  <option value="Grocery">Grocery</option>
-                  <option value="Other">Other</option>
-                </select>
-			<input type="description" name="description" id="description" placeholder="Description" class="expense-form">
-			<button class="save">Save</button>
-			<button class="cancel">Cancel</button>
-			</div>`;
-			$(params).html(expenseHtml);
-		}
-
-	
 
 	function showExpenses(data){
 		const expenseHtml = data.map(function(entry) {
@@ -56,41 +34,43 @@ $(function() {
 		})
 
 		$("#expense-data").html(expenseHtml);
-		
+
 		$(".edit").click(e => {
-	console.log("hello");
 			e.preventDefault();
 			var button=e.currentTarget;
-			var editRow=$(button).parent();
+			var editRowID=$(button).parent('.expense-details').attr('data-id');
+			$(".black-cover").removeClass("hidden");
+			$(".modal").attr("data-id", editRowID)
+			editRow.html(newForm);
+		})
+
+
+		$(".save").click(e=> {
+			e.preventDefault();
+			var expenseId = $(e.currentTarget).parent('.modal').attr('data-id');
 			var params={
-				strDate: $(editRow).find(".date").text(),
-				amount: $(editRow).find(".amount").text(),
-				category: $(editRow).find(".category").text(),
-				description: $(editRow).find(".description").text()
+				strDate: $(".modal").find(".date").text(),
+				amount: $(".modal").find(".amount").text(),
+				category: $(".modal").find(".category").text(),
+				description: $(".modal").find(".description").text(),
+				id:expenseId
 			};
 
-			console.log("hi");
-
-			var newForm=renderForm(editRow);
-
-			editRow.html(newForm);
-
-			$(".save").click(e=> {
-				e.preventDefault();
-				var expenseId = $(e.currentTarget).parent('.expense-details').attr('data-id');
-
-				$.ajax({
-					type: "PUT",
-					url: url + "/" + expenseId,
-					success: function(data) {
-						getData();
-					},
-					error: function(err) {
-						console.log(err);
-					}
-				})
+			$.ajax({
+				type: "PUT",
+				url: url + "/" + expenseId,
+				success: function(data) {
+					getData();
+				},
+				error: function(err) {
+					console.log(err);
+				}
 			})
 		})
+
+
+
+
 	}
 
 
@@ -143,20 +123,20 @@ $(function() {
 	// 	}
 
 
-$("#expense-data").on("click", ".delete", function(e) {
-	e.preventDefault();
-	var expenseId = $(e.currentTarget).parent('.expense-details').attr('data-id');
-	$.ajax({
-		type: "DELETE",
-		url: url + "/" + expenseId,
-		success: function(data) {
-			getData();
-		}, 
-		error: function(err) {
-			console.log(err);
-		}
+	$("#expense-data").on("click", ".delete", function(e) {
+		e.preventDefault();
+		var expenseId = $(e.currentTarget).parent('.expense-details').attr('data-id');
+		$.ajax({
+			type: "DELETE",
+			url: url + "/" + expenseId,
+			success: function(data) {
+				getData();
+			},
+			error: function(err) {
+				console.log(err);
+			}
+		})
 	})
-})
 
 
 
@@ -193,4 +173,3 @@ $("#expense-data").on("click", ".delete", function(e) {
 // 		}
 // 	});
 // })
-

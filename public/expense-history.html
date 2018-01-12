@@ -25,12 +25,12 @@
         <form action="/" method="post" class="expense-search">
 
           <div class="top-row">
-            
+
             <div id="history">
               <h1>Expenses for <span id="monthly-record">all months</span></h1>
             </div>
 
-            
+
             <div class="month">
               <label class="switch-month">
                 Switch to Month:
@@ -39,7 +39,7 @@
             </div>
 
           </div>
-          
+
 
           <div class="headings">
             <ul>
@@ -56,10 +56,33 @@
 
         </form>
       </div>
-    </div> 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="expense-history.js"></script>
-    <script src="moment.js"></script>
+    </div>
+    <div class="black-cover hidden" >
+      <div class="modal">
+        <div class="expense-details" params-id="${params.id}">
+          <input type="date" name="date" id="date" class="expense-form">
+          <input type="amount" name="amount" id="amount" placeholder="Amount" class="expense-form">
+          <select name="category" id='category' class="expense-form" required>
+            <option value="0">Category</option>
+            <option value="Gas">Gas</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Home Decor">Home Decor</option>
+            <option value="Restaurants and Bar">Restaurants and Bar</option>
+            <option value="Travel">Travel</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Other">Other</option>
+          </select>
+          <input type="description" name="description" id="description" placeholder="Description" class="expense-form">
+          <button class="save">Save</button>
+          <button class="cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
 
-  </body>
-  </html>
+  </main>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="expense-history.js"></script>
+  <script src="moment.js"></script>
+
+</body>
+</html>
