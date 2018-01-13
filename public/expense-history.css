@@ -82,24 +82,54 @@ nav ul li a{
 
 
 .month{
-  float: right;
   width: 58%;
+  display: inline-block;
 }
 
-.month label{
+.top-row {
   color: white;
-  margin: 10px 0;
-  font-size: 17px;
+  padding: 0 4% 2%;
+}
+
+#history h1{
+  /*width: 100%;*/
+  display: inline-block;
+  /*border: 1px solid red;*/
+  /*margin: 0 80px;*/
+}
+
+.switch-month{
+  /*padding: 0 2%;*/
+  margin: 0 7.62%;
+}
+
+/*#month{
+  margin: 0 100px;
+}*/
+
+.monthly-expenses{
+  width: 49.7%;
+  display: inline-block;
+  /*border: 1px solid blue;*/
+}
+
+/*#monthly-expenses h1{
+  display: inline-block;
 }
 
 
-.top-row> div, label {
-  float:left;
-  margin-right: 0;
-}
+#month{
+  float: right;
+  display: inline-block;
+}*/
 
-
-
+/*h1 {
+  text-align: left;
+  color: #62a795;
+  color: #f89a84;
+  font-weight:900;
+  margin:0 0 40px;
+}*/
 .field-wrap label {
   position:absolute;
   left:13px;
@@ -167,13 +197,7 @@ button:hover, button:focus {
 }
 
 
-h1 {
-  text-align: left;
-  color: #62a795;
-  /*color: #f89a84;*/
-  font-weight:900;
-  margin:0 0 40px;
-}
+
 
 .field-wrap label {
   position:absolute;
@@ -205,55 +229,90 @@ input {
   resize: vertical;
 }
 
-.headings ul li{
-  display: inline-block;
-  /*text-align: center;*/
-  /*margin-left: 0;*/
-  width: 15%;
-  /*color: #14be14;*/
-  color: #62a795;
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
 }
-
-.headings ul li.date{
-
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
 }
-
-.headings ul li.amount{
-  margin: 0 5%;
+/*table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}*/
+table tr {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
 }
-
-.headings ul li.category{
-  margin: 0 2%;
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
 }
-
-.headings ul li.description{
-  margin: 0 %;
+table th {
+  font-size: 20px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }
-.field-wrap {
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+  /*table caption {
+    font-size: 1.3em;
+  }*/
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    /*padding: 0;*/
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  table td:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-html-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+/*.field-wrap {
   position:relative;
   margin-bottom:40px;
 }
+*/
 
 
-.top-row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
-.top-row> div {
-  float:left;
-  width:48%;
-  margin-right:4%;
-}
-.top-row div:last-child {
-  margin:0;
-}
-
-.expense-details{
-  color: white;
+/*.expense-details{
   width:1200px;
-  font-size:20px;
+  font-size:15px;
 }
 
 div.date{
@@ -280,7 +339,7 @@ div.description{
   display: inline-block;
   margin: 2% 5%;
 }
-
+*/
 button{
   display: inline-block;
   font-size: 16px;
@@ -306,29 +365,44 @@ button.delete{
   background-color: #841111;
 }
 
-@media only screen and (max-width: 1290px) {
-button{
-  margin: auto 1%;
-}
-
 /*@media only screen and (max-width: 1285px) {
   button{
   margin-left: 20px;
+}*/
+
+/*@media only screen and (max-width: 1280px) {
+  .switch-month{
+
+  margin: 0 4.62%;
+}
 }
 
-@media only screen and (max-width: 1280px) {
-  button{
-  margin-left: 18px;
+@media only screen and (max-width: 1125px) {
+
+.switch-month{
+  margin: 0 3.62%;
+}
 }
 
-@media only screen and (max-width: 1275px) {
+@media only screen and (max-width: 1007px) {
+
+.switch-month{
+  margin: 0 auto;
+  display: block;
+}
+}
+
+*/
+
+/*@media only screen and (max-width: 1275px) {
   button{
   margin-left: 18px;
 }*/
 
-@media only screen and (max-width: 1050px) {
+/*@media only screen and (max-width: 1050px) {
   .container{
     margin: 0 auto;
     width: 100%;
     padding: 2%;
   }
+*/

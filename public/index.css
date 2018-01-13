@@ -661,7 +661,7 @@ top: 0;
 }
 
 
-@media only screen and (max-width: 799px) {
+/*@media only screen and (max-width: 799px) {
 
   .monthly-expenses {
     padding-left: 11%;
@@ -789,7 +789,6 @@ top: 0;
 @media only screen and (max-width: 670px) {
 
 .monthly-expenses {
-    /*padding-left: 4%;*/
     width: 550px !important; 
    padding-left: 2%;
   }
@@ -982,7 +981,7 @@ top: 0;
   .nav_bar {
     padding-left: 22%;
   }
-}
+}*/
   /*.nav_bar .dropdown {
     display: block !important;
 }

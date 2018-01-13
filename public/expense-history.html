@@ -3,7 +3,7 @@
 <head>
   <title>Budgetly</title>
   <link rel="stylesheet" type="text/css" href="expense-history.css ">
-  <link rel="stylesheet" type="text/css" href="float-grid.css">
+  <!-- <link rel="stylesheet" type="text/css" href="float-grid.css"> -->
 </head>
 <body>
   <nav role="navigation" class="nav_bar">
@@ -26,12 +26,12 @@
 
           <div class="top-row">
 
-            <div id="history">
+            <div id="history" class="monthly-expenses">
               <h1>Expenses for <span id="monthly-record">all months</span></h1>
             </div>
 
 
-            <div class="month">
+            <div id="month" class="monthly-expenses">
               <label class="switch-month">
                 Switch to Month:
               </label>
@@ -42,12 +42,18 @@
 
 
           <div class="headings">
-            <ul>
-              <li class="date"><h2>Date</h2></li>
-              <li class="amount"><h2>Amount</h2></li>
-              <li class="category"><h2>Category</h2></li>
-              <li class="description"><h2>Description</h2></li>
-            </ul>
+           <table> 
+            <thead>
+              <tr>
+                <th class="date data data-html">Date</th>
+                <th class="amount data data-html">Amount</th>
+                <th class="category data data-html">Category</th>
+                <th class="description data data-html">Description</th>
+                <th class="edit buttons">Edit</th>
+                <th class="delete buttons">Delete</th>
+            </tr>
+          </thead>
+           </table>  
           </div>
 
           <div class="field-wrap" id="expense-data">
