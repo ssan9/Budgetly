@@ -75,6 +75,8 @@ Expense
 
 
 router.put('/:id', (req, res) => {
+	console.log(req.params.id);
+	console.log(req.body.id);
 	if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
 	  return res.status(400).json({
 		error: 'Request path id and request body id values must match'

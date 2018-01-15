@@ -9,7 +9,7 @@
 }
 
 .modal{
-  background-color:white;
+  background:rgba(19, 35, 47, 0.9);
   width: 60%;
   margin: 100px auto;
 }
@@ -92,44 +92,18 @@ nav ul li a{
 }
 
 #history h1{
-  /*width: 100%;*/
-  display: inline-block;
-  /*border: 1px solid red;*/
-  /*margin: 0 80px;*/
+ display: inline-block;
 }
 
 .switch-month{
-  /*padding: 0 2%;*/
   margin: 0 7.62%;
 }
-
-/*#month{
-  margin: 0 100px;
-}*/
 
 .monthly-expenses{
   width: 49.7%;
   display: inline-block;
-  /*border: 1px solid blue;*/
 }
 
-/*#monthly-expenses h1{
-  display: inline-block;
-}
-
-
-#month{
-  float: right;
-  display: inline-block;
-}*/
-
-/*h1 {
-  text-align: left;
-  color: #62a795;
-  color: #f89a84;
-  font-weight:900;
-  margin:0 0 40px;
-}*/
 .field-wrap label {
   position:absolute;
   left:13px;
@@ -222,7 +196,7 @@ input:focus {
   outline:0;
   border-color:#1ab188;
 }
-}
+
 
 input {
   border:2px solid rgb(160, 179, 176);;
@@ -241,10 +215,7 @@ table {
   width: 100%;
   table-layout: fixed;
 }
-/*table caption {
-  font-size: 1.5em;
-  margin: .5em 0 .75em;
-}*/
+
 table tr {
   background: #f8f8f8;
   border: 1px solid #ddd;
@@ -260,20 +231,49 @@ table th {
   letter-spacing: .1em;
   text-transform: uppercase;
 }
-@media screen and (max-width: 600px) {
-  table {
-    border: 0;
+
+button{
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+button.edit{
+  width: 60px;
+  background-color: #307c68;
+  color: white;
+}
+
+button.delete{
+  background-color: #a10b0b;
+  color: white;
+}
+
+.edit:focus{
+  background-color: #155544;
+}
+
+.delete:focus{
+  background-color: #841111;
+}
+
+@media only screen and (max-width: 930px) {
+ table th{
+  font-size: 15px;
+}
+}
+
+@media only screen and (max-width: 730px) {
+  table{
+border: 0;
   }
-  /*table caption {
-    font-size: 1.3em;
-  }*/
+
   table thead {
     border: none;
     clip: rect(0 0 0 0);
     height: 1px;
     margin: -1px;
     overflow: hidden;
-    /*padding: 0;*/
     position: absolute;
     width: 1px;
   }
@@ -302,75 +302,8 @@ table th {
     border-bottom: 0;
   }
 }
-/*.field-wrap {
-  position:relative;
-  margin-bottom:40px;
-}
-*/
 
-
-
-/*.expense-details{
-  width:1200px;
-  font-size:15px;
-}
-
-div.date{
-  width: 25%;
-  display: inline-block;
-  margin:2% 0;
-
-}
-
-div.amount{
-  width: 16%;
-  display: inline-block;
-  margin: 2% auto;
-}
-
-div.category{
-  width: 16%;
-  display: inline-block;
-  margin: 2% auto;
-}
-
-div.description{
-  width: 16%;
-  display: inline-block;
-  margin: 2% 5%;
-}
-*/
-button{
-  display: inline-block;
-  font-size: 16px;
-  margin-left: 5px;
-}
-
-button.edit{
-  width: 60px;
-  background-color: #307c68;
-  color: white;
-}
-
-button.delete{
-  background-color: #a10b0b;
-  color: white;
-}
-
-.edit:focus{
-  background-color: #155544;
-}
-
-.delete:focus{
-  background-color: #841111;
-}
-
-/*@media only screen and (max-width: 1285px) {
-  button{
-  margin-left: 20px;
-}*/
-
-/*@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
   .switch-month{
 
   margin: 0 4.62%;
@@ -385,24 +318,17 @@ button.delete{
 }
 
 @media only screen and (max-width: 1007px) {
-
-.switch-month{
+.monthly-expenses{
   margin: 0 auto;
   display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.month{
+width: 35%;
 }
 }
 
-*/
 
-/*@media only screen and (max-width: 1275px) {
-  button{
-  margin-left: 18px;
-}*/
 
-/*@media only screen and (max-width: 1050px) {
-  .container{
-    margin: 0 auto;
-    width: 100%;
-    padding: 2%;
-  }
-*/
