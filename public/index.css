@@ -6,20 +6,28 @@ body {
   background-image: url("https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+/*  font-family: "Open Sans", sans-serif;
+*/  line-height: 1.25;
 }
   
 .menu{
   margin: 0;
+  position: relative;
+  top: -4px;
+  clear: both;
 }
+
 nav {
   box-sizing: border-box;
   text-align: right;
   position: fixed;
-  height: 50px;
+  height: 60px;
   background-color: #155544;
   background-color: #307c68;
   width: 100%;
   top: 0;
+  z-index: 1;
+  /*font-size: 22px;*/
 }
 
 nav ul li{
@@ -30,6 +38,8 @@ nav ul li a{
   text-decoration: none;
   margin-right: 80px;
   color: white;
+  font-size: 18px;
+  /*top: 10px;*/
 }
 
 .nav_bar a:hover{
@@ -41,10 +51,6 @@ nav ul li a{
   text-decoration: none;
 }
 
-/*.nav_bar .menu-icon {
-  display: none;
-  }*/
-
   .nav_bar .menu-btn{
     display: none;
   }
@@ -53,14 +59,13 @@ nav ul li a{
     width: 100px;
     position: absolute;
     left: 75px;
-    font-size: 25px;
-    top: 12px;
+    font-size: 30px;
+    top: 9px;
     font-weight: 700;
     color: white;
   }
 
   .container{
-    /*height: 400px;*/
     padding: 9%;
   }
 
@@ -108,52 +113,50 @@ nav ul li a{
 
   }
 
-
-
-  .options{
+.options{
     background-image: url("http://www.creativeglassshop.co.uk/userfiles/productlargeimages/product_2717.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    /*height:450px;*/
     font-size: 14px;
     text-align: center;
     padding: 7%;
   }
 
   .pic{
-    /*padding-left: 7%;*/
-    /*padding-top: 40%;*/
-    /*color: white;*/
     width: 100%;
   }
+
 
   .options-image{
     width: 40%;
   }
 
-  .budget, .add-expenses{
+
+  .budgeting-pages{
     padding: 50px; 
   }
 
-  .monthly-budget, .add-monthly{
-    /*padding-left:5%;*/
+  .budget-options-pages{
     float: left;
-    width: 49%;
-    /*clear: both;*/
+    width: 55%;
   }
 
-  .budget-image, .add-monthly-image{
-    width: 70%;
-    margin: 0 10%;
+.budget-page-image{
+    width: 90%;
+    height: 400px;
+    margin: 0 5%;
   }
 
-  .intro-two, .intro-four{
+  .pages-intro{
    float: right;
-   width: 50%;
+   width: 45%;
    text-align: center;
-   margin: 12% auto;
-   font-size: 95%;
+   position: relative;
+   margin: 162px auto;
  }
+ .pages-intro h1{
+  margin : 0 auto;
+}
 
 
  span#budget{
@@ -169,13 +172,12 @@ nav ul li a{
   background-size: cover;
   /*height: 445px;*/
   /*padding-top: 3%;*/
-
-  padding: 50px;
 }
 
 .expense-image{
-  width: 100%;
-  /*margin: 0 10%;*/
+  width: 90%;
+  height: 400px;
+  margin: 0 5%;
 }
 span#expenses{
   display: block;
@@ -185,27 +187,47 @@ span#expenses{
   /*padding-left:5%;*/
   float: right;
   width: 55%;
-  /*padding-top: 0.25%;*/
+  height: 100%;
+  padding-top: 0.25%;
 }
 
 .intro-three{
   float: left;
-  width: 44%;
+  width: 45%;
   text-align: center;
-  margin: 5% auto;
+  position: relative;
+  margin: 115px auto;
 }
 
-/*.intro-three{
- float: right;
- width: 50%;
- text-align: center;
- margin: 7% auto;
-}*/
-
-.clear{
-  clear:both;
+.intro-three h1{
+  margin: 0 auto;
 }
 
+/*.add-expenses{
+    padding: 50px; 
+  }
+
+.add-monthly{*/
+    /*padding-left:5%;*/
+    /*float: left;
+    width: 55%;*/
+    /*clear: both;*/
+  /*}
+
+.add-monthly-image{
+    width: 90%;
+    height: 400px;
+    margin: 0 5%;
+  }
+
+  .intro-four{
+   float: right;
+   width: 45%;
+   text-align: center;
+   margin: 10.6% auto;
+   font-size: 95%;
+ }
+*/
 /*.add-expenses{
   height: 500px;
   padding-top: 3%;*/
@@ -282,7 +304,25 @@ footer a{
   width: 40%; 
 }
 }*/
+/*@media only screen and (max-width: 1360px) {
+  .intro-two{
+    margin: 11.5% auto;
+  }
+}
 
+@media only screen and (max-width: 1300px) {
+  .intro-two{
+    margin: 11.8% auto;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+    .intro-two{
+    margin: 14% auto;
+  }
+}
+
+*/
 
 @media only screen and (max-width: 1050px) {
   /*.intro{
@@ -413,11 +453,94 @@ top: 0;
 
 }
 
-@media only screen and (max-width: 700px) {
+/*@media only screen and (max-width: 1000px) {
+
+  .monthly-expenses{
+    width: 75%;
+  }
+.expense-image{
+  width: 90%;
+}
+}*/
+/*.expenses{
+  background-image: url("http://www.creativeglassshop.co.uk/userfiles/productlargeimages/product_2717.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.expense-image{
+  width: 90%;
+  height: 350px;
+  margin: 0 5%;
+}
+span#expenses{
+  display: block;
+}
+
+.monthly-expenses{
+  float: right;
+  width: 55%;
+  height: 100%;
+  padding-top: 0.25%;
+}
+
+.intro-three{
+  float: left;
+  width: 45%;
+  text-align: center;
+  position: relative;
+  margin: 115px auto;
+}
+
+.intro-three h1{
+  margin: 0 auto;
+}
+*/
+
+@media only screen and (max-width: 1000px) {
+.pages-layout{
+  width: 100%;
+  float: none;
+}
+.pages-info{
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/*@media only screen and (max-width: 850px) {
+
+.intro-two{
+    margin: 26% auto;
+    font-size: 80%;
+  }*/
+
+/*@media only screen and (max-width: 702px) {
 
   .options-image{
     width: 20%;
   }
+
+.monthly-expenses{
+  width: 100%;
+}
+  .expense-image{
+    width: 490px;
+  }
+
+}
+*/
+
+  @media only screen and (max-width: 300px) {
+    ul.tab-group{
+      padding: 0;
+    }
+    
+    .intro-three h1{
+    margin: 0 auto;
+  }
+}
   /*.intro{
     padding-top: 12%;
   }
