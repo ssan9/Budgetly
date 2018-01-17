@@ -1,141 +1,147 @@
 $(function() {
-	var url = "/api/expenses";
-	getData();
-	function getData() {
-		$.ajax({
-			type: "GET",
-			url: url,
-			success: function(data)
-			{
-				showExpenses(data)
-			}
-		});
-	}
+  var url = "/api/expenses";
+  getData();
+  function getData() {
+    $.ajax({
+      type: "GET",
+      url: url,
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoic2Jhc3RpZGFzciIsImZpcnN0TmFtZSI6IlNlYmFzdGlhbiIsImxhc3ROYW1lIjoiQmFzdGlkYXMifSwiaWF0IjoxNTE2MjA2NDQxLCJleHAiOjE1MTY4MTEyNDEsInN1YiI6InNiYXN0aWRhc3IifQ.HTIZ42mI5hCDfy4KXEEuqgAkfaSBsHv9ZWeNZsJiBow"
+      },
+      success: function(data) {
+        showExpenses(data);
+      }
+    });
+  }
 
-	$(".month").on("change", function(){
-		var selected = $(this).val();
-		if(selected) {
-			makeAjaxRequest(selected);
-		}
-	});
+  $(".month").on("change", function() {
+    var selected = $(this).val();
+    if (selected) {
+      makeAjaxRequest(selected);
+    }
+  });
 
-	function showExpenses(data){
-		const expenseHtml = data.map(function(entry) {
-			var strDate=moment(entry.date).format('MMMM Do, YYYY');
-			return `<tr class="expense-details" data-id="${entry.id}">
+  function showExpenses(data) {
+    const expenseHtml = data.map(function(entry) {
+      var strDate = moment(entry.date).format("MMMM Do, YYYY");
+      return `<tr class="expense-details" data-id="${entry.id}">
 			<td class="date data data-js" data-html-label="date">${strDate}</td>
 			<td class="amount data data-js" data-html-label="amount">$${entry.amount}</td>
-			<td class="category data data-js" data-html-label="category">${entry.category}</td>
-			<td class="description data data-js" data-html-label="description">${entry.description}</td>
+			<td class="category data data-js" data-html-label="category">${
+        entry.category
+      }</td>
+			<td class="description data data-js" data-html-label="description">${
+        entry.description
+      }</td>
 			<td class="edit buttons" data-html-label="edit"><button class="edit">Edit</button></td>
 			<td class="delete buttons" data-html-label="delete"><button class="delete">Delete</button></td>
 
-			</tr>`
+			</tr>`;
+    });
 
-			
-		})
-		
+    $("#expense-data").html(expenseHtml);
 
-		
-		$("#expense-data").html(expenseHtml);
-		
-		$("#expense-data").on("click", ".edit", function(e) {
+    $("#expense-data").on("click", ".edit", function(e) {
+      e.preventDefault();
+      var button = e.currentTarget;
+      var editRowId = $(e.currentTarget)
+        .parents(".expense-details")
+        .attr("data-id");
 
-			
-			e.preventDefault();		  			
-			var button=e.currentTarget;	
-			var editRowId = $(e.currentTarget).parents('.expense-details').attr('data-id');
-			
-			$(".black-cover").removeClass("hidden");
-			$(".modal").attr("data-id", editRowId)
-		})
-		
-		function closeModal() {
-			$(".black-cover").addClass("hidden");
-			$(".modal").attr("data-id", "");
-			$(".modal").find("#date").val("");		 				
-			$(".modal").find("#amount").val("")
-			$(".modal").find("#category").val("");	 				
-			$(".modal").find("#description").val("");
-		}
+      $(".black-cover").removeClass("hidden");
+      $(".modal").attr("data-id", editRowId);
+    });
 
-		$(".modal").on("click", ".cancel", function(e) {
-			e.preventDefault();
-			closeModal(); 	
-		})
-		
-		$(".modal").on("click", ".save", function(e) {
+    function closeModal() {
+      $(".black-cover").addClass("hidden");
+      $(".modal").attr("data-id", "");
+      $(".modal")
+        .find("#date")
+        .val("");
+      $(".modal")
+        .find("#amount")
+        .val("");
+      $(".modal")
+        .find("#category")
+        .val("");
+      $(".modal")
+        .find("#description")
+        .val("");
+    }
 
-			e.preventDefault();
-			var expenseId = $(e.currentTarget).parents('.modal').attr('data-id');		 
-			var params={		 				
-				strDate: $(".modal").find("#date").val(),		 				
-				amount: $(".modal").find("#amount").val(),
-				category: $(".modal").find("#category").val(),	 				
-				description: $(".modal").find("#description").val(),
-				id:expenseId
+    $(".modal").on("click", ".cancel", function(e) {
+      e.preventDefault();
+      closeModal();
+    });
 
-			};	
-			console.log(params)	  			
-			
-			
-			$.ajax({
-				type: "PUT",
-				url: url + "/" + expenseId,
-				data: JSON.stringify(params),
-				contentType: "application/json; charset=utf-8",
-				success: function(data) {
-					getData();
-					closeModal(); 	
-				},
+    $(".modal").on("click", ".save", function(e) {
+      e.preventDefault();
+      var expenseId = $(e.currentTarget)
+        .parents(".modal")
+        .attr("data-id");
+      var params = {
+        strDate: $(".modal")
+          .find("#date")
+          .val(),
+        amount: $(".modal")
+          .find("#amount")
+          .val(),
+        category: $(".modal")
+          .find("#category")
+          .val(),
+        description: $(".modal")
+          .find("#description")
+          .val(),
+        id: expenseId
+      };
+      console.log(params);
 
-				error: function(err) {
-					console.log(err);
-				}
-			})
-		})
-	}
+      $.ajax({
+        type: "PUT",
+        url: url + "/" + expenseId,
+        data: JSON.stringify(params),
+        contentType: "application/json; charset=utf-8",
+        success: function(data) {
+          getData();
+          closeModal();
+        },
 
+        error: function(err) {
+          console.log(err);
+        }
+      });
+    });
+  }
 
+  function makeAjaxRequest(selectedMonth) {
+    var strMonth = moment(selectedMonth).format("MMMM");
+    var strDateMonth = moment(selectedMonth).format("MM");
+    var strDateYear = moment(selectedMonth).format("YYYY");
+    $.ajax({
+      type: "GET",
+      url: url + "/" + strDateMonth + "/" + strDateYear,
+      success: function(data) {
+        showExpenses(data);
+        $("#monthly-record").html(strMonth);
+      }
+    });
+  }
 
-
-
-	function makeAjaxRequest(selectedMonth){
-		var strMonth=moment(selectedMonth).format('MMMM');
-		var strDateMonth=moment(selectedMonth).format('MM');
-		var strDateYear=moment(selectedMonth).format('YYYY');
-		$.ajax({
-			type: "GET",
-			url: url + "/" + strDateMonth + "/" + strDateYear,
-			success: function(data) {
-				showExpenses(data)
-				$("#monthly-record").html(strMonth);
-			}
-		});
-
-	}
-
-	
-
-	$("#expense-data").on("click", ".delete", function(e) {
-		e.preventDefault();
-		var expenseId = $(e.currentTarget).parent('.expense-details').attr('data-id');
-		$.ajax({
-			type: "DELETE",
-			url: url + "/" + expenseId,
-			success: function(data) {
-				getData();
-			}, 
-			error: function(err) {
-				console.log(err);
-			}
-		})
-	})
-
-
-
-
-})
-
-
-
+  $("#expense-data").on("click", ".delete", function(e) {
+    e.preventDefault();
+    var expenseId = $(e.currentTarget)
+      .parent(".expense-details")
+      .attr("data-id");
+    $.ajax({
+      type: "DELETE",
+      url: url + "/" + expenseId,
+      success: function(data) {
+        getData();
+      },
+      error: function(err) {
+        console.log(err);
+      }
+    });
+  });
+});

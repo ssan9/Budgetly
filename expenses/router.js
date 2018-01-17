@@ -1,9 +1,11 @@
 "use strict";
 const express = require("express");
 const router = express.Router();
+const passport = require("passport");
 const { Expense } = require("./models");
+const jwtAuth = passport.authenticate("jwt", { session: false });
 
-router.get("/", (req, res) => {
+router.get("/", jwtAuth, (req, res) => {
   Expense.find()
     .then(data => {
       res.json(data.map(datum => datum.serialize()));
