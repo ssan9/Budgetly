@@ -6,8 +6,7 @@ $(function() {
       type: "GET",
       url: url,
       headers: {
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoic2Jhc3RpZGFzciIsImZpcnN0TmFtZSI6IlNlYmFzdGlhbiIsImxhc3ROYW1lIjoiQmFzdGlkYXMifSwiaWF0IjoxNTE2MjA2NDQxLCJleHAiOjE1MTY4MTEyNDEsInN1YiI6InNiYXN0aWRhc3IifQ.HTIZ42mI5hCDfy4KXEEuqgAkfaSBsHv9ZWeNZsJiBow"
+        Authorization: "Bearer TOKEN HERE"
       },
       success: function(data) {
         showExpenses(data);
