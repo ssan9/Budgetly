@@ -6,8 +6,7 @@ body {
   background-image: url("https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-/*  font-family: "Open Sans", sans-serif;
-*/  line-height: 1.25;
+  line-height: 1.25;
 }
   
 .menu{
@@ -27,7 +26,6 @@ nav {
   width: 100%;
   top: 0;
   z-index: 1;
-  /*font-size: 22px;*/
 }
 
 nav ul li{
@@ -170,8 +168,6 @@ nav ul li a{
   background-image: url("http://www.creativeglassshop.co.uk/userfiles/productlargeimages/product_2717.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /*height: 445px;*/
-  /*padding-top: 3%;*/
 }
 
 .expense-image{
@@ -184,7 +180,6 @@ span#expenses{
 }
 
 .monthly-expenses{
-  /*padding-left:5%;*/
   float: right;
   width: 55%;
   height: 100%;
@@ -203,50 +198,7 @@ span#expenses{
   margin: 0 auto;
 }
 
-/*.add-expenses{
-    padding: 50px; 
-  }
 
-.add-monthly{*/
-    /*padding-left:5%;*/
-    /*float: left;
-    width: 55%;*/
-    /*clear: both;*/
-  /*}
-
-.add-monthly-image{
-    width: 90%;
-    height: 400px;
-    margin: 0 5%;
-  }
-
-  .intro-four{
-   float: right;
-   width: 45%;
-   text-align: center;
-   margin: 10.6% auto;
-   font-size: 95%;
- }
-*/
-/*.add-expenses{
-  height: 500px;
-  padding-top: 3%;*/
-  /*border: 2px solid black;*/
-/*}
-
-.add-monthly{
-  padding-left:5%;
-  float: left;
-  width: 40%;
-}
-
-.intro-five{
- float: right;
- width: 50%;
- text-align: center;
- margin: 7% auto;
-}
-*/
 span#add-expenses{
   display: block;
 }
@@ -267,69 +219,10 @@ footer a{
   font-weight: 900;
 }
 
-/*@media only screen and (max-width: 1300px) {
-  .container{
-  padding: 11%;
-}
-}
 
-@media only screen and (max-width: 1095px) {
-  .container{
-  padding: 13%;
-}
-}
-
-@media only screen and (max-width: 1000px) {
-  .container{
-  padding: 15%;
-}
-}*/
-
-
-/*@media only screen and (max-width: 1200px) {
-  .intro{
-  padding-top: 10%;
-}
-}
-
-@media only screen and (max-width: 1100px) {
-  .intro{
-  padding-top: 12%;
-}
-}
-
-@media only screen and (max-width: 1070px) {
-  .intro-two{
-  padding-top: 8%;
-  width: 40%; 
-}
-}*/
-/*@media only screen and (max-width: 1360px) {
-  .intro-two{
-    margin: 11.5% auto;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-  .intro-two{
-    margin: 11.8% auto;
-  }
-}
-
-@media only screen and (max-width: 1150px) {
-    .intro-two{
-    margin: 14% auto;
-  }
-}
-
-*/
 
 @media only screen and (max-width: 1050px) {
-  /*.intro{
-  padding-top: 13%;
-} 
-*/
-  .nav_bar .menu-icon {
+   .nav_bar .menu-icon {
   display: block;
   }
 
@@ -453,49 +346,7 @@ top: 0;
 
 }
 
-/*@media only screen and (max-width: 1000px) {
 
-  .monthly-expenses{
-    width: 75%;
-  }
-.expense-image{
-  width: 90%;
-}
-}*/
-/*.expenses{
-  background-image: url("http://www.creativeglassshop.co.uk/userfiles/productlargeimages/product_2717.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.expense-image{
-  width: 90%;
-  height: 350px;
-  margin: 0 5%;
-}
-span#expenses{
-  display: block;
-}
-
-.monthly-expenses{
-  float: right;
-  width: 55%;
-  height: 100%;
-  padding-top: 0.25%;
-}
-
-.intro-three{
-  float: left;
-  width: 45%;
-  text-align: center;
-  position: relative;
-  margin: 115px auto;
-}
-
-.intro-three h1{
-  margin: 0 auto;
-}
-*/
 
 @media only screen and (max-width: 1000px) {
 .pages-layout{
@@ -509,584 +360,29 @@ span#expenses{
   }
 }
 
-/*@media only screen and (max-width: 850px) {
-
-.intro-two{
-    margin: 26% auto;
-    font-size: 80%;
-  }*/
-
-/*@media only screen and (max-width: 702px) {
-
-  .options-image{
-    width: 20%;
-  }
-
-.monthly-expenses{
-  width: 100%;
-}
-  .expense-image{
-    width: 490px;
-  }
-
-}
-*/
-
-  @media only screen and (max-width: 300px) {
-    ul.tab-group{
-      padding: 0;
-    }
-    
-    .intro-three h1{
-    margin: 0 auto;
-  }
-}
-  /*.intro{
-    padding-top: 12%;
-  }
-  .monthly-budget{
-    padding-top: 0.5%;
-  }
-
-  .monthly-expenses{
-    padding-top: 1.5%;
-  }
-
-  .intro-four{
-    width: 36%;
-    padding-top: 5%;
-  }
-
-  .add-expenses{
-    padding-top: 4%;
-  }
-
-  .intro-five{
-    width: 36%;
-    padding-top: 5%;
-
-  }
-  
-}
-*/
-
-/*@media only screen and (max-width: 1000px) {
-
-.intro{
-    padding-top: 15%;
-  }
-
-}
-
-@media only screen and (max-width: 975px) {
-
-  .nav_bar {
-    padding-left: 7%;
-  }
-}
-
-@media only screen and (max-width: 955px) {
-  .intro-two{
-  padding-top: 9%;
-  width: 35%;
-}
-
-.intro-five{
-  padding-top: 9%;
-  width: 35%;
-}
-}
-
-@media only screen and (max-width: 900px) {
-  .budget{
-    height: 530px;
-  }
-  .monthly-budget{
-    float: none;
-    width: 100%;
-    padding-left: 0;
-    padding-top: 1.5%;
-    text-align: center;
-  }
-*/
-  /*.monthly-budget{
-    width: 100%;
-    padding-left: 0;
-    text-align: center;
-  }*/
-  /*.intro-two{
-  float: none;
-  width: 100%;
-  padding-top: 0;
-    display: inline;
-    text-align: center;
-  } 
-
-  span#budget{
-    display: inline;
-  }
-
-.add-expenses{
-  height: 530px;
-}
-
-.add-monthly{
-  float: none;
-    width: 100%;
-    padding-left: 0;
-    padding-top: 1.5%;
-    text-align: center;
-}
-
-.intro-five{
-  float: none;
-  width: 100%;
-  padding-top: 0;
-    display: inline;
-    text-align: center;
-  }
-
-  span#add-expenses{
-    display: inline;
-  }
-
-}
-
-@media only screen and (max-width: 880px) {
-
-  .nav_bar {
-    padding-left: 7%;
-  }
-}
-
-
 @media only screen and (max-width: 800px) {
-  .nav_bar {
-    padding-left: 8%;
-  }
-
-  .intro{
-    padding-top: 15%;
-  }
-
-  .budget{
-    height: 500px;
-  }
-  .monthly-budget{
-    padding-top: 1.5%;
-    width: 100%;
-    padding-left: 0;
-    text-align: center;
-    padding-bottom: 1%;
-  }
-
-
-  
-
-  
-
-  .expenses{
-    height: 470px;
-  }
-
-  .monthly-expenses{
-    padding-left: 12%;
-    padding-top: 3%;
-    width: 100%;
-    padding-bottom: 1%;
-
-  }
-  .intro-four{
-    float: none;
-    display: inline;
-    text-align: center;
-  }
-
-  span#expenses{
-    display: inline;
-  }
-
-  .add-expenses{
-    height: 500px;
-  }
-
-  .add-monthly{
-    width: 100%;
-    padding-left: 0;
-    text-align: center;
-    padding-bottom: 1%;*/
-    /*float: none;*/
-  /*}
-
-  .intro-five{
-    float: none;
-    display: inline;
-    text-align: center;
-  }
-
-  span#add-expenses{
-    display: inline;
-  }
-}*/
-
-
-/*@media only screen and (max-width: 799px) {
-
-  .monthly-expenses {
-    padding-left: 11%;
+  .intro h1{
+    padding: 8%;
   }
 }
 
-@media only screen and (max-width: 775px) {
-
-  .monthly-expenses {
-    padding-left: 10%;
-  }
-}
-
-@media only screen and (max-width: 770px) {
-
-  .monthly-expenses {
-    padding-left: 9%;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-
-  .nav_bar {
-    padding-left: 9%;
-  }
-}
-
- 
-
-
-
-@media only screen and (max-width: 749px) {
-
-  .nav_bar {
-    padding-left: 8%;
-  }
-}
-
- @media only screen and (max-width: 740px) {
-
-  .monthly-expenses {
-    padding-left: 8%;
-  }
-}
-
-@media only screen and (max-width: 720px) {
-
-  .nav_bar {
-    padding-left: 9%;
+@media only screen and (max-width: 470px) {
+  .budget-page-image{
+    height: auto;
   }
 
-  .intro{
-    padding-top: 17%;
-  }
-
-  .monthly-expenses{
-    padding-left: 8%;
-  }
-}
-
-@media only screen and (max-width: 719px) {
-
-.monthly-expenses {
-    padding-left: 7%;
-  }
-
-
-@media only screen and (max-width: 700px) {
-  .intro{
-    padding-top: 18%;
-  }
-
-  .options{
-    height: 600px;
-  }
-  .pic{
-      padding-top: 4%;
-  }
-
-  .monthly-expenses{
-    padding-left: 6%;
-  }
-
-}
-
-
-@media only screen and (max-width: 693px) {
-
-  .monthly-expenses {
-    padding-left: 5%;
-  }
-}
-
-@media only screen and (max-width: 685px) {
-
-  .nav_bar {
-    padding-left: 10%;
-  }
-
-  .monthly-expenses {
-    padding-left: 4%;
-  }
-}
-
-@media only screen and (max-width: 684px) {
-
-.monthly-expenses {
-    padding-left: 4%;
-  }
-}
-
-@media only screen and (max-width: 675px) {
-
-.monthly-expenses {
-    padding-left: 6%;
-  }
-}
-  @media only screen and (max-width: 674px) {
-
-.monthly-expenses {
-    padding-left: 4%;
-  }
-}
-
-@media only screen and (max-width: 670px) {
-
-.monthly-expenses {
-    width: 550px !important; 
-   padding-left: 2%;
-  }
-}
-
-@media only screen and (max-width: 665px) {
-
-.monthly-expenses {
-    padding-left: 3.5%;
-    float:none;
-  }
-
-}
-
-@media only screen and (max-width: 650px) {
-
-.monthly-expenses {
-      width: 500px !important; 
-
-    padding-left: 3%;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-
-.monthly-expenses {
-    padding-left: 1%;
-  }
-}
-
-@media only screen and (max-width: 630px) {
-
-.monthly-expenses {
-    padding-left: 0.5%;
-  }
-
-@media only screen and (max-width: 620px) {
-
-.monthly-expenses {
-    padding-left: 0;
-
-  }
-}
-
-@media only screen and (max-width: 610px) {
-
-  .nav_bar {
-    padding-left: 10%;
-  }
-
-  .intro{
-    padding-top: 19%;
-  }
-}
-
-@media only screen and (max-width: 609px) {
-
-.monthly-expenses{
-   width: 550px !important; 
-   padding-left: 2%;
-  }
-}
-
-@media only screen and (max-width: 608px) {
-
-.monthly-expenses {
-    padding-left: 3.5%
-  }
-}
-
-@media only screen and (max-width: 605px) {
-
-.monthly-expenses{
-   width: 545px !important;
-   padding-left: 0%; 
-  }
-}
-
-@media only screen and (max-width: 585px) {
-
-  .nav_bar {
-    padding-left: 11%;
-  }
-
-  .intro{
-    padding-top: 23%;
-  }
-}
-
-@media only screen and (max-width: 530px) {
-
-  .nav_bar {
-    padding-left: 10%;
-  }
-}
-
-@media only screen and (max-width: 529px) {
-
-  .nav_bar {
-    padding-left: 11%;
-  }
-}
-
-@media only screen and (max-width: 528px) {
-
-  .nav_bar {
-    padding-left: 12%;
-  }
-
-  .intro{
-    padding-top: 25%;
-  }
-}
-
-
-@media only screen and (max-width: 500px) {
-
-  .nav_bar {
-    padding-left: 13%;
-  }
-
-  .intro{
-    padding-top: 25%;
-  }
-
-}
-
-@media only screen and (max-width: 460px) {
-
-  .nav_bar {
-    padding-left: 14%;
-  }
-
-  .intro{
-    padding-top: 30%;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-
-  .nav_bar {
-    padding-left: 15%;
-  }
-}
-
-@media only screen and (max-width: 395px) {
-
-.nav_bar {
-    padding-left: 16%;
-  }
-
-  .intro{
-    padding-top: 35%;
-  }
-}
-
-@media only screen and (max-width: 370px) {
-
-  .nav_bar {
-    padding-left: 17%;
-  }
-  .options{
-    height: 610px;
-  }
-}
-
-@media only screen and (max-width: 340px) {
-
-  .nav_bar {
-    padding-left: 18%;
-  }
-}
-
-@media only screen and (max-width: 339px) {
-
-  .nav_bar {
-    padding-left: 19%;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-
-  .nav_bar {
-    padding-left: 20%;
-  }
+  .expense-image{
+    height: auto;
+  } 
 }
 
 @media only screen and (max-width: 300px) {
-
-  .nav_bar {
-    padding-left: 22%;
+  ul.tab-group{
+    padding: 0;
   }
-}*/
-  /*.nav_bar .dropdown {
-    display: block !important;
+    
+  .intro-three h1{
+    margin: 0 auto;
+  }
 }
-
-.nav_bar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
-*/
-/* Dropdown content (hidden by default) */
-/*.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-*//* Links inside the dropdown */
-/*.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-*/
-/* Add a grey background color to dropdown links on hover */
-/*.dropdown-content a:hover {
-  background-color: #ddd;
-}
-*/
-/* Show the dropdown menu on hover */
-/*.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-}*/
+  
