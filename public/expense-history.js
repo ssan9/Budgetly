@@ -1,12 +1,13 @@
 $(function() {
   var url = "/api/expenses";
+  console.log(localStorage.getItem('token'));
   getData();
   function getData() {
     $.ajax({
       type: "GET",
       url: url,
       headers: {
-        Authorization: "Bearer TOKEN HERE"
+        "Authorization": "Bearer " +  localStorage.getItem('token')
       },
       success: function(data) {
         showExpenses(data);
@@ -144,3 +145,46 @@ $(function() {
     });
   });
 });
+
+// onUpdate: function() {
+//   var me = this,
+//   form=this.get 
+//   incomeInput=input[name=income],
+//   budgetTotal=input[name=budget],
+//   expensesTotal=input[name=expenses],
+//   savingsCalc=incomeInput-expenseTotal;
+//   updates.setData({
+//     income: incomeInput,
+//     budget: budgetTotal,
+//     expenses: expenseInput,
+//     savings: savingsCalc
+//   })
+// }
+
+// Ext.Array.forEach(data.items, function (item) {
+//                 rows.push({
+//                     item: item.data.item,
+//                     amount: item.data.amount
+//                 })
+//             });
+//             state = {
+//                 income: incomeInput,
+//                 budget: budgetTotal,
+//                 expenses: expenseTotal,
+//                 savings: incomeInput - expenseTotal
+//             };
+//             return state;
+//         },
+//         applyState: Ext.emptyFn,
+//         // @private
+//         calcTotalExpenses: function () {
+//             var me = this,
+//                 total = 0.0;
+//             Ext.Array.forEach(me.getStore().data.items, function (item) {
+//                 total += item.data.amount;
+//             });
+//             return total;
+//         },
+
+
+

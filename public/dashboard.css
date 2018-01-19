@@ -136,8 +136,8 @@ nav ul li a{
 
 .danger{
   background-color: #a10b0b;
-  padding:7px;
-  height: 45.5px;
+  padding:7.45px;
+  height: 45.36px;
 }
 
 .field-wrap {
@@ -151,7 +151,7 @@ nav ul li a{
   clear: both;
 }
 
-label {
+/*label {
   position:absolute;
   left: 170px;
   color:rgba(255, 255, 255, 0.5);
@@ -167,9 +167,9 @@ label.highlight {
 input {
   font-size:22px;
   display:block;
-  height:100%;
+  height:100%;*/
   /*padding:5px 10px;*/
-  background:none;
+  /*background:none;
   border: 1px solid #a0b3b0;
   color:white;
   border-radius:0;
@@ -186,8 +186,18 @@ input {
   border:2px solid rgb(160, 179, 176);;
   resize: vertical;
 
+}*/
+
+table{
+  border: 1px solid white;
+  margin: 0 auto;
 }
 
+td{
+  border: 1px solid white;
+  padding: 5%;
+  font-size: 22px;
+}
 @media only screen and (max-width: 1050px) {
 
   .nav_bar .menu-icon {
@@ -313,7 +323,7 @@ top: 0;
 }
 
 }
-
+/*
 label{
   margin-left: 2%;
 }
@@ -359,201 +369,202 @@ label{
     left: 130px;
   }
 }
-
+*/
 
 @media only screen and (max-width: 645px) {
   .bar{
     width: 23.90%;
   }
-  label{
+  /*label{
     left: 130px;
-  }
+  }*/
 }
 
   @media only screen and (max-width: 640px) {
   .bar{
     width: 23.98%;
   }
-  label{
+  /*label{
     left: 125px;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 635px) {
   .bar{
     width: 23.97%;
   }
-  label{
+  /*label{
     left: 125px;
-  }
+  }*/
 }
   
 @media only screen and (max-width: 629px) {
   .bar{
     width: 23.96%;
-  }
+  /*}
   label{
     left: 125px;
-  }
+  }*/
 }
 @media only screen and (max-width: 625px) {
   .bar{
     width: 23.95%;
   }
-  label{
+  /*label{
     left: 120px;
-  }
+  }*/
 }
 @media only screen and (max-width: 620px) {
   .bar{
     width: 23.94%;
   }
-  label{
+  /*label{
     left: 120px;
-  }
+  }*/
 }
 @media only screen and (max-width: 615px) {
   .bar{
     width: 23.93%;
   }
-  label{
+  /*label{
     left: 115px;
-  }
+  }*/
 }
 
   @media only screen and (max-width: 610px) {
   .bar{
     width: 23.92%;
   }
-  label{
+  /*label{
     left: 115px;
-  }
+  }*/
 }
 
   @media only screen and (max-width: 605px) {
   .bar{
     width: 23.91%;
   }
-  label{
+  /*label{
     left: 110px;
-  }
+  }*/
 }
   @media only screen and (max-width: 600px) {
   .bar{
     width: 23.90%;
   }
-  label{
+  /*label{
     left: 110px;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 596px) {
   .bar{
     width: 23.89%;
   }
-  label{
+  /*label{
     left: 105px;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 591px) {
   .bar{
     width: 23.86%;
   }
-  label{
+  /*label{
     left: 105px;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 586px) {
   .bar{
     width: 23.86%;
   }
-  label{
+  /*label{
     left: 100px;
   }
  .expense-amount{
   width: 450px;
- }
+ }*/
 }
 
 @media only screen and (max-width: 583px) {
   .bar{
     width: 23.84%;
   }
-label{
+/*label{
     left: 100px;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 574px) {
   .bar{
     width: 23.84%;
   }
-  label{
+  /*label{
     left: 95px;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 570px) {
   .bar{
     width: 23.83%;
   }
-  label{
+  /*label{
     left: 95px;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 566px) {
   .bar{
     width: 23.82%;
   }
-  label{
+  /*label{
     left: 95px;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 562px) {
   .bar{
     width: 23.81%;
   }
- label{
+}
+ /*label{
     left: 90px;
-  }
+  }*/
 @media only screen and (max-width: 558px) {
   .bar{
     width: 23.80%;
   }
-  label{
+  /*label{
     left: 90px;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 554px) {
   .bar{
     width: 23.79%;
   }
-  label{
+  /*label{
     left: 85px;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 550px) {
   .bar{
     width: 23.78%;
   }
-  label{
+  /*label{
     left: 85px;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 547px) {
   .bar{
     width: 23.77%;
   }
-  label{
+  /*label{
     left: 80px;
-  }
+  }*/
 }
 
 
@@ -561,9 +572,9 @@ label{
   .bar{
     width: 23.76%;
   }
-  label{
+  /*label{
     left: 80px;
-  }
+  }*/
 }
 
 
@@ -573,9 +584,9 @@ label{
     display: block;
   }
 
-  label{
+  /*label{
     left: 80px;
-  }
+  }*/
 
   .danger{
     padding-bottom: 0;
@@ -585,13 +596,13 @@ label{
 
   }
 
-  .expense-amount{
+  /*.expense-amount{
     width: 400px;
   }
-
+*/
 }
 
-@media only screen and (max-width: 539px) {
+/*@media only screen and (max-width: 539px) {
   label{
     left: 75px;
   }
@@ -643,19 +654,19 @@ label{
   label{
     left: 55px;
   }
-}
+}*/
 
 
 @media only screen and (max-width: 495px) {
-  label{
+  /*label{
     left: 55px;
-  }
+  }*/
   .expense-amount{
     width: 300px;
   }
 }
 
-@media only screen and (max-width: 490px) {
+/*@media only screen and (max-width: 490px) {
   label{
     left: 55px;
   }
@@ -781,18 +792,18 @@ label{
     left: 10px;
   }
 }
-
+*/
 @media only screen and (max-width: 380px) {
-  label{
+  /*label{
     left: 35px;
-  }
+  }*/
   .container{
     padding:40px 0;
 }
 }
 
 
-@media only screen and (max-width: 375px) {
+/*@media only screen and (max-width: 375px) {
   label{
     left: 35px;
   }
@@ -886,7 +897,7 @@ label{
    left: 60px;
   }
 
-}
+}*/
 
 
 

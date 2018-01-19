@@ -61,12 +61,24 @@ nav ul li a{
     top: 9px;
     font-weight: 700;
     color: white;
+    z-index: 10;
   }
 
   .container{
+    /*background-image: url("http://www.mediacurrent.com/sites/default/files/styles/article_full_width_600_/public/budget-drupal-project-01.png?itok=sQmzya6J");*/
+    /*background-size: 1750px 500px;*/
+    /*background-position: 0 35%;*/
+    /*background-repeat: no-repeat;*/
     padding: 9%;
   }
 
+/*.intro-image{*/
+      /*background-image: url("http://www.mediacurrent.com/sites/default/files/styles/article_full_width_600_/public/budget-drupal-project-01.png?itok=sQmzya6J");*/
+          /*background-size: 1750px 500px;*/
+              /*background-repeat: no-repeat;*/
+              /*width: 50%;
+float: left;
+}*/
   .intro{
     text-align: center;
   }
@@ -271,7 +283,7 @@ background-color: #f4f4f4;
  
 .nav_bar .current {
 display: block;
-float: left;
+/*float: right;*/
 font-size: 2em;
 padding: 0 20px;
 text-decoration: none;
@@ -282,14 +294,16 @@ color: white;
 clear: both;
 max-height: 0;
 transition: max-height .2s ease-out;
+float: right;
 }
  .nav_bar .menu-icon {
 cursor: pointer;
 display: inline-block;
 float: right;
-padding: 24px 20px;
+padding: 24px 110px;
 position: relative;
 user-select: none;
+
 }
 
 .nav_bar .menu-icon .navicon {

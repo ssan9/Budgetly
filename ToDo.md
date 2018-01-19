@@ -27,5 +27,5 @@ https://courses.thinkful.com/NODE-001v5/assignment/3.1.1
 
 # ToDos
 
-* Add padding on home before "Need to get your Finances on Track"
-* fix image width instead of height#
+* Add padding on home before "Need to get your Finances on Track" -done
+* fix image width instead of height# -done

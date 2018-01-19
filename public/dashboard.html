@@ -47,17 +47,17 @@
           
           <div class="top-row">
             <div class="field-wrap">
-              <label>
+              <!-- <label>
                 Monthly Income: 
               </label>
-              <input type="text" name="income" id="income" class="income" required autocomplete="off" />
+              <input type="number" name="monthly-income" id="income" class="budget" required autocomplete="off" />
             </div>
             
             <div class="field-wrap">
               <label>
                 Monthly Budget: 
               </label>
-              <input type="text" name="income" id="income" class="income" required autocomplete="off"/>
+              <input type="number" name="monthly-budget" id="budget" class="budget" required autocomplete="off"/>
             </div>
           </div>
 
@@ -65,17 +65,38 @@
             <label>
               Monthly expenses: 
             </label>
-            <input type="email" name="income" id="income" class="income" required autocomplete="off"/>
+            <input type="number" name="monthly-expenses" id="expenses" class="budget" required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Savings:
             </label>
-            <input type="password" name="income" id="income" class="income" required autocomplete="off"/>
+            <input type="number" name="savings" id="savings" class="budget" required autocomplete="off"/>
           </div>
-          
-        </form>  
-      </div>  
 
-      
+          <div class="field-wrap" id="expense-data"> 
+          </div> -->
+        
+<table>
+  <tbody>
+    <tr>
+      <td class="budget" id="income">Monthly Income</td>
+      <td id="monthly-income">$</td>
+    </tr>
+    <tr>
+      <td class="budget" id="budget">Monthly Budget</td>
+      <td id="monthly-budget">$</td>
+    </tr>
+       <tr>
+      <td class="budget" id="expenses">Monthly Expenses</td>
+      <td id="monthly expenses">$</td>
+    </tr>    
+        <tr>
+      <td class="budget" id="savings">Savings</td>
+      <td id="monthly savings">$</td>
+    </tr>      
+  </tbody>
+</table>
+        </body>
+        </html>
