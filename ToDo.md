@@ -2,30 +2,23 @@
 
 https://courses.thinkful.com/NODE-001v5/assignment/3.1.1
 
-1. User registration POST /api/users
-   * returns your user if ok.
-2. to login, and get a token POST to /api/auth/login
-   * returns an auth Token
-3. GET expenses (protected endpoint) sending token
-
-   * Set token on request
-   * Authorization -> Bearer SDFD235647
-
-# Steps for frontend auth.
-
-1. /signup.js [Signup section] should POST to POST /api/users to create the user. If successful -> show login.
-2. /signup.js [Login section] POST to /api/auth/login to get token. If successful -> you get a token.
-
-* Save the token to localStorage.
-  `localStorage.setItem('token', req.body.authToken);`
-* redirect to dashboard.
-
-3. /expense-history.js Get token from localstorage
-   `var token = localStorage.getItem("token");`
-   make all the ajax requests using that token
-   Set the `Authorization` header to `Bearer ${token}`
-
 # ToDos
 
-* Add padding on home before "Need to get your Finances on Track" -done
-* fix image width instead of height# -done
+* On login success take me to history.
+* Fix login forms
+* fix signup success to highlight the login
+* logout button on all navbars
+* make nav look similar on all pages
+* remove alerts and console logs
+* Right now all the nav elements show by default and we hide them.
+
+  * Start them off as hidden and show the necessary ones.
+
+##On the signup page ask for :
+
+* Monthly Income $
+* Monthly Budget $
+
+Modify the user routes/model so on to save that along with username password firstName Lastname
+
+* Show Monthly Income / Monthly Budget on dashboard

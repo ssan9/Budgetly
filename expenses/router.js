@@ -17,7 +17,7 @@ router.get("/", jwtAuth, (req, res) => {
 });
 
 //get all expenses by month and year
-router.get("/:month/:year", (req, res) => {
+router.get("/:month/:year", jwtAuth, (req, res) => {
   console.log(req.params.month);
   console.log(req.params.year);
 
@@ -37,7 +37,7 @@ router.get("/:month/:year", (req, res) => {
     });
 });
 
-router.get("/:id", (req, res) => {
+router.get("/:id", jwtAuth, (req, res) => {
   Expense.findById(req.params.id)
     .then(datum => res.json(datum.serialize()))
     .catch(err => {
@@ -46,7 +46,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
+router.post("/", jwtAuth, (req, res) => {
   const requiredFields = ["date", "amount", "category", "description"];
   for (let i = 0; i < requiredFields.length; i++) {
     const field = requiredFields[i];
@@ -70,7 +70,7 @@ router.post("/", (req, res) => {
     });
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:id", jwtAuth, (req, res) => {
   console.log(req.params.id);
   console.log(req.body.id);
   if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
@@ -92,7 +92,7 @@ router.put("/:id", (req, res) => {
     .catch(err => res.status(500).json({ message: "Something went wrong" }));
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", jwtAuth, (req, res) => {
   Expense.findByIdAndRemove(req.params.id)
     .then(() => {
       res.status(204).json({ message: "success" });

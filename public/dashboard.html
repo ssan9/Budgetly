@@ -16,6 +16,7 @@
       <li><a href="add-expense.html" id="add-expense">Add Expense</a></li>
       <li><a href="expense-history.html" id="expense-history">History</a></li>
       <li><a href="dashboard.html" id="expense" class="current">Dashboard</a></li>
+            <li><a href="#" id="logout">Logout</a></li>
   </ul>
 </nav>
 
@@ -26,10 +27,10 @@
       <div class="heading">
         <h2>Dashboard</h2>
       </div>
-      
+
       <div class="amount-spent">
-        <h1>$700</h1> 
-        <p class="expense-amount">in Monthly Expenses</p> 
+        <h1>$700</h1>
+        <p class="expense-amount">in Monthly Expenses</p>
       </div>
 
       <div class="savings-bar">
@@ -44,18 +45,18 @@
       <form class="budget-form" id="budget-form" action="/" method="post">
 
         <div class="your-budget">
-          
+
           <div class="top-row">
             <div class="field-wrap">
               <!-- <label>
-                Monthly Income: 
+                Monthly Income:
               </label>
               <input type="number" name="monthly-income" id="income" class="budget" required autocomplete="off" />
             </div>
-            
+
             <div class="field-wrap">
               <label>
-                Monthly Budget: 
+                Monthly Budget:
               </label>
               <input type="number" name="monthly-budget" id="budget" class="budget" required autocomplete="off"/>
             </div>
@@ -63,11 +64,11 @@
 
           <div class="field-wrap">
             <label>
-              Monthly expenses: 
+              Monthly expenses:
             </label>
             <input type="number" name="monthly-expenses" id="expenses" class="budget" required autocomplete="off"/>
           </div>
-          
+
           <div class="field-wrap">
             <label>
               Savings:
@@ -75,9 +76,9 @@
             <input type="number" name="savings" id="savings" class="budget" required autocomplete="off"/>
           </div>
 
-          <div class="field-wrap" id="expense-data"> 
+          <div class="field-wrap" id="expense-data">
           </div> -->
-        
+
 <table>
   <tbody>
     <tr>
@@ -91,12 +92,15 @@
        <tr>
       <td class="budget" id="expenses">Monthly Expenses</td>
       <td id="monthly expenses">$</td>
-    </tr>    
+    </tr>
         <tr>
       <td class="budget" id="savings">Savings</td>
       <td id="monthly savings">$</td>
-    </tr>      
+    </tr>
   </tbody>
 </table>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="nav.js"></script>
         </body>
         </html>

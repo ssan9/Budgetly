@@ -1,13 +1,12 @@
 $(function() {
   var url = "/api/expenses";
-  console.log(localStorage.getItem('token'));
-  getData();
+
   function getData() {
     $.ajax({
       type: "GET",
       url: url,
       headers: {
-        "Authorization": "Bearer " +  localStorage.getItem('token')
+        Authorization: "Bearer " + token
       },
       success: function(data) {
         showExpenses(data);
@@ -148,7 +147,7 @@ $(function() {
 
 // onUpdate: function() {
 //   var me = this,
-//   form=this.get 
+//   form=this.get
 //   incomeInput=input[name=income],
 //   budgetTotal=input[name=budget],
 //   expensesTotal=input[name=expenses],
@@ -185,6 +184,3 @@ $(function() {
 //             });
 //             return total;
 //         },
-
-
-
