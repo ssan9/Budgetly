@@ -6,6 +6,7 @@ body{
   background-image: url("https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.25;
 }
 
@@ -37,6 +38,8 @@ nav ul li a{
   margin-right: 80px;
   color: white;
   font-size: 18px;
+  display: none;
+
   /*top: 10px;*/
 }
 
@@ -62,6 +65,7 @@ nav ul li a{
     font-weight: 700;
     color: white;
     text-decoration: none;
+    z-index: 1;
   }
 
 .container {
@@ -195,7 +199,7 @@ table{
 
 td{
   border: 1px solid white;
-  padding: 5%;
+  /*padding: 5%;*/
   font-size: 22px;
 }
 @media only screen and (max-width: 1050px) {

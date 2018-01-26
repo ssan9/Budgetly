@@ -1,6 +1,7 @@
 $(function() {
   var url = "/api/expenses";
-
+  var token = localStorage.getItem("token");
+  getData();
   function getData() {
     $.ajax({
       type: "GET",
@@ -10,6 +11,9 @@ $(function() {
       },
       success: function(data) {
         showExpenses(data);
+      },
+      error: function(errMsg) {
+        console.log(errMsg);
       }
     });
   }
@@ -22,25 +26,25 @@ $(function() {
   });
 
   function showExpenses(data) {
+    console.log(data)
     const expenseHtml = data.map(function(entry) {
       var strDate = moment(entry.date).format("MMMM Do, YYYY");
-      return `<tr class="expense-details" data-id="${entry.id}">
-			<td class="date data data-js" data-html-label="date">${strDate}</td>
-			<td class="amount data data-js" data-html-label="amount">$${entry.amount}</td>
-			<td class="category data data-js" data-html-label="category">${
+      return `<tr class="expenses-details" data-id="${entry.id}">
+			<td class="date data data-js" aria-label="date">${strDate}</td>
+			<td class="amount data data-js" aria-label="amount">$${entry.amount}</td>
+			<td class="category data data-js" aria-label="category">${
         entry.category
       }</td>
-			<td class="description data data-js" data-html-label="description">${
+			<td class="description data data-js" aria-label="description">${
         entry.description
       }</td>
-			<td class="edit buttons" data-html-label="edit"><button class="edit">Edit</button></td>
-			<td class="delete buttons" data-html-label="delete"><button class="delete">Delete</button></td>
+			<td class="edit buttons" aria-label="edit"><button class="edit">Edit</button></td>
+			<td class="delete buttons" aria-label="delete"><button class="delete">Delete</button></td>
 
 			</tr>`;
     });
 
     $("#expense-data").html(expenseHtml);
-
     $("#expense-data").on("click", ".edit", function(e) {
       e.preventDefault();
       var button = e.currentTarget;
@@ -99,6 +103,9 @@ $(function() {
       $.ajax({
         type: "PUT",
         url: url + "/" + expenseId,
+        headers: {
+        Authorization: "Bearer " + token
+        },
         data: JSON.stringify(params),
         contentType: "application/json; charset=utf-8",
         success: function(data) {
@@ -120,6 +127,9 @@ $(function() {
     $.ajax({
       type: "GET",
       url: url + "/" + strDateMonth + "/" + strDateYear,
+      headers: {
+        Authorization: "Bearer " + token
+      },
       success: function(data) {
         showExpenses(data);
         $("#monthly-record").html(strMonth);
@@ -135,6 +145,9 @@ $(function() {
     $.ajax({
       type: "DELETE",
       url: url + "/" + expenseId,
+      headers: {
+        Authorization: "Bearer " + token
+      },
       success: function(data) {
         getData();
       },

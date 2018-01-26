@@ -7,7 +7,7 @@ const jsonParser = bodyParser.json();
 
 // Post to register a new user
 router.post("/", jsonParser, (req, res) => {
-  const requiredFields = ["username", "password"];
+  const requiredFields = ["username", "password", "income", "budget"];
   const missingField = requiredFields.find(field => !(field in req.body));
 
   if (missingField) {
@@ -33,6 +33,7 @@ router.post("/", jsonParser, (req, res) => {
     });
   }
 
+  
   // If the username and password aren't trimmed we give an error.  Users might
   // expect that these will work without trimming (i.e. they want the password
   // "foobar ", including the space at the end).  We need to reject such values
@@ -87,7 +88,7 @@ router.post("/", jsonParser, (req, res) => {
     });
   }
 
-  let { username, password, firstName = "", lastName = "" } = req.body;
+  let { username, password, firstName = "", lastName = "", income, budget } = req.body;
   // Username and password come in pre-trimmed, otherwise we throw an error
   // before this
   firstName = firstName.trim();
@@ -113,7 +114,9 @@ router.post("/", jsonParser, (req, res) => {
         username,
         password: hash,
         firstName,
-        lastName
+        lastName,
+        income,
+        budget
       });
     })
     .then(user => {
@@ -125,8 +128,39 @@ router.post("/", jsonParser, (req, res) => {
       if (err.reason === "ValidationError") {
         return res.status(err.code).json(err);
       }
+      console.log(err);
       res.status(500).json({ code: 500, message: "Internal server error" });
     });
 });
 
+router.post("/budget", jsonParser, (req, res) => {
+  const requiredFields = ["income", "budget"];
+  console.log(requiredFields);
+  const missingField = requiredFields.find(field => !(field in req.body));
+    console.log(req.body);
+
+  if (missingField) {
+    return res.status(422).json({
+      code: 422,
+      reason: "ValidationError",
+      message: "Missing field",
+      location: missingField
+    });
+  }
+
+  const numberFields = ["income", "budget"];
+  const nonNumberField = numberFields.find(
+    field => field in req.body && typeof req.body[field] !== "number"
+  );
+
+  if (nonNumberField) {
+    return res.status(422).json({
+      code: 422,
+      reason: "ValidationError",
+      message: "Incorrect field type: expected string",
+      location: nonNumberField
+    });
+  }
+//unfinished
+});
 module.exports = { router };

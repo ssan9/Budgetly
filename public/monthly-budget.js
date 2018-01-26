@@ -2,24 +2,24 @@ $("#expense-form").submit(function(e) { //taking values from input fields and al
     alert("hello");  
 
     e.preventDefault();
-    let newExpense = {
-      username: $("#income").val(),
-      password: $("#budget").val(),
+    let newBudget = {
+      income: $("#income").val(),
+      budget: $("#budget").val()
     }
-    var url = "/api/expenses";
-
+    var url = "api/users/budget";
+    console.log(newBudget);
     $.ajax({
       type: "POST",
       url: url,
-      data: JSON.stringify(newExpense),
+      data: JSON.stringify(newBudget),
       contentType: "application/json; charset=utf-8",
 
       success: function(data)
       {
-        console.log(data);
+        console.log(data)
         window.location.href="/dashboard.html"
       },
-      failure: function(errMsg) {
+      error: function(errMsg) {
         alert(errMsg);
       }
 

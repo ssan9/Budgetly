@@ -44,17 +44,18 @@ $(function() {
   // $('#lg a').css({'background-color': 'rgba(160, 179, 176, 0.25)', 'color': 'white'});
   $("#signup-form").submit(function(e) {
     //taking values from input fields and also setting parameters
-    alert("hello");
 
     e.preventDefault();
     let newExpense = {
       username: $("#username").val(),
       password: $("#password").val(),
       firstName: $("#firstName").val(),
-      lastName: $("#lastName").val()
+      lastName: $("#lastName").val(),
+      income: $("#income").val(),
+      budget: $("#budget").val()
     };
     var url = "/api/users";
-    console.log(newExpense);
+
     $.ajax({
       type: "POST",
       url: url,
@@ -62,12 +63,13 @@ $(function() {
       contentType: "application/json; charset=utf-8",
 
       success: function(data) {
-        console.log(data);
-        // window.location.href="/signup.html#login"
+        window.location.href="/monthly-budget.html"
         $("#signup-form")
           .closest("#signup-tab")
-          .hide();
-        $("#login").show();
+          .hide()
+         $("#su a") .css("background-color", "rgba(160, 179, 176, 0.25)");
+        $("#login").show()
+        $("#lg a").css("background-color", "#307c68");
       },
       error: function(errMsg) {
         console.log(errMsg);
@@ -77,15 +79,12 @@ $(function() {
 
   $("#log-in").submit(function(e) {
     //taking values from input fields and also setting parameters
-    alert("hello");
-
     e.preventDefault();
     let loginInfo = {
       username: $("#username-login").val(),
       password: $("#password-login").val()
     };
     var url = "/api/auth/login";
-    console.log(loginInfo);
     $.ajax({
       type: "POST",
       url: url,
@@ -93,9 +92,8 @@ $(function() {
       contentType: "application/json; charset=utf-8",
 
       success: function(data) {
-        console.log("Success!");
         localStorage.setItem("token", data.authToken);
-        window.location = "/dashboard.html";
+        window.location = "/expense-history.html";
       },
 
       error: function(errMsg) {

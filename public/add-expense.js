@@ -1,5 +1,6 @@
 
 $(function() {
+var token = localStorage.getItem("token");
 
   $("#expense-form").submit(function(e) { //taking values from input fields and also setting parameters
     alert("hello");  
@@ -16,6 +17,9 @@ $(function() {
     $.ajax({
       type: "POST",
       url: url,
+      headers: {
+        Authorization: "Bearer " + token
+      },
       data: JSON.stringify(newExpense),
       contentType: "application/json; charset=utf-8",
 
