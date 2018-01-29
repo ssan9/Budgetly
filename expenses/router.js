@@ -5,6 +5,19 @@ const passport = require("passport");
 const { Expense } = require("./models");
 const jwtAuth = passport.authenticate("jwt", { session: false });
 
+router.get("/dashboard", jwtAuth, (req, res) => {
+  const dashboardData = {
+    income: req.user.income,
+    budget: req.user.budget,
+    expenses: req.user.budget*0.8, //toDo- Calculate the expenses for this month
+    savings: this.income-this.expenses,
+    percentage: this.budget-this.expenses/this.budget*100
+  }
+  
+  res.status(200).json({data: dashboardData});
+  
+});
+
 router.get("/", jwtAuth, (req, res) => {
   Expense.find()
     .then(data => {

@@ -1,5 +1,6 @@
 $(function() {
-  var url = "/api/users/budget";
+  var url = "/api/expenses/dashboard";
+  var token = localStorage.getItem("token");
 
     $.ajax({
       type: "GET",
@@ -9,21 +10,45 @@ $(function() {
       },
       success: function(data) {
         showBudget(data);
+        bar(data);
+        console.log(data);
+      },
+      error: function(errMsg) {
+        console.log(errMsg);
       }
     });
   
 
   function showBudget(data) {
-    console.log(data)
-    const budgetHtml = data.map(function(entry) {
-      return `<tr class="budget-details" data-id="${entry.id}">
-            <td class="budget income" id="income">$${entry.income}hello</td>
-            <td class="budget" id="budget">$${entry.budget}</td>
-            </tr>`;
-    });
+    console.log(data);
+    // const budgetHtml = (function(entry) {
+    
+       const budgetHtml=`<td class="budget income" id="income">$${data.data.income}</td>
+            <td class="budget" id="budget">$${data.data.budget}</td>`;
 
     $(".monthly-budget").html(budgetHtml);
 
-}
+  }
+// })
+function bar(data) {
+  console.log(data)
+  var percentage = (data.budget-data.expenses)/data.budget*100
+  console.log(percentage);
 
+  if (percentage >=75) {
+    $(".safe").css("border-color", "black");
+  }
+
+  else if(percentage >=50) {
+    $(".still-safe").css("border-color", "black");
+  }
+
+  else if(percentage >=25) {
+    $(".near-danger").css("border-color", "black");
+  }
+
+  else {
+    $(".danger").css({"border-color": "magenta","color": "red"});
+}
+};              
 });

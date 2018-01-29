@@ -63,7 +63,6 @@ $(function() {
       contentType: "application/json; charset=utf-8",
 
       success: function(data) {
-        window.location.href="/monthly-budget.html"
         $("#signup-form")
           .closest("#signup-tab")
           .hide()
