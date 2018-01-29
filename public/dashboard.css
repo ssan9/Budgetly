@@ -110,8 +110,8 @@ nav ul li a{
 
 .bar{
   display: inline-block;
-  width: 24%;
-  border:1px solid white;
+  width: 22%;
+  border:3px solid white;
   padding-top: 20px;
   text-align: center;
   font-size: 18px;

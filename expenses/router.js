@@ -6,20 +6,20 @@ const { Expense } = require("./models");
 const jwtAuth = passport.authenticate("jwt", { session: false });
 
 router.get("/dashboard", jwtAuth, (req, res) => {
+  const expenses = 3000;
   const dashboardData = {
     income: req.user.income,
     budget: req.user.budget,
-    expenses: req.user.budget*0.8, //toDo- Calculate the expenses for this month
-    savings: this.income-this.expenses,
-    percentage: this.budget-this.expenses/this.budget*100
+    expenses: expenses, //toDo- Calculate the expenses for this month
+    savings: req.user.income-expenses,
   }
   
-  res.status(200).json(data: dashboardData);
+  res.status(200).json(dashboardData);
   
 });
 
 router.get("/", jwtAuth, (req, res) => {
-  Expense.find()
+  Expense.find({user: req.user.id}) // finds the expenses for that user
     .then(data => {
       res.json(data.map(datum => datum.serialize()));
     })
@@ -35,6 +35,7 @@ router.get("/:month/:year", jwtAuth, (req, res) => {
   console.log(req.params.year);
 
   Expense.find({
+    user: req.user.id,
     date: {
       $gte: new Date(req.params.year, req.params.month - 1, 0),
       $lt: new Date(req.params.year, req.params.month - 1, 31)
@@ -71,6 +72,7 @@ router.post("/", jwtAuth, (req, res) => {
   }
 
   Expense.create({
+    user: req.user.id,
     date: req.body.date,
     amount: req.body.amount,
     category: req.body.category,

@@ -20,30 +20,27 @@ $(function() {
     });
   
   function showExpenses(data) {
-    console.log(data);
-    const expenseHtml = `<h1>$${data.data.expenses}</h1>`;
+    const expenseHtml = `<h1>$${data.expenses}</h1>`;
     $(".expenses").html(expenseHtml);
   }
 
   function showBudget(data) {
-    console.log(data);
-    // const budgetHtml = (function(entry) {
     
        const budgetHtml=`<tr>
                               <td class="budget income" id="income">Monthly Income</td> 
-                              <td id="monthly-income" class="monthly-budget">$${data.data.income}</td>
+                              <td id="monthly-income" class="monthly-budget">$${data.income}</td>
                             </tr>
                             <tr>
                               <td class="budget" id="budget">Monthly Budget</td>
-                              <td id="monthly-budget" class="monthly-budget">$${data.data.budget}</td>
+                              <td id="monthly-budget" class="monthly-budget">$${data.budget}</td>
                             </tr>
                             <tr>
                               <td class="budget expenses" id="expenses">Monthly Expenses</td>
-                              <td id="monthly expenses">$${data.data.expenses}</td> 
+                              <td id="monthly expenses">$${data.expenses}</td> 
                             </tr>
                             <tr> 
                               <td class="budget savings" id="savings">Savings</td>
-                              <td id="monthly savings">$${data.data.savings}</td> 
+                              <td id="monthly savings">$${data.savings}</td> 
                             </tr>`;
 
     $(".monthly-budget").html(budgetHtml);
@@ -68,7 +65,7 @@ function bar(data) {
   }
 
   else {
-    $(".danger").css({"border-color": "magenta","color": "red"});
+    $(".danger").css({"border-color": "magenta"});
 }
 };              
 });

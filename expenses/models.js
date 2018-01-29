@@ -7,7 +7,8 @@ const expenseSchema = mongoose.Schema({
   date: { type: Date },
   amount: { type: Number },
   category: { type: String }, // what should we use for select element?
-  description: { type: String }
+  description: { type: String },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: "User" } 
 });
 
 expenseSchema.methods.serialize = function() {
@@ -16,7 +17,8 @@ expenseSchema.methods.serialize = function() {
     date: this.date,
     amount: this.amount,
     category: this.category,
-    description: this.description
+    description: this.description,
+    user: this.user
   };
 };
 
