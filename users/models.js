@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 // var jwt = require('jsonwebtoken');
 // var secret = require('../config').secret;
 
-
 mongoose.Promise = global.Promise;
 
 const UserSchema = mongoose.Schema({
@@ -26,11 +25,12 @@ const UserSchema = mongoose.Schema({
   budget: {
     type: Number,
     default: 0
-  },
+  }
 });
 
 UserSchema.methods.serialize = function() {
   return {
+    id: this._id,
     username: this.username || "",
     firstName: this.firstName || "",
     lastName: this.lastName || "",

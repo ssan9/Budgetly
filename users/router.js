@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const { User } = require("./models");
 const router = express.Router();
 const jsonParser = bodyParser.json();
+const passport = require("passport");
 
 // Post to register a new user
 router.post("/", jsonParser, (req, res) => {
@@ -33,7 +34,6 @@ router.post("/", jsonParser, (req, res) => {
     });
   }
 
-  
   // If the username and password aren't trimmed we give an error.  Users might
   // expect that these will work without trimming (i.e. they want the password
   // "foobar ", including the space at the end).  We need to reject such values
@@ -88,7 +88,14 @@ router.post("/", jsonParser, (req, res) => {
     });
   }
 
-  let { username, password, firstName = "", lastName = "", income, budget } = req.body;
+  let {
+    username,
+    password,
+    firstName = "",
+    lastName = "",
+    income,
+    budget
+  } = req.body;
   // Username and password come in pre-trimmed, otherwise we throw an error
   // before this
   firstName = firstName.trim();
@@ -133,11 +140,11 @@ router.post("/", jsonParser, (req, res) => {
     });
 });
 
-router.post("/budget", jsonParser, (req, res) => {
+const jwtAuth = passport.authenticate("jwt", { session: false });
+
+router.post("/budget", jwtAuth, (req, res) => {
   const requiredFields = ["income", "budget"];
-  console.log(requiredFields);
   const missingField = requiredFields.find(field => !(field in req.body));
-    console.log(req.body);
 
   if (missingField) {
     return res.status(422).json({
@@ -157,10 +164,20 @@ router.post("/budget", jsonParser, (req, res) => {
     return res.status(422).json({
       code: 422,
       reason: "ValidationError",
-      message: "Incorrect field type: expected string",
+      message: "Incorrect field type: expected number",
       location: nonNumberField
     });
   }
-//unfinished
+  console.log(req.user);
+  User.findOne({ _id: req.user.id })
+    .then(user => {
+      user.income = req.body.income;
+      user.budget = req.body.budget;
+      return user.save();
+    })
+    .then(user => res.json(user))
+    .catch(e => console.log(e));
+
+  //unfinished
 });
 module.exports = { router };
