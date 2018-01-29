@@ -14,7 +14,7 @@ router.get("/dashboard", jwtAuth, (req, res) => {
     percentage: this.budget-this.expenses/this.budget*100
   }
   
-  res.status(200).json({data: dashboardData});
+  res.status(200).json(data: dashboardData);
   
 });
 
