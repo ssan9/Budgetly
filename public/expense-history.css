@@ -301,6 +301,22 @@ button.delete{
   }
 }
 
+@media only screen and (max-width: 1280px) {
+  .switch-month{
+
+  margin: 0 4.62%;
+}
+}
+
+@media only screen and (max-width: 1125px) {
+
+.switch-month{
+  margin: 0 3.62%;
+}
+
+}
+
+
 @media only screen and (max-width: 1050px) {
 
   .nav_bar .menu-icon {
@@ -426,9 +442,27 @@ top: 0;
 }
 
 #category{
-    width: 57%;
-    margin-left: 21%;
-    margin-right: 21%;
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+
+}
+
+@media only screen and (max-width: 1007px) {
+.monthly-expenses{
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.month{
+width: 35%;
+}
+
+input{
+    width: 78%;
   }
 
 }
@@ -437,6 +471,7 @@ top: 0;
  table th{
   font-size: 15px;
 }
+
 }
 
 @media only screen and (max-width: 880px) {
@@ -448,15 +483,22 @@ top: 0;
   }
 
   #category{
-    width: 80.5%;
-    margin-left: 9.5%;
-    margin-right: 9.5%;
+    width: 79%;
+    margin-left: 10.5%;
+    margin-right: 10.5%;
   }
 }
 
 @media only screen and (max-width: 730px) {
+
+  #month{
+    display: block;
+    width: 80%;
+    margin: 2% auto;
+  }
+
   table{
-border: 0;
+    border: 0;
   }
 
   table thead {
@@ -493,41 +535,7 @@ border: 0;
     border-bottom: 0;
   }
 }
-
-@media only screen and (max-width: 1280px) {
-  .switch-month{
-
-  margin: 0 4.62%;
-}
-}
-
-@media only screen and (max-width: 1125px) {
-
-.switch-month{
-  margin: 0 3.62%;
-}
-}
-
-@media only screen and (max-width: 1007px) {
-.monthly-expenses{
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-  width: 100%;
-}
-
-.month{
-width: 35%;
-}
-}
-
-
-@media only screen and (max-width: 730px) {
-  #month{
-    display: block;
-    width: 80%;
-    margin: 2% auto;
-  }
+  
 
 @media only screen and (max-width: 690px) {
   #category{
@@ -539,3 +547,4 @@ width: 35%;
   #month{
     width: 91%;
   }
+}
