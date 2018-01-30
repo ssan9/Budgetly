@@ -21,6 +21,24 @@ $(function() {
   
   function showExpenses(data) {
     const expenseHtml = `<h1>$${data.expenses}</h1>`;
+    const percentage = (data.budget-data.expenses)/data.budget*100;
+    console.log(percentage);
+        if (percentage >=75) {
+          $(".expenses").css("color", "green");
+        }
+
+        else if(percentage >=50) {
+        $(".expenses").css("color", "yellow");
+      }
+
+      else if(percentage >=25) {
+        $(".expenses").css("color", "orange");
+      }
+
+      else {
+        $(".expenses").css("color", "red");
+      }
+
     $(".expenses").html(expenseHtml);
   }
 
@@ -53,19 +71,19 @@ function bar(data) {
   console.log(percentage);
 
   if (percentage >=75) {
-    $(".safe").css("border-color", "black");
+    $(".safe").css({"border-top": "5px solid cyan", "border-right": "5px solid #32a1ce", "border-bottom": "5px solid cyan", "border-left": "5px solid #32a1ce"});
   }
 
   else if(percentage >=50) {
-    $(".still-safe").css("border-color", "black");
+    $(".still-safe").css({"border-top": "5px solid cyan", "border-right": "5px solid #32a1ce", "border-bottom": "5px solid cyan", "border-left": "5px solid #32a1ce"});
   }
 
   else if(percentage >=25) {
-    $(".near-danger").css("border-color", "black");
+    $(".near-danger").css({"border-top": "5px solid cyan", "border-right": "5px solid #32a1ce", "border-bottom": "5px solid cyan", "border-left": "5px solid #32a1ce"});
   }
 
   else {
-    $(".danger").css({"border-color": "magenta"});
+    $(".danger").css({"border-top": "5px solid cyan", "border-right": "5px solid #32a1ce", "border-bottom": "5px solid cyan", "border-left": "5px solid #32a1ce"});
 }
 };              
 });

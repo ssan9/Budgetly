@@ -84,7 +84,7 @@ nav ul li a{
 
 .amount-spent h1 {
   text-align:center;
-  color:orange;
+  /*color:orange;*/
   font-weight: 200;
   margin:0;
 }
@@ -100,7 +100,9 @@ nav ul li a{
 }
 
 .savings-bar{
-  margin: 80px auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 3%;
   display: inline-block;
   width: 100%; 
   font-size: 0;
@@ -136,6 +138,8 @@ nav ul li a{
 .near-danger{
   background-color: orange;
   height: 40px;
+  padding-top: 10.3px;
+  padding-bottom: 10px;
 }
 
 .danger{
@@ -155,43 +159,6 @@ nav ul li a{
   clear: both;
 }
 
-/*label {
-  position:absolute;
-  left: 170px;
-  color:rgba(255, 255, 255, 0.5);
-  padding: 4px;
-  font-size:22px;
-}
-
-
-label.highlight {
-  color: white;
-}
-
-input {
-  font-size:22px;
-  display:block;
-  height:100%;*/
-  /*padding:5px 10px;*/
-  /*background:none;
-  border: 1px solid #a0b3b0;
-  color:white;
-  border-radius:0;
-  margin: 0 auto;
-
-}
-input:focus {
-  outline:0;
-  border-color:#1ab188;
-}
-
-
-input {
-  border:2px solid rgb(160, 179, 176);;
-  resize: vertical;
-
-}*/
-
 table{
   border: 1px solid white;
   margin: 0 auto;
@@ -199,9 +166,9 @@ table{
 
 td{
   border: 1px solid white;
-  /*padding: 5%;*/
   font-size: 22px;
 }
+
 @media only screen and (max-width: 1050px) {
 
   .nav_bar .menu-icon {
@@ -327,270 +294,29 @@ top: 0;
 }
 
 }
-/*
-label{
-  margin-left: 2%;
-}
-
-
 
 @media only screen and (max-width: 700px) {
-  label{
-    left: 160px;
-  }
-}
-
-@media only screen and (max-width: 690px) {
-  label{
-    left: 150px;
-  }
-
   .expense-amount{
-    width:500px;
+    width: 275px;
   }
 }
 
-@media only screen and (max-width: 680px) {
-  label{
-    left: 145px;
+/*@media only screen and (max-width: 630px) {
+  .expense-amount{
+    width: 275px;
   }
-}
-
-@media only screen and (max-width: 670px) {
-  label{
-    left: 140px;
-  }
-}
-
-@media only screen and (max-width: 660px) {
-  label{
-    left: 135px;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  label{
-    left: 130px;
-  }
-}
-*/
-
-@media only screen and (max-width: 645px) {
-  .bar{
-    width: 23.90%;
-  }
-  /*label{
-    left: 130px;
-  }*/
-}
-
-  @media only screen and (max-width: 640px) {
-  .bar{
-    width: 23.98%;
-  }
-  /*label{
-    left: 125px;
-  }*/
-}
-
-@media only screen and (max-width: 635px) {
-  .bar{
-    width: 23.97%;
-  }
-  /*label{
-    left: 125px;
-  }*/
-}
-  
-@media only screen and (max-width: 629px) {
-  .bar{
-    width: 23.96%;
-  /*}
-  label{
-    left: 125px;
-  }*/
-}
-@media only screen and (max-width: 625px) {
-  .bar{
-    width: 23.95%;
-  }
-  /*label{
-    left: 120px;
-  }*/
-}
-@media only screen and (max-width: 620px) {
-  .bar{
-    width: 23.94%;
-  }
-  /*label{
-    left: 120px;
-  }*/
-}
-@media only screen and (max-width: 615px) {
-  .bar{
-    width: 23.93%;
-  }
-  /*label{
-    left: 115px;
-  }*/
-}
-
-  @media only screen and (max-width: 610px) {
-  .bar{
-    width: 23.92%;
-  }
-  /*label{
-    left: 115px;
-  }*/
-}
-
-  @media only screen and (max-width: 605px) {
-  .bar{
-    width: 23.91%;
-  }
-  /*label{
-    left: 110px;
-  }*/
-}
-  @media only screen and (max-width: 600px) {
-  .bar{
-    width: 23.90%;
-  }
-  /*label{
-    left: 110px;
-  }*/
-}
-
-@media only screen and (max-width: 596px) {
-  .bar{
-    width: 23.89%;
-  }
-  /*label{
-    left: 105px;
-  }*/
-}
-
-@media only screen and (max-width: 591px) {
-  .bar{
-    width: 23.86%;
-  }
-  /*label{
-    left: 105px;
-  }*/
-}
-
-@media only screen and (max-width: 586px) {
-  .bar{
-    width: 23.86%;
-  }
-  /*label{
-    left: 100px;
-  }
- .expense-amount{
-  width: 450px;
- }*/
-}
-
-@media only screen and (max-width: 583px) {
-  .bar{
-    width: 23.84%;
-  }
-/*label{
-    left: 100px;
-  }*/
-}
-
-@media only screen and (max-width: 574px) {
-  .bar{
-    width: 23.84%;
-  }
-  /*label{
-    left: 95px;
-  }*/
-}
-
-@media only screen and (max-width: 570px) {
-  .bar{
-    width: 23.83%;
-  }
-  /*label{
-    left: 95px;
-  }*/
-}
-
-@media only screen and (max-width: 566px) {
-  .bar{
-    width: 23.82%;
-  }
-  /*label{
-    left: 95px;
-  }*/
-}
-
-@media only screen and (max-width: 562px) {
-  .bar{
-    width: 23.81%;
-  }
-}
- /*label{
-    left: 90px;
-  }*/
-@media only screen and (max-width: 558px) {
-  .bar{
-    width: 23.80%;
-  }
-  /*label{
-    left: 90px;
-  }*/
-}
-
-@media only screen and (max-width: 554px) {
-  .bar{
-    width: 23.79%;
-  }
-  /*label{
-    left: 85px;
-  }*/
-}
-
-@media only screen and (max-width: 550px) {
-  .bar{
-    width: 23.78%;
-  }
-  /*label{
-    left: 85px;
-  }*/
-}
-
-@media only screen and (max-width: 547px) {
-  .bar{
-    width: 23.77%;
-  }
-  /*label{
-    left: 80px;
-  }*/
-}
-
-
-@media only screen and (max-width: 543px) {
-  .bar{
-    width: 23.76%;
-  }
-  /*label{
-    left: 80px;
-  }*/
-}
-
+}*/
 
 @media only screen and (max-width: 542px) {
+
+  /*.expense-amount{
+    width: 275px;
+  }
+*/
   .bar{
-    width: 100%;
+    width: 95%;
     display: block;
   }
-
-  /*label{
-    left: 80px;
-  }*/
 
   .danger{
     padding-bottom: 0;
@@ -600,331 +326,22 @@ label{
 
   }
 
-  /*.expense-amount{
-    width: 400px;
-  }
-*/
-}
-
-/*@media only screen and (max-width: 539px) {
-  label{
-    left: 75px;
-  }
-}
-
-@media only screen and (max-width: 535px) {
-  label{
-    left: 75px;
-  }
-}
-
-@media only screen and (max-width: 530px) {
-  label{
-    left: 70px;
-  }
-}
-
-@media only screen and (max-width: 525px) {
-  label{
-    left: 70px;
-  }
-}
-
-@media only screen and (max-width: 520px) {
-  label{
-    left: 70px;
-  }
-}
-
-@media only screen and (max-width: 515px) {
-  label{
-    left: 65px;
-  }
-}
-
-@media only screen and (max-width: 510px) {
-  label{
-    left: 65px;
-  }
-}
-
-@media only screen and (max-width: 505px) {
-  label{
-    left: 60px;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  label{
-    left: 55px;
-  }
-}*/
-
-
-@media only screen and (max-width: 495px) {
-  /*label{
-    left: 55px;
-  }*/
-  .expense-amount{
-    width: 300px;
-  }
-}
-
-/*@media only screen and (max-width: 490px) {
-  label{
-    left: 55px;
-  }
-}
-
-
-@media only screen and (max-width: 485px) {
-  label{
-    left: 50px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  label{
-    left: 50px;
-  }
-}
-
-@media only screen and (max-width: 475px) {
-  label{
-    left: 50px;
-  }
-}
-
-@media only screen and (max-width: 470px) {
-  label{
-    left: 50px;
-  }
-}
-
-@media only screen and (max-width: 465px) {
-  label{
-    left: 45px;
-  }
-}
-
-@media only screen and (max-width: 460px) {
-  label{
-    left: 45px;
-  }
-}
-
-@media only screen and (max-width: 455px) {
-  label{
-    left: 45px;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  label{
-    left: 40px;
-  }
-}
-
-@media only screen and (max-width: 445px) {
-  label{
-    left: 35px;
-  }
-}
-
-@media only screen and (max-width: 440px) {
-  label{
-    left: 30px;
-  }
-}
-
-@media only screen and (max-width: 435px) {
-  label{
-    left: 30px;
-  }
-}
-
-@media only screen and (max-width: 430px) {
-  label{
-    left: 25px;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  label{
-    left: 25px;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  label{
-    left: 20px;
-  }
-}
-
-@media only screen and (max-width: 415px) {
-  label{
-    left: 15px;
-  }
-}
-
-@media only screen and (max-width: 410px) {
-  label{
-    left: 15px;
-  }
-}
-
-@media only screen and (max-width: 405px) {
-  label{
-    left: 10px;
-  }
-}
-
-@media only screen and (max-width: 395px) {
-  label{
-    left: 10px;
-  }
-}
-
-@media only screen and (max-width: 390px) {
-  label{
-    left: 10px;
-  }
-}
-
-@media only screen and (max-width: 385px) {
-  label{
-    left: 10px;
-  }
-}
-*/
-@media only screen and (max-width: 380px) {
-  /*label{
-    left: 35px;
-  }*/
   .container{
-    padding:40px 0;
-}
-}
-
-
-/*@media only screen and (max-width: 375px) {
-  label{
-    left: 35px;
-  }
-}
-
-@media only screen and (max-width: 370px) {
-  label{
-    left: 35px;
-  }
-}
-
-@media only screen and (max-width: 365px) {
-  label{
-    left: 30px;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  label{
-    left: 30px;
-  }
-}
-
-@media only screen and (max-width: 355px) {
-  label{
-    left: 30px;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  label{
-    left: 20px;
-  }
-}
-
-@media only screen and (max-width: 345px) {
-  label{
-    left: 20px;
-  }
-}
-
-@media only screen and (max-width: 340px) {
-  label{
-    left: 15px;
-  }
-}
-
-@media only screen and (max-width: 335px) {
-  label{
-    left: 15px;
-  }
-}
-
-@media only screen and (max-width: 330px) {
-  label{
-    left: 15px;
-  }
-}
-
-@media only screen and (max-width: 325px) {
-  label{
-    left: 15px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  label{
-    left: 10px;
+    padding-left: 8%;
   }
 }
 
 
-@media only screen and (max-width: 620px) {
-  label{
-   left: 8%;
-   padding: 2px;
-   position: absolute;
+
+
+/*@media only screen and (max-width: 495px) {
+  .expense-amount{
+    width: 275px;
   }
-
-}
-
-@media only screen and (max-width: 615px) {
-  label{
-   left: 6%;
-  }
-
-}
-
-@media only screen and (max-width: 559px) {
-  label{
-   left: 60px;
-  }
-
 }*/
+@media only screen and (max-width: 380px) {
+  .container{
+    padding-left: 9%;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+}
