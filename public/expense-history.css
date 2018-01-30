@@ -1,3 +1,4 @@
+
 .black-cover{
   position:fixed;
   top:0;
@@ -9,8 +10,10 @@
 
 .modal{
   background:rgba(19, 35, 47, 0.9);
-  width: 60%;
-  margin: 100px auto;
+  width: 40%;
+  margin: 125px auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .hidden{
@@ -129,24 +132,19 @@ nav ul li a{
 input {
   font-size:22px;
   display:block;
-  width:100%;
+  width:50%;
   height:100%;
-  padding:5px 10px;
+  margin: 0 auto;
+  padding:10px 10px;
   background:none;
   background-image:none;
-  border: 1px solid #a0b3b0;
+  border: 2px solid rgb(160, 179, 176);
   color:white;
   border-radius:0;
-  transition:border-color .25s ease, box-shadow .25s ease;
 }
 input:focus {
   outline:0;
   border-color:#1ab188;
-}
-
-input {
-  border:2px solid rgb(160, 179, 176);;
-  resize: vertical;
 }
 
 .field-wrap {
@@ -154,31 +152,78 @@ input {
   margin-bottom:40px;
 }
 
+.expense-form{
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#category{
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  height: 48px;
+  font-size: 22px;
+  text-align: center;
+  width: 53.8%;
+  border: 2px solid rgb(160, 179, 176);
+  margin-left: 23%;
+  margin-right: 23%;
+  padding-left: 1%;
+}
+
+option{
+  color: black;
+}
+
+option:first-child{
+  display: none;
+}
+
+#category:focus {
+  outline:0;
+  border-color:#1ab188;
+}
+
+
 .button {
-  border:0;
+  /*border:0;
   outline:none;
   border-radius:0;
   padding:15px 0;
-  font-size:2rem;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  background:#1ab188;
-  color: white;
+
+  /*font-weight:900;*/
+  /*text-transform:uppercase;*/
+  /*letter-spacing:.1em;*/
+  /*color: white;*/
 }
-button:hover, button:focus {
+.save:hover, .save:focus {
   background:#1ab188;
 }
 
 
 .button-block {
-  display:block;
-  width:100%;
+  display:inline-block;
+  background:rgba(160, 179, 176, 0.25);
+  color: white;
+  width:45%;
+  height:40px;
+  text-align:center;
+  cursor:pointer;
+  font-size: 20px;
+  margin-left: 3%;
+}
+.save{
+   background:#1ab188;
+  font-size: 20px;
 }
 
-.forgot {
-  margin-top:-20px;
-  text-align:right;
+.cancel {
+  background:#a10b0b;
+}
+
+.cancel:hover {
+  background:#841111;
+  color:white;
 }
 
 .tab-content > div:last-child {
@@ -188,35 +233,7 @@ button:hover, button:focus {
 
 
 
-.field-wrap label {
-  position:absolute;
-  left:13px;
-  color:rgba(255, 255, 255, 0.5);
-  font-size:22px;
-}
 
-input {
-  font-size:22px;
-  display:block;
-  width:100%;
-  height:100%;
-  padding:5px 10px;
-  background:none;
-  background-image:none;
-  border:1px solid rgb(160, 179, 176);;
-  color:white;
-  border-radius:0;
-}
-input:focus {
-  outline:0;
-  border-color:#1ab188;
-}
-
-
-input {
-  border:2px solid rgb(160, 179, 176);;
-  resize: vertical;
-}
 
 table {
   border: 1px solid #ccc;
@@ -272,6 +289,16 @@ button.delete{
 
 .delete:focus{
   background-color: #841111;
+}
+
+
+@media only screen and (max-width: 1370px) {
+
+  #category{
+    width: 55%;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
@@ -398,12 +425,33 @@ transform: rotate(45deg);
 top: 0;
 }
 
+#category{
+    width: 57%;
+    margin-left: 21%;
+    margin-right: 21%;
+  }
+
 }
 
 @media only screen and (max-width: 930px) {
  table th{
   font-size: 15px;
 }
+}
+
+@media only screen and (max-width: 880px) {
+  .modal{
+    width: 80%;
+  }
+  input{
+    width: 75%;
+  }
+
+  #category{
+    width: 80.5%;
+    margin-left: 9.5%;
+    margin-right: 9.5%;
+  }
 }
 
 @media only screen and (max-width: 730px) {
@@ -436,7 +484,7 @@ border: 0;
     * aria-label has no advantage, it won't be read inside a table
     content: attr(aria-label);
     */
-    content: attr(data-html-label);
+    content: attr(data-label);
     float: left;
     font-weight: bold;
     text-transform: uppercase;
@@ -480,6 +528,12 @@ width: 35%;
     width: 80%;
     margin: 2% auto;
   }
+
+@media only screen and (max-width: 690px) {
+  #category{
+    width: 80%;
+  }
+}
 
 @media only screen and (max-width: 470px) {
   #month{

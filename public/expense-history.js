@@ -30,16 +30,16 @@ $(function() {
     const expenseHtml = data.map(function(entry) {
       var strDate = moment(entry.date).format("MMMM Do, YYYY");
       return `<tr class="expenses-details" data-id="${entry.id}">
-			<td class="date data data-js" aria-label="date">${strDate}</td>
-			<td class="amount data data-js" aria-label="amount">$${entry.amount}</td>
-			<td class="category data data-js" aria-label="category">${
+			<td class="date data data-js" data-label="date" aria-label="date">${strDate}</td>
+			<td class="amount data data-js" data-label="amount" aria-label="amount">$${entry.amount}</td>
+			<td class="category data data-js" data-label="category" aria-label="category">${
         entry.category
       }</td>
-			<td class="description data data-js" aria-label="description">${
+			<td class="description data data-js" data-label="description" aria-label="description">${
         entry.description
       }</td>
-			<td class="edit buttons" aria-label="edit"><button class="edit">Edit</button></td>
-			<td class="delete buttons" aria-label="delete"><button class="delete">Delete</button></td>
+			<td class="edit buttons" data-label="edit" aria-label="edit"><button class="edit">Edit</button></td>
+			<td class="delete buttons" data-label="delete" aria-label="delete"><button class="delete">Delete</button></td>
 
 			</tr>`;
     });
