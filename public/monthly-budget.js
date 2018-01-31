@@ -19,7 +19,7 @@ $("#expense-form").submit(function(e) {
     contentType: "application/json; charset=utf-8",
     success: function(data) {
       console.log(data);
-      //window.location.href = "/dashboard.html";
+      window.location.href = "/dashboard.html";
     },
     error: function(errMsg) {
       console.log(errMsg);
