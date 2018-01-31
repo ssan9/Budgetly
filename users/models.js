@@ -33,9 +33,9 @@ UserSchema.methods.serialize = function() {
     id: this._id,
     username: this.username || "",
     firstName: this.firstName || "",
-    lastName: this.lastName || "",
-    income: this.income || 0,
-    budget: this.budget || 0
+    lastName: this.lastName || ""
+    // income: this.income || 0,
+    // budget: this.budget || 0
   };
 };
 

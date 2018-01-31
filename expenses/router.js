@@ -3,27 +3,34 @@ const express = require("express");
 const router = express.Router();
 const passport = require("passport");
 const { Expense } = require("./models");
+const { User } = require("../users/models");
 const jwtAuth = passport.authenticate("jwt", { session: false });
 
 router.get("/dashboard", jwtAuth, (req, res) => {
   var today = new Date();
-  Expense.find({
-    user: req.user.id,
-    date: {
-      $gte: new Date(today.getFullYear(), today.getMonth(), 0),
-      $lt: new Date(today.getFullYear(), today.getMonth(), 32)
-    }
-  })
+  var user;
+  User.findById(req.user.id)
+    .then(_user => (user = _user))
+    .then(() =>
+      Expense.find({
+        user: req.user.id,
+        date: {
+          $gte: new Date(today.getFullYear(), today.getMonth(), 1),
+          $lte: new Date(today.getFullYear(), today.getMonth(), 31)
+        }
+      })
+    )
     .then(expenses => {
+      // add up all expenses
       var expenseTotal = expenses.reduce(
         (sum, expense) => sum + expense.amount,
         0
       );
       return res.json({
-        income: req.user.income,
-        budget: req.user.budget,
+        income: user.income,
+        budget: user.budget,
         expenses: expenseTotal,
-        savings: req.user.income - expenseTotal
+        savings: user.income - expenseTotal
       });
     })
     .catch(err => {
@@ -48,8 +55,8 @@ router.get("/:month/:year", jwtAuth, (req, res) => {
   Expense.find({
     user: req.user.id,
     date: {
-      $gte: new Date(req.params.year, req.params.month - 1, 0),
-      $lt: new Date(req.params.year, req.params.month - 1, 31)
+      $gte: new Date(req.params.year, req.params.month - 1, 1),
+      $lte: new Date(req.params.year, req.params.month - 1, 31)
     }
   })
     .then(data => {

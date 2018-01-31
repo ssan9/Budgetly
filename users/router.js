@@ -168,16 +168,15 @@ router.post("/budget", jwtAuth, (req, res) => {
       location: nonNumberField
     });
   }
+  var updated = {
+    income: req.body.income,
+    budget: req.body.budget
+  };
+  console.log(updated);
   console.log(req.user);
-  User.findOne({ _id: req.user.id })
-    .then(user => {
-      user.income = req.body.income;
-      user.budget = req.body.budget;
-      return user.save();
-    })
-    .then(user => res.json(user))
-    .catch(e => console.log(e));
 
-  //unfinished
+  User.findByIdAndUpdate(req.user.id, { $set: updated }, { new: true })
+    .then(user => res.json(user.serialize()))
+    .catch(err => res.status(500).json({ message: "Something went wrong" }));
 });
 module.exports = { router };
