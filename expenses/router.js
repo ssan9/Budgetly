@@ -6,20 +6,34 @@ const { Expense } = require("./models");
 const jwtAuth = passport.authenticate("jwt", { session: false });
 
 router.get("/dashboard", jwtAuth, (req, res) => {
-  const expenses = 3000;
-  const dashboardData = {
-    income: req.user.income,
-    budget: req.user.budget,
-    expenses: expenses, //toDo- Calculate the expenses for this month
-    savings: req.user.income-expenses,
-  }
-  
-  res.status(200).json(dashboardData);
-  
+  var today = new Date();
+  Expense.find({
+    user: req.user.id,
+    date: {
+      $gte: new Date(today.getFullYear(), today.getMonth(), 0),
+      $lt: new Date(today.getFullYear(), today.getMonth(), 32)
+    }
+  })
+    .then(expenses => {
+      var expenseTotal = expenses.reduce(
+        (sum, expense) => sum + expense.amount,
+        0
+      );
+      return res.json({
+        income: req.user.income,
+        budget: req.user.budget,
+        expenses: expenseTotal,
+        savings: req.user.income - expenseTotal
+      });
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).json({ error: "something went terribly wrong" });
+    });
 });
 
 router.get("/", jwtAuth, (req, res) => {
-  Expense.find({user: req.user.id}) // finds the expenses for that user
+  Expense.find({ user: req.user.id }) // finds the expenses for that user
     .then(data => {
       res.json(data.map(datum => datum.serialize()));
     })
@@ -31,9 +45,6 @@ router.get("/", jwtAuth, (req, res) => {
 
 //get all expenses by month and year
 router.get("/:month/:year", jwtAuth, (req, res) => {
-  console.log(req.params.month);
-  console.log(req.params.year);
-
   Expense.find({
     user: req.user.id,
     date: {
@@ -41,7 +52,6 @@ router.get("/:month/:year", jwtAuth, (req, res) => {
       $lt: new Date(req.params.year, req.params.month - 1, 31)
     }
   })
-
     .then(data => {
       res.json(data.map(datum => datum.serialize()));
     })
