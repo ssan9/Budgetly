@@ -51,7 +51,6 @@ $(function() {
       var editRowId = $(e.currentTarget)
         .parents(".expense-details")
         .attr("data-id");
-
       $(".black-cover").removeClass("hidden");
       $(".modal").attr("data-id", editRowId);
     });
@@ -138,6 +137,7 @@ $(function() {
   }
 
   $("#expense-data").on("click", ".delete", function(e) {
+    console.log("hi");
     e.preventDefault();
     var expenseId = $(e.currentTarget)
       .parent(".expense-details")
