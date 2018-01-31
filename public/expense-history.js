@@ -26,18 +26,20 @@ $(function() {
   });
 
   function showExpenses(data) {
-    console.log(data)
+    console.log(data);
     const expenseHtml = data.map(function(entry) {
       var strDate = moment(entry.date).format("MMMM Do, YYYY");
       return `<tr class="expenses-details" data-id="${entry.id}">
-			<td class="date data data-js" data-label="date" aria-label="date">${strDate}</td>
-			<td class="amount data data-js" data-label="amount" aria-label="amount">$${entry.amount}</td>
-			<td class="category data data-js" data-label="category" aria-label="category">${
-        entry.category
-      }</td>
-			<td class="description data data-js" data-label="description" aria-label="description">${
-        entry.description
-      }</td>
+			  <td class="date data data-js" data-label="date" aria-label="date">${strDate}</td>
+  			<td class="amount data data-js" data-label="amount" aria-label="amount">$${
+          entry.amount
+        }</td>
+  			<td class="category data data-js" data-label="category" aria-label="category">${
+          entry.category
+        }</td>
+  			<td class="description data data-js" data-label="description" aria-label="description">${
+          entry.description
+        }</td>
 			<td class="edit buttons" data-label="edit" aria-label="edit"><button class="edit">Edit</button></td>
 			<td class="delete buttons" data-label="delete" aria-label="delete"><button class="delete">Delete</button></td>
 
@@ -49,7 +51,7 @@ $(function() {
       e.preventDefault();
       var button = e.currentTarget;
       var editRowId = $(e.currentTarget)
-        .parents(".expense-details")
+        .parents(".expenses-details")
         .attr("data-id");
       $(".black-cover").removeClass("hidden");
       $(".modal").attr("data-id", editRowId);
@@ -103,7 +105,7 @@ $(function() {
         type: "PUT",
         url: url + "/" + expenseId,
         headers: {
-        Authorization: "Bearer " + token
+          Authorization: "Bearer " + token
         },
         data: JSON.stringify(params),
         contentType: "application/json; charset=utf-8",
@@ -137,10 +139,11 @@ $(function() {
   }
 
   $("#expense-data").on("click", ".delete", function(e) {
-    console.log("hi");
+    e.stopPropagation();
+    console.log($(e.currentTarget).parents(".expenses-details"));
     e.preventDefault();
     var expenseId = $(e.currentTarget)
-      .parent(".expense-details")
+      .parents(".expenses-details")
       .attr("data-id");
     $.ajax({
       type: "DELETE",
@@ -157,4 +160,3 @@ $(function() {
     });
   });
 });
-
