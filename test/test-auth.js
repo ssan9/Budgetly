@@ -20,7 +20,7 @@ describe('Auth endpoints', function () {
   const password = 'examplePass';
   const firstName = 'Example';
   const lastName = 'User';
-
+  let id = '';
   before(function () {
     return runServer();
   });
@@ -37,7 +37,8 @@ describe('Auth endpoints', function () {
         firstName,
         lastName
       })
-    );
+    )
+    .then( user=> id=user.id);
   });
 
   afterEach(function () {
@@ -111,7 +112,8 @@ describe('Auth endpoints', function () {
           expect(payload.user).to.deep.equal({
             username,
             firstName,
-            lastName
+            lastName,
+            id
           });
         });
     });
