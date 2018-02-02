@@ -5,11 +5,11 @@
   right:0;
   bottom:0;
   left:0;
-  background-color:rgba(0, 0, 0, 0.5);
+  background:rgba(19, 35, 47, 0.9);
 }
 
 .modal{
-  background:rgba(19, 35, 47, 0.9);
+  background-color: #10192A;
   width: 40%;
   margin: 125px auto;
   padding-top: 25px;
@@ -20,7 +20,6 @@
   display:none;
 }
 
-
 body{
   box-sizing: border-box;
   margin: 0;
@@ -30,6 +29,7 @@ body{
   background-size: cover;
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
+  background-color: #D0ECE7;
 }
 
 .menu{
@@ -60,7 +60,6 @@ nav ul li a{
   color: white;
   font-size: 18px;
   display: none;
-
 }
 
 .nav_bar a:hover{
@@ -72,21 +71,21 @@ nav ul li a{
   text-decoration: none;
 }
 
-  .nav_bar .menu-btn{
+.nav_bar .menu-btn{
     display: none;
-  }
+}
 
-  #app-name{
-    width: 100px;
-    position: absolute;
-    left: 75px;
-    font-size: 30px;
-    top: 9px;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    z-index: 1;
-  }
+#app-name{
+  width: 100px;
+  position: absolute;
+  left: 75px;
+  font-size: 30px;
+  top: 9px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  z-index: 1;
+}
 
 
 .container {
@@ -97,7 +96,6 @@ nav ul li a{
   border-radius: 4px;
   box-shadow:0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
-
 
 .month{
   width: 58%;
@@ -142,6 +140,7 @@ input {
   color:white;
   border-radius:0;
 }
+
 input:focus {
   outline:0;
   border-color:#1ab188;
@@ -184,22 +183,9 @@ option:first-child{
   border-color:#1ab188;
 }
 
-
-.button {
-  /*border:0;
-  outline:none;
-  border-radius:0;
-  padding:15px 0;
-
-  /*font-weight:900;*/
-  /*text-transform:uppercase;*/
-  /*letter-spacing:.1em;*/
-  /*color: white;*/
-}
 .save:hover, .save:focus {
   background:#1ab188;
 }
-
 
 .button-block {
   display:inline-block;
@@ -212,6 +198,7 @@ option:first-child{
   font-size: 20px;
   margin-left: 3%;
 }
+
 .save{
    background:#1ab188;
   font-size: 20px;
@@ -230,11 +217,6 @@ option:first-child{
   display:none;
 }
 
-
-
-
-
-
 table {
   border: 1px solid #ccc;
   border-collapse: collapse;
@@ -249,11 +231,13 @@ table tr {
   border: 1px solid #ddd;
   padding: .35em;
 }
+
 table th,
 table td {
   padding: .625em;
   text-align: center;
 }
+
 table th {
   font-size: 20px;
   letter-spacing: .1em;
@@ -291,9 +275,7 @@ button.delete{
   background-color: #841111;
 }
 
-
 @media only screen and (max-width: 1370px) {
-
   #category{
     width: 55%;
     margin-left: 22.5%;
@@ -305,179 +287,173 @@ button.delete{
   .switch-month{
 
   margin: 0 4.62%;
-}
+  }
 }
 
 @media only screen and (max-width: 1125px) {
-
-.switch-month{
-  margin: 0 3.62%;
-}
-
+  .switch-month{
+    margin: 0 3.62%;
+  }
 }
 
 
 @media only screen and (max-width: 1050px) {
-
   .nav_bar .menu-icon {
-  display: block;
+    display: block;
   }
 
   .nav_bar .menu-btn{
     display: block;
   }
 
+  .nav_bar {
+    background-color: #307c68;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+    padding-left: 2%;
+  }
 
-.nav_bar {
-background-color: #307c68;
-box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-position: fixed;
-width: 100%;
-z-index: 3;
-text-align: center;
-padding-left: 2%;
-}
+  .nav_bar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+    width: 250px;
+    text-align: center;
+  }
 
-.nav_bar ul {
-margin: 0;
-padding: 0;
-list-style: none;
-overflow: hidden;
-background-color: #fff;
-width: 250px;
-text-align: center;
+  .nav_bar ul li{
+    display: block;
+  }
 
-}
+  .nav_bar li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+    color: #307c68;
+    width: 100%;
+  }
 
-.nav_bar ul li{
-  display: block;
-}
+  .nav_bar li a:hover {
+    background-color: #f4f4f4;
+  }
+   
+  .nav_bar .current {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+  }
 
-.nav_bar li a {
-display: block;
-padding: 20px 20px;
-border-right: 1px solid #f4f4f4;
-text-decoration: none;
-color: #307c68;
-width: 100%;
-}
+  .nav_bar .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  .nav_bar .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 24px 20px;
+    position: relative;
+    user-select: none;
+  }
 
-.nav_bar li a:hover {
-background-color: #f4f4f4;
-}
- 
-.nav_bar .current {
-display: block;
-float: left;
-font-size: 2em;
-padding: 0 20px;
-text-decoration: none;
-color: white;
-}
+  .nav_bar .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
 
-.nav_bar .menu {
-clear: both;
-max-height: 0;
-transition: max-height .2s ease-out;
-}
- .nav_bar .menu-icon {
-cursor: pointer;
-display: inline-block;
-float: right;
-padding: 24px 20px;
-position: relative;
-user-select: none;
-}
+  .nav_bar .menu-icon .navicon:before,
+  .nav_bar .menu-icon .navicon:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
 
-.nav_bar .menu-icon .navicon {
-background: white;
-display: block;
-height: 2px;
-position: relative;
-transition: background .2s ease-out;
-width: 18px;
-}
+  .nav_bar .menu-icon .navicon:before {
+    top: 5px;
+  }
 
-.nav_bar .menu-icon .navicon:before,
-.nav_bar .menu-icon .navicon:after {
-background: white;
-content: '';
-display: block;
-height: 100%;
-position: absolute;
-transition: all .2s ease-out;
-width: 100%;
-}
+  .nav_bar .menu-icon .navicon:after {
+    top: -5px;
+  }
+  .nav_bar .menu-btn {
+    display: none;
+  }
 
-.nav_bar .menu-icon .navicon:before {
-top: 5px;
-}
+  .nav_bar .menu-btn:checked ~ .menu {
+    max-height: 300px;
+  }
 
-.nav_bar .menu-icon .navicon:after {
-top: -5px;
-}
- .nav_bar .menu-btn {
-display: none;
-}
+  .nav_bar .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
 
-.nav_bar .menu-btn:checked ~ .menu {
-max-height: 300px;
-}
+  .nav_bar .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
 
-.nav_bar .menu-btn:checked ~ .menu-icon .navicon {
-background: transparent;
-}
+  .nav_bar .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
 
-.nav_bar .menu-btn:checked ~ .menu-icon .navicon:before {
-transform: rotate(-45deg);
-}
+  .nav_bar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .nav_bar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
 
-.nav_bar .menu-btn:checked ~ .menu-icon .navicon:after {
-transform: rotate(45deg);
-}
-
-.nav_bar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.nav_bar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-top: 0;
-}
-
-#category{
+  #category{
     width: 85%;
     margin-left: 7.5%;
     margin-right: 7.5%;
   }
-
 }
 
 @media only screen and (max-width: 1007px) {
-.monthly-expenses{
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-  width: 100%;
-}
-
-.month{
-width: 35%;
-}
-
-input{
-    width: 78%;
+  .monthly-expenses{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 100%;
   }
+
+  .month{
+  width: 35%;
+  }
+
+  input{
+      width: 78%;
+    }
 
 }
 
 @media only screen and (max-width: 930px) {
  table th{
   font-size: 15px;
-}
-
+  }
 }
 
 @media only screen and (max-width: 880px) {
   .modal{
     width: 80%;
   }
+
   input{
     width: 75%;
   }
@@ -490,7 +466,6 @@ input{
 }
 
 @media only screen and (max-width: 730px) {
-
   #month{
     display: block;
     width: 80%;
@@ -510,11 +485,13 @@ input{
     position: absolute;
     width: 1px;
   }
+
   table tr {
     border-bottom: 3px solid #ddd;
     display: block;
     margin-bottom: .625em;
   }
+
   table td {
     border-bottom: 1px solid #ddd;
     display: block;
@@ -522,21 +499,17 @@ input{
     text-align: right;
   }
   table td:before {
-    /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
     content: attr(data-label);
     float: left;
     font-weight: bold;
     text-transform: uppercase;
   }
+
   table td:last-child {
     border-bottom: 0;
   }
 }
   
-
 @media only screen and (max-width: 690px) {
   #category{
     width: 80%;

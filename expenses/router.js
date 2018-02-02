@@ -135,18 +135,4 @@ router.delete("/:id", jwtAuth, (req, res) => {
     });
 });
 
-//get all expenses by isoDate
-// router.get('/data-by-isodate/:isoDate', (req, res) => {
-// 	console.log(req.params.isoDate);
-//   Expense
-// 		.find()
-// 		.then(data => {
-// 			res.json(data.map(datum => datum.serialize()));
-// 		})
-// 		.catch(err => {
-// 			console.error(err);
-// 			res.status(500).json({ error: 'something went terribly wrong' });
-// 		});
-// });
-
 module.exports = { router };

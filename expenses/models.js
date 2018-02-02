@@ -24,20 +24,4 @@ expenseSchema.methods.serialize = function() {
 
 const Expense = mongoose.model("Expense", expenseSchema);
 
-//
-// function next() {
-// 	const date = new Date;
-// 	date.setDate(1);
-// 	Budgetly.aggregate({ $match: { date : { $gt : date } } }).group({_id : "$_id",
-// 		amount, category, description}).exec(function(err, res) {
-// 			if(err) throw err;
-// 			console.log(res);
-// 			Budgetly.remove(function(err) {
-// 				if(err) throw err;
-// 				mongoose.disconnect();
-// 			});
-// 		});
-//
-// }
-
 module.exports = { Expense };

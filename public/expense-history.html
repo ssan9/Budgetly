@@ -2,10 +2,8 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Budgetly</title>
   <link rel="stylesheet" type="text/css" href="expense-history.css ">
-  <!-- <link rel="stylesheet" type="text/css" href="float-grid.css"> -->
 </head>
 <body>
   <nav role="navigation" class="nav_bar">
@@ -36,7 +34,6 @@
               <h1>Expenses for <span id="monthly-record">all months</span></h1>
             </div>
 
-
             <div id="month" class="monthly-expenses">
               <label class="switch-month">
                 Switch to Month:
@@ -65,9 +62,6 @@
               </tbody>
 
            </table>
-          <!-- </div>
-
-          <div class="field-wrap" id="expense-data"> -->
 
           </div>
 
@@ -78,8 +72,8 @@
       <div class="modal">
         <div class="expense-details" params-id="${params.id}">
           <input type="date" name="date" id="date" class="expense-form">
-          <input type="amount" name="amount" id="amount" placeholder="Amount" class="expense-form">
-          <select name="category" id='category' class="expense-form" required>
+          <input type="number" name="amount" id="amount" placeholder="Amount" class="expense-form">
+          <select name="category" id='category' placeholder="Category" class="expense-form" required>
             <option value="0">Category</option>
             <option value="Gas">Gas</option>
             <option value="Entertainment">Entertainment</option>

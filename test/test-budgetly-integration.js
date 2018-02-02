@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 
 const should = chai.should();
 
-const { Expenses } = require("../expenses/models");
+const { Expense } = require("../expenses/models");
 const { closeServer, runServer, app } = require("../server");
 const { TEST_DATABASE_URL } = require("../config");
 
@@ -35,7 +35,7 @@ function seedBudgetlyData() {
     });
   }
 
-  return Budgetly.insertMany(seedData);
+  return Expense.insertMany(seedData);
 }
 
 function generateAmount() {
@@ -71,7 +71,7 @@ describe("budgetly's API resource", function() {
           res.should.have.status(200);
           res.body.should.have.length.of.at.least(1);
 
-          return Budgetly.count();
+          return Expense.count();
         })
         .then(count => {
           res.body.should.have.length.of(count);
@@ -101,7 +101,7 @@ describe("budgetly's API resource", function() {
           });
 
           resDatum = res.body[0];
-          return Budgetly.findById(resDatum.id);
+          return Expense.findById(resDatum.id);
         })
         .then(datum => {
           resDatum.date.should.equal(datum.date);
@@ -141,7 +141,7 @@ describe("budgetly's API resource", function() {
           res.body.amount.should.equal(newDatum.amount);
           res.body.category.should.equal(newDatum.category);
           res.body.description.should.equal(newDatum.description);
-          return Budgetly.findById(res.body.id);
+          return Expense.findById(res.body.id);
         })
         .then(function(datum) {
           datum.date.should.equal(newDatum.date);
@@ -161,7 +161,7 @@ describe("budgetly's API resource", function() {
         description: "cats cats cats"
       };
 
-      return Budgetly.findOne()
+      return Expense.findOne()
         .then(datum => {
           updateEntry.id = datum.id;
 
@@ -172,7 +172,7 @@ describe("budgetly's API resource", function() {
         })
         .then(res => {
           res.should.have.status(204);
-          return Budgetly.findById(updateEntry.id);
+          return Expense.findById(updateEntry.id);
         })
         .then(datum => {
           datum.date.should.equal(updateEntry.date);
@@ -187,14 +187,14 @@ describe("budgetly's API resource", function() {
     it("should delete a datum by id", function() {
       let datum;
 
-      return Budgetly.findOne()
+      return Expense.findOne()
         .then(_datum => {
           datum = _datum;
           return chai.request(app).delete(`/data/${datum.id}`);
         })
         .then(res => {
           res.should.have.status(204);
-          return Budgetly.findById(datum.id);
+          return Expense.findById(datum.id);
         })
         .then(_datum => {
           should.not.exist(_datum);

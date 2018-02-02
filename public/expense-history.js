@@ -26,9 +26,8 @@ $(function() {
   });
 
   function showExpenses(data) {
-    console.log(data);
     const expenseHtml = data.map(function(entry) {
-      var strDate = moment(entry.date).format("MMMM Do, YYYY");
+      var strDate = moment(entry.date).add(1, "days").format("MMMM Do, YYYY");
       return `<tr class="expenses-details" data-id="${entry.id}">
 			  <td class="date data data-js" data-label="date" aria-label="date">${strDate}</td>
   			<td class="amount data data-js" data-label="amount" aria-label="amount">$${
@@ -83,10 +82,10 @@ $(function() {
       e.preventDefault();
       var expenseId = $(e.currentTarget)
         .parents(".modal")
-        .attr("data-id");
+        .attr("data-id"); 
       var params = {
-        strDate: $(".modal")
-          .find("#date")
+        date: $(".modal")
+          .find("#date")  
           .val(),
         amount: $(".modal")
           .find("#amount")
@@ -99,7 +98,6 @@ $(function() {
           .val(),
         id: expenseId
       };
-      console.log(params);
 
       $.ajax({
         type: "PUT",
@@ -140,7 +138,6 @@ $(function() {
 
   $("#expense-data").on("click", ".delete", function(e) {
     e.stopPropagation();
-    console.log($(e.currentTarget).parents(".expenses-details"));
     e.preventDefault();
     var expenseId = $(e.currentTarget)
       .parents(".expenses-details")
