@@ -4,6 +4,6 @@ deploy:
   provider: heroku
   api_key:
     secure: DD2g9fHbeQzCW26Zn3k5pL/K8H04Duq3R3U6TPFLpQaIFQ4+ePoHtGV5dMzcK0SMQMXSNOZy9fSemf+SfK5UNc0+JCTBj4N69DBv1fPyfWYo2RGmOK0aCI2oDiqfo/sNYgolnoH+Z+07kBTbPBi+Es5p9iWOuCjx8FluVujewJhsD39h0Us1cS3/m5C79hEW12/fxMaAnz5DWr45ZF5duT0vIQ/BLz3cUSq8+4gXwzsJ5uh8VugMERs40jz1gPzBLrjAwzCzasFvRmaglbM0yOJ4oe8jOwy8MjPwAjSV+EgdQ2uCv9u53FJtO5cb0LNoGl/kcYHYJNvv+uuc/zItv0v++1/QXxsThsa6LQwygTxNTRqJl/CgH+LpIwRsbNzP15BO6tp5EbZPUijhmxFVbD+JHzImEUb1js/5RvW/vo1Z2n8ilO+O8bDtGueEs4Cl606DYm/Q4b58jzkFdCIMV7fZhEnZQIWjZ11hHBesqxvk+Tix/1nUEQpGvxtD2kSA/DEsjDzcWEIjaFQvcb3tXNULEeDQC3PZUxC6LDp1whTEA7MyNf0PFh9shg6V/Nbv5Weufre8eJn55n2JWpjPpARliOUQOHz569CzZ/+7jJJGV1olBfVpMqUbBMPEFVExsY4gkQHrNggFx4uprik8y3KH5u+cpXxLohiwheZgUbM=
-  app: Budgetly
-  on: https://floating-inlet-62621.herokuapp.com/
+  app: https://floating-inlet-62621.herokuapp.com/
+  on: 
     repo: ssan9/Budgetly
