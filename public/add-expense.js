@@ -26,8 +26,8 @@ var token = localStorage.getItem("token");
         window.location="/expense-history.html"
         $( "#expense-data" ).html(data);
       },
-      failure: function(errMsg) {
-        alert(errMsg);
+      error: function(errMsg) {
+        console.log(errMsg);
       }
 
     });
