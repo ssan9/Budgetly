@@ -4,6 +4,6 @@ deploy:
   provider: heroku
   api_key:
     secure: X+IjnJnda8MXTxhP0PqfXJifRaUDkYBx01f/hXBDt8TqOD+rrCck2z+KGYhZyHqCgwDfl36r9CyjLgi8bVkEFzLNISxraDq71aXl0tdWA21eB2lHUnmuH7cuZ0p/rRm+a8IJo2MHv8olse2sRis3Vq6MDNhBLmjX0i26q2MKzJh7gPcsV6PnUFip4lEMKHCtVD6Q5r4dmpJ0UTBegExmrbj/a8s9hiTJYycPxSSwq1LB6Gc1LyH/6bcoEiTZnz0UVUZI02SkyM+x2plJ5Ms4rNFBdvFVHJu04CFiPkWUsH8XA3QQYnTnyUaw2PQFQZAXgB7FIY4LC3y/BxMMc145RmJmdugRAhklBVuedhGCqVrB64i30yaVPIzn8ZbYMrNN9AXLbWfJVzI5DHzg8VBHfayEkq9Zd0q6mwvssnuFqaiY6PAoKnmUKbgzOwdi0PwYOQNO2nGvdTdWhKh9Elu5ml+ZOpsWovj69pKvmwN2VZVH6olobAzW0PQWIfKUmN/whW+3UuN7ennXv72Keq2vaf1zG0ycleFRneremk2FiJokz77JnGm0hgjaa6nw56qq+6BBEFJh6OYJsaYWlmqVJCo0E+/YQbJXWKz2FOE5LRNrwBG2eVgvva2kekpRr3YezMVQ1QPyH/X0fbMvw6sAdv7TWrgdokwOTTYTXOmrbjk=
-  app: https://arcane-wave-23260.herokuapp.com/ | https://git.heroku.com/arcane-wave-23260.git
+  app: arcane-wave-23260
   on:
     repo: ssan9/Budgetly
