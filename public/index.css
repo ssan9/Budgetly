@@ -151,18 +151,21 @@ nav ul li a{
   width: 45%;
   text-align: center;
   position: relative;
-  margin: 8% auto;
 }
-.pages-intro h1{
+.pages-info h1{
   margin : 0 auto;
 }
-.intro-four{
-  margin: 10% auto;
+
+.intro-one{
+  margin: 9% auto;
+}
+.intro-three{
+  /*margin: 10% auto;
   float: right;
   width: 45%;
   text-align: center;
-  position: relative;
-  margin: 12% auto;
+  position: relative;*/
+  margin: 14.5% auto;
 }
 span#budget{
   display: block;
@@ -194,12 +197,13 @@ span#expenses{
   padding-top: 0.25%;
 }
 
-.intro-three{
-  float: left;
+.intro-two{
+  /*float: left;
   width: 45%;
   text-align: center;
-  position: relative;
-  margin: 115px auto;
+  position: relative;*/
+  padding-top:0.5%; 
+  margin: 6.5% auto;
 }
 
 .intro-three h1{
