@@ -109,6 +109,7 @@ $(function() {
         contentType: "application/json; charset=utf-8",
         success: function(data) {
           getData();
+          $(".month").val("");  
           closeModal();
         },
 
