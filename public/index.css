@@ -151,12 +151,19 @@ nav ul li a{
   width: 45%;
   text-align: center;
   position: relative;
-  margin: 162px auto;
+  margin: 8% auto;
 }
 .pages-intro h1{
   margin : 0 auto;
 }
-
+.intro-four{
+  margin: 10% auto;
+  float: right;
+  width: 45%;
+  text-align: center;
+  position: relative;
+  margin: 12% auto;
+}
 span#budget{
   display: block;
 }
