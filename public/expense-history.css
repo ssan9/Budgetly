@@ -16,6 +16,13 @@
   padding-bottom: 25px;
 }
 
+#modal-form{
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 0;
+  margin: 0 auto;
+}
+
 .hidden{
   display:none;
 }
@@ -191,21 +198,28 @@ option:first-child{
   display:inline-block;
   background:rgba(160, 179, 176, 0.25);
   color: white;
-  width:45%;
+  width:48%;
   height:40px;
   text-align:center;
   cursor:pointer;
-  font-size: 20px;
-  margin-left: 3%;
+  font-size: 0;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 .save{
-   background:#1ab188;
-  font-size: 20px;
+   background-color:#1ab188;
+   border: 2px solid #D0CFCF;
+   vertical-align: middle;
+   padding-top: 6px;
+   font-size: 20px;
 }
 
 .cancel {
   background:#a10b0b;
+  vertical-align: middle;
+  /*margin-top: 1%;*/
+  font-size: 20px;
 }
 
 .cancel:hover {
@@ -248,10 +262,11 @@ table td{
   font-size: 20px;
 }
 
-button{
-  display: inline-block;
-  font-size: 16px;
-  margin-left: 5px;
+.button{
+  /*display: inline-block;*/
+  /*font-size: 16px;*/
+  /*padding-top: 0.2%;
+  margin-left: 1.5%;*/
 }
 
 button.edit{

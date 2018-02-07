@@ -57,12 +57,11 @@ $(function() {
       var category = expensesDetails.find(".category").text();
       var description = expensesDetails.find(".description").text();
       var date = expensesDetails.find(".date").text();
-
+      console.log(date);
       $("#date").val(date);
       $("#amount").val(amount.slice(1));
       $("#category").val(category);
       $("#description").val(description);
-
       $(".black-cover").removeClass("hidden");
       $(".modal").attr("data-id", editRowId);
     });
