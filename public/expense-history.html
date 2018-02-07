@@ -71,7 +71,8 @@
     <div class="black-cover hidden" >
       <div class="modal">
         <div class="expense-details" params-id="${params.id}">
-          <input type="date" name="date" id="date" class="expense-form">
+          <form id="modal-form">
+          <input type="date" name="date" id="date" class="expense-form" required>
           <input type="number" name="amount" id="amount" placeholder="Amount" class="expense-form">
           <select name="category" id='category' placeholder="Category" class="expense-form" required>
             <option value="0">Category</option>
@@ -84,8 +85,9 @@
             <option value="Other">Other</option>
           </select>
           <input type="description" name="description" id="description" placeholder="Description" class="expense-form">
-          <button class="save button button-block">Save</button>
+          <input type="submit" class="save button button-block">Save</input>
           <button class="cancel button button-block">Cancel</button>
+        </form>
         </div>
       </div>
     </div>

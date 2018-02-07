@@ -27,7 +27,9 @@ $(function() {
 
   function showExpenses(data) {
     const expenseHtml = data.map(function(entry) {
-      var strDate = moment(entry.date).add(1, "days").format("MMMM Do, YYYY");
+      var strDate = moment(entry.date)
+        .add(1, "days")
+        .format("MMMM Do, YYYY");
       return `<tr class="expenses-details" data-id="${entry.id}">
 			  <td class="date data data-js" data-label="date" aria-label="date">${strDate}</td>
   			<td class="amount data data-js" data-label="amount" aria-label="amount">$${
@@ -48,10 +50,19 @@ $(function() {
     $("#expense-data").html(expenseHtml);
     $("#expense-data").on("click", ".edit", function(e) {
       e.preventDefault();
-      var button = e.currentTarget;
-      var editRowId = $(e.currentTarget)
-        .parents(".expenses-details")
-        .attr("data-id");
+      var button = $(e.currentTarget);
+      var expensesDetails = button.parents(".expenses-details");
+      var editRowId = button.parents(".expenses-details").attr("data-id");
+      var amount = expensesDetails.find(".amount").text();
+      var category = expensesDetails.find(".category").text();
+      var description = expensesDetails.find(".description").text();
+      var date = expensesDetails.find(".date").text();
+
+      $("#date").val(date);
+      $("#amount").val(amount.slice(1));
+      $("#category").val(category);
+      $("#description").val(description);
+
       $(".black-cover").removeClass("hidden");
       $(".modal").attr("data-id", editRowId);
     });
@@ -78,24 +89,16 @@ $(function() {
       closeModal();
     });
 
-    $(".modal").on("click", ".save", function(e) {
+    $("#modal-form").submit(function(e) {
       e.preventDefault();
       var expenseId = $(e.currentTarget)
         .parents(".modal")
-        .attr("data-id"); 
+        .attr("data-id");
       var params = {
-        date: $(".modal")
-          .find("#date")  
-          .val(),
-        amount: $(".modal")
-          .find("#amount")
-          .val(),
-        category: $(".modal")
-          .find("#category")
-          .val(),
-        description: $(".modal")
-          .find("#description")
-          .val(),
+        date: $("#date").val(),
+        amount: $("#amount").val(),
+        category: $("#category").val(),
+        description: $("#description").val(),
         id: expenseId
       };
 
@@ -109,7 +112,7 @@ $(function() {
         contentType: "application/json; charset=utf-8",
         success: function(data) {
           getData();
-          $(".month").val("");  
+          $(".month").val("");
           closeModal();
         },
 
