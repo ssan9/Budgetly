@@ -202,13 +202,13 @@ span#expenses{
   width: 45%;
   text-align: center;
   position: relative;*/
-  /*padding-top:0.5%; */
+  /* padding-top:0.5%; */
   margin: 5.5% auto;
 }
 
-.intro-three h1{
+/*.intro-three h1{
   margin: 0 auto;
-}
+}*/
 
 span#add-expenses{
   display: block;
@@ -388,8 +388,8 @@ footer a{
     padding: 0;
   }
     
-  .intro-three h1{
+  /*.intro-three h1{
     margin: 0 auto;
-  }
+  }*/
 }
   
