@@ -229,7 +229,7 @@ button:hover, button:focus {
   background: #155544;
 }
 
-.forgot {
+/*.forgot {
   margin-top:-20px;
   text-align:right;
 }
@@ -242,7 +242,7 @@ button:hover, button:focus {
 
 .forgot a:hover{
  color: #6bd5b8;
-}
+}*/
 
 @media only screen and (max-width: 1050px) {
   .nav_bar .menu-icon {
