@@ -1,41 +1,39 @@
 "use strict";
-global.DATABASE_URL = 'mongodb://localhost/jwt-auth-budgetly-app-test';
-
+const { TEST_DATABASE_URL } = require("../config");
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const faker = require("faker");
 const mongoose = require("mongoose");
-const jwt = require('jsonwebtoken');
-const {JWT_SECRET} = require('../config');
+const jwt = require("jsonwebtoken");
+const { JWT_SECRET } = require("../config");
 
 const should = chai.should();
 
 const { Expense } = require("../expenses/models");
 const { closeServer, runServer, app } = require("../server");
-const { TEST_DATABASE_URL } = require("../config");
 
 chai.use(chaiHttp);
-const username = 'exampleUser';
-  const password = 'examplePass';
-  const firstName = 'Example';
-  const lastName = 'User';
-  const income = 1000;
-  const budget = 500;
+const username = "exampleUser";
+const password = "examplePass";
+const firstName = "Example";
+const lastName = "User";
+const income = 1000;
+const budget = 500;
 const token = jwt.sign(
-        {
-          user: {
-            username,
-            firstName,
-            lastName
-          }
-        },
-        JWT_SECRET,
-        {
-          algorithm: 'HS256',
-          subject: username,
-          expiresIn: '7d'
-        }
-      );
+  {
+    user: {
+      username,
+      firstName,
+      lastName
+    }
+  },
+  JWT_SECRET,
+  {
+    algorithm: "HS256",
+    subject: username,
+    expiresIn: "7d"
+  }
+);
 
 function tearDownDb() {
   return new Promise((resolve, reject) => {
@@ -69,7 +67,7 @@ function generateAmount() {
 
 describe("budgetly's API resource", function() {
   before(function() {
-    return runServer();
+    return runServer(TEST_DATABASE_URL);
   });
 
   beforeEach(function() {
@@ -87,31 +85,27 @@ describe("budgetly's API resource", function() {
   describe("GET endpoint", function() {
     it("should return all existing entries", function() {
       let res;
-      console.log("1234");
-      console.log(token);
       return chai
         .request(app)
         .get("/api/expenses")
-        .set('authorization', `Bearer ${token}`)
+        .set("authorization", `Bearer ${token}`)
         .then(_res => {
           res = _res;
           res.should.have.status(200);
           res.body.should.have.lengthOf.at.least(1);
-          console.log(res.body);
           return res.body.length;
-          console.log("5678");
         })
         .then(count => {
           res.body.should.have.lengthOf(count);
         });
     });
-    console.log(" bye bye bye");
+
     it("should return data with right fields", function() {
       let resDatum;
       return chai
         .request(app)
         .get("/api/expenses")
-        .set('authorization', `Bearer ${token}`)
+        .set("authorization", `Bearer ${token}`)
         .then(function(res) {
           res.should.have.status(200);
           res.should.be.json;
@@ -126,19 +120,13 @@ describe("budgetly's API resource", function() {
               "category",
               "description"
             );
-            console.log("hi hi hi hi");
-            console.log(datum);
           });
-          console.log("ho ho ho ho");
 
           resDatum = res.body[0];
           return Expense.findById(resDatum.id);
         })
         .then(datum => {
-          console.log("hey hey hey hey");
-          console.log(datum);
           resDatum.id.should.equal(datum.id);
-          console.log("c ya cya cya cya");
           var datumDate = new Date(resDatum.date).getTime();
           var datDate = new Date(datum.date).getTime();
 
@@ -146,8 +134,6 @@ describe("budgetly's API resource", function() {
           resDatum.amount.should.equal(datum.amount);
           resDatum.category.should.equal(datum.category);
           resDatum.description.should.equal(datum.description);
-          // console.log("hello hello hello");
-          // console.log(datum);
         });
     });
   });
@@ -164,7 +150,7 @@ describe("budgetly's API resource", function() {
       return chai
         .request(app)
         .post("/api/expenses")
-        .set('authorization', `Bearer ${token}`)
+        .set("authorization", `Bearer ${token}`)
         .send(newDatum)
         .then(function(res) {
           res.should.have.status(201);
@@ -213,7 +199,7 @@ describe("budgetly's API resource", function() {
           return chai
             .request(app)
             .put(`/api/expenses/${datum.id}`)
-            .set('authorization', `Bearer ${token}`)
+            .set("authorization", `Bearer ${token}`)
             .send(updateEntry);
         })
         .then(res => {
@@ -238,10 +224,10 @@ describe("budgetly's API resource", function() {
       return Expense.findOne()
         .then(_datum => {
           datum = _datum;
-          return chai.request(app)
-          .delete(`/api/expenses/${datum.id}`)
-          .set('authorization', `Bearer ${token}`)
-
+          return chai
+            .request(app)
+            .delete(`/api/expenses/${datum.id}`)
+            .set("authorization", `Bearer ${token}`);
         })
         .then(res => {
           res.should.have.status(204);
