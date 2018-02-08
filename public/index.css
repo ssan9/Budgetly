@@ -391,7 +391,7 @@ footer a{
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 330px) {
   .nav_bar .menu-icon {
     padding: 24px 50px;
   }
@@ -401,13 +401,13 @@ footer a{
   }
 
   .nav_bar ul {
-    margin: 0;
-    padding: 0;
+    /*margin: 0;*/
+    /*padding: 0;*/
     /*list-style: none;*/
     /*overflow: hidden;*/
     /*background-color: #fff;*/
     width: 275px;
-    text-align: center;
+    /*text-align: center;*/
   }
 }
 
