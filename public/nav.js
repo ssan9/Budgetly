@@ -6,16 +6,16 @@ $(function() {
     $("#expense-history").show(); 
     $("#expense").show(); 
     $("#logout").show();
-    $(".menu-icon").show();
+    // $(".menu-icon").show();
     $("#signup").hide();
   } else {
-    $(".menu-icon").hide();
+    // $(".menu-icon").hide();
     
-    $(window).resize(function() {
-      if($(this).width() >1050) {
-        $("#signup").show();
-      }
-    })
+    // $(window).resize(function() {
+    //   if($(this).width() >1050) {
+    //     $("#signup").show();
+    //   }
+    // })
 
     $("#signup").show();
   }
