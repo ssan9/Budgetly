@@ -47,6 +47,7 @@ $(function() {
     });
 
     $("#expense-data").html(expenseHtml);
+
     $("#expense-data").on("click", ".edit", function(e) {
       e.preventDefault();
       var button = $(e.currentTarget);
@@ -56,9 +57,8 @@ $(function() {
       var category = expensesDetails.find(".category").text();
       var description = expensesDetails.find(".description").text();
       var date = expensesDetails.find(".date").attr("data-value");
-      // var strDate = moment(date).format('MM-DD-YYYY');
       var strDate = moment(date).format('YYYY-MM-DD');
-      console.log(date, strDate);
+    
       $("#date").val(strDate);
       $("#amount").val(amount.slice(1));
       $("#category").val(category);

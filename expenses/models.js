@@ -15,7 +15,7 @@ expenseSchema.methods.serialize = function() {
   return {
     id: this._id,
     //drop the time portion, we care only about the date
-    //with the time we incorrectly showed this as a midnight in London
+    //with the time we incorrectly show that it is midnight in London 
     date: this.date.toISOString().substr(0, 10),
     amount: this.amount,
     category: this.category,

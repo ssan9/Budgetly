@@ -30,6 +30,9 @@ nav {
   z-index: 1;
 }
 
+.menu-icon{
+  display: none;
+}
 nav ul li{
   display: inline-block;
 }

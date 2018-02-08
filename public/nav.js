@@ -6,10 +6,12 @@ $(function() {
     $("#expense-history").show(); 
     $("#expense").show(); 
     $("#logout").show();
+    $(".menu-icon").show();
     $("#signup").hide();
 
   } else {
     $("#signup").show();
+    $(".menu-icon").hide();
   }
 
   $("#logout").click(function() {
