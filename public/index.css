@@ -30,9 +30,6 @@ nav {
   z-index: 1;
 }
 
-.menu-icon{
-  display: none;
-}
 nav ul li{
   display: inline-block;
 }
@@ -276,7 +273,7 @@ footer a{
   }
 
   .nav_bar li a:hover {
-  background-color: #f4f4f4;
+    background-color: #f4f4f4;
   }
    
   .nav_bar .current {
@@ -300,6 +297,7 @@ footer a{
     padding: 24px 110px;
     position: relative;
     user-select: none;
+    display: none;
   }
 
   .nav_bar .menu-icon .navicon {

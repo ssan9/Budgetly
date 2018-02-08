@@ -8,10 +8,16 @@ $(function() {
     $("#logout").show();
     $(".menu-icon").show();
     $("#signup").hide();
-
   } else {
-    $("#signup").show();
     $(".menu-icon").hide();
+    
+    $(window).resize(function() {
+      if($(this).width() >1050) {
+        $("#signup").show();
+      }
+    })
+
+    $("#signup").show();
   }
 
   $("#logout").click(function() {
@@ -19,3 +25,4 @@ $(function() {
     window.location = "/";
   });
 });
+
