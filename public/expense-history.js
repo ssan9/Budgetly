@@ -57,9 +57,10 @@ $(function() {
       var category = expensesDetails.find(".category").text();
       var description = expensesDetails.find(".description").text();
       var date = expensesDetails.find(".date").text();
-      var strDate = moment(date).format('YYYY-MM-DD');
+      // var strDate = moment(date).format('MM-DD-YYYY');
+      // var strDate = moment(date).format('MM/DD/YYYY');
       console.log(date);
-      $("#date").val(strDate);
+      $("#date").val(date);
       $("#amount").val(amount.slice(1));
       $("#category").val(category);
       $("#description").val(description);
