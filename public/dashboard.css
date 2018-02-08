@@ -14,7 +14,8 @@ body{
 .menu{
   margin: 0;
   position: relative;
-  top: -4px;
+  top: 17px;
+  clear: both;
 }
 
 nav {
@@ -38,6 +39,7 @@ nav ul li a{
   margin-right: 80px;
   color: white;
   font-size: 18px;
+  padding-top: 50px;
   display: none;
 }
 
@@ -210,24 +212,23 @@ td{
  
   .nav_bar .current {
     display: block;
-    float: left;
     font-size: 2em;
     padding: 0 20px;
     text-decoration: none;
-    color: white;
   }
 
   .nav_bar .menu {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
+    float: right;
   }
 
  .nav_bar .menu-icon {
     cursor: pointer;
     display: inline-block;
-    /*float: right;*/
-    padding: 24px 20px;
+    float: right;
+    padding: 24px 110px;
     position: relative;
     user-select: none;
   }
@@ -309,8 +310,28 @@ td{
   }
 }
 
+@media only screen and (max-width: 400px) {
+  #app-name{
+    left: 15px;
+  }
+}
+
 @media only screen and (max-width: 380px) {
   .container{
     padding-left: 9%;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .nav_bar .menu-icon {
+    padding: 24px 50px;
+  }
+
+  #app-name{
+    left: 15px;
+  }
+
+  .nav_bar ul {
+    width: 275px;
   }
 }

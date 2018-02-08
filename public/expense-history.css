@@ -42,7 +42,8 @@ body{
 .menu{
   margin: 0;
   position: relative;
-  top: -4px;
+  top: 17px;
+  clear: both;
 }
 
 nav {
@@ -66,6 +67,7 @@ nav ul li a{
   margin-right: 80px;
   color: white;
   font-size: 18px;
+  padding-top: 50px;
   display: none;
 }
 
@@ -360,23 +362,23 @@ button.delete{
    
   .nav_bar .current {
     display: block;
-    float: left;
     font-size: 2em;
     padding: 0 20px;
     text-decoration: none;
-    color: white;
   }
 
   .nav_bar .menu {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
+    float: right;
   }
+  
   .nav_bar .menu-icon {
     cursor: pointer;
     display: inline-block;
     float: right;
-    padding: 24px 20px;
+    padding: 24px 110px;
     position: relative;
     user-select: none;
   }
