@@ -14,7 +14,9 @@ const expenseSchema = mongoose.Schema({
 expenseSchema.methods.serialize = function() {
   return {
     id: this._id,
-    date: this.date,
+    //drop the time portion, we care only about the date
+    //with the time we incorrectly showed this as a midnight in London
+    date: this.date.toISOString().substr(0, 10),
     amount: this.amount,
     category: this.category,
     description: this.description,

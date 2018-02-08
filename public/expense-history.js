@@ -28,10 +28,9 @@ $(function() {
   function showExpenses(data) {
     const expenseHtml = data.map(function(entry) {
       var strDate = moment(entry.date)
-        .add(1, "days")
         .format("MMMM Do, YYYY");
       return `<tr class="expenses-details" data-id="${entry.id}">
-			  <td class="date data data-js" data-label="date" aria-label="date">${strDate}</td>
+			  <td class="date data data-js" data-label="date" aria-label="date" data-value="${entry.date}"> ${strDate}</td>
   			<td class="amount data data-js" data-label="amount" aria-label="amount">$${
           entry.amount
         }</td>
@@ -56,11 +55,11 @@ $(function() {
       var amount = expensesDetails.find(".amount").text();
       var category = expensesDetails.find(".category").text();
       var description = expensesDetails.find(".description").text();
-      var date = expensesDetails.find(".date").text();
+      var date = expensesDetails.find(".date").attr("data-value");
       // var strDate = moment(date).format('MM-DD-YYYY');
-      // var strDate = moment(date).format('MM/DD/YYYY');
-      console.log(date);
-      $("#date").val(date);
+      var strDate = moment(date).format('YYYY-MM-DD');
+      console.log(date, strDate);
+      $("#date").val(strDate);
       $("#amount").val(amount.slice(1));
       $("#category").val(category);
       $("#description").val(description);
