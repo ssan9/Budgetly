@@ -395,6 +395,10 @@ footer a{
   .nav_bar .menu-icon {
     padding: 24px 50px;
   }
+
+  #app-name{
+    left: 15px;
+  }
 }
 
 @media only screen and (max-width: 300px) {
