@@ -393,3 +393,23 @@ button:hover, button:focus {
   }
 }
 
+@media only screen and (max-width: 400px) {
+  #app-name{
+    left: 15px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .nav_bar .menu-icon {
+    padding: 24px 50px;
+  }
+
+  #app-name{
+    left: 15px;
+  }
+
+  .nav_bar ul {
+    width: 275px;
+  }
+}
+
