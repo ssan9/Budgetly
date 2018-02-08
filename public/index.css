@@ -387,17 +387,22 @@ footer a{
 }
 
 @media only screen and (max-width: 400px) {
-  /*.nav_bar .menu-icon {*/
-    /*cursor: pointer;
-    display: inline-block;
-    float: right;*/
-    /*padding: 24px 110px;*/
-    /*position: relative;
-    user-select: none;*/
-  /*}*/
   #app-name{
     left: 25px;
   }
+}
+
+@media only screen and (max-width: 330px) {
+  .nav_bar .menu-icon {
+    /*cursor: pointer;
+    display: inline-block;
+    float: right;*/
+    padding: 24px 150px;
+    /*position: relative;
+    user-select: none;*/
+  /*}*/
+  }
+}
 @media only screen and (max-width: 300px) {
   ul.tab-group{
     padding: 0;
