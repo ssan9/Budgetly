@@ -399,6 +399,16 @@ footer a{
   #app-name{
     left: 15px;
   }
+
+  .nav_bar ul {
+    /*margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;*/
+    width: 100px;
+    /*text-align: center;*/
+  }
 }
 
 @media only screen and (max-width: 300px) {
