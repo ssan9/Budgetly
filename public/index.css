@@ -356,13 +356,12 @@ footer a{
   }
 }
 
-
-
 @media only screen and (max-width: 1000px) {
   .pages-layout{
     width: 100%;
     float: none;
   }
+
   .pages-info{
       float: none;
       width: 100%;
@@ -392,24 +391,15 @@ footer a{
   }
 }
 
-@media only screen and (max-width: 330px) {
+@media only screen and (max-width: 500px) {
   .nav_bar .menu-icon {
-    /*cursor: pointer;
-    display: inline-block;
-    float: right;*/
-    padding: 24px 150px;
-    /*position: relative;
-    user-select: none;*/
-  /*}*/
+    padding: 24px 90px;
   }
 }
+
 @media only screen and (max-width: 300px) {
   ul.tab-group{
     padding: 0;
   }
-    
-  /*.intro-three h1{
-    margin: 0 auto;
-  }*/
 }
   
