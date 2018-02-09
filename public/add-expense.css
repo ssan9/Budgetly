@@ -282,7 +282,6 @@ option:first-child{
   
   .nav_bar ul li{
     display: block;
-    padding-bottom: 50px;
   }
 
   .nav_bar li a {
@@ -303,7 +302,6 @@ option:first-child{
     font-size: 2em;
     padding: 0 20px;
     text-decoration: none;
-    color: white;
   }
 
   .nav_bar .menu {
