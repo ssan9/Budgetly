@@ -320,6 +320,7 @@ button:hover, button:focus {
     padding: 24px 20px;
     position: relative;
     user-select: none;
+    display: none;
   }
 
   .nav_bar .menu-icon .navicon {

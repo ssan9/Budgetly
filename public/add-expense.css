@@ -318,7 +318,7 @@ option:first-child{
     padding: 24px 110px;
     position: relative;
     user-select: none;
-    /*display: none;*/
+    display: none;
   }
 
   .nav_bar .menu-icon .navicon {
