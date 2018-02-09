@@ -42,8 +42,7 @@ body{
 .menu{
   margin: 0;
   position: relative;
-  top: 17px;
-  clear: both;
+  top: -4px;
 }
 
 nav {
