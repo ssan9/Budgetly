@@ -65,6 +65,7 @@ nav ul li a{
   font-weight: 700;
   color: white;
   z-index: 1;
+  text-decoration: none;
 }
 
 .container {
