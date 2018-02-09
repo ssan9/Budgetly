@@ -42,7 +42,8 @@ body{
 .menu{
   margin: 0;
   position: relative;
-  top: -4px;
+  top: 17px;
+  clear: both;
 }
 
 nav {
@@ -66,6 +67,7 @@ nav ul li a{
   margin-right: 80px;
   color: white;
   font-size: 18px;
+  padding-top: 50px;
   display: none;
 }
 
@@ -313,14 +315,6 @@ button.delete{
 
 
 @media only screen and (max-width: 1050px) {
-  .menu{
-    top: 17px;
-    clear: both;
-  }
-
-  nav ul li a{
-    padding-top: 50px;
-  }
   .nav_bar .menu-icon {
     display: block;
   }
