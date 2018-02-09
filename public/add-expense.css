@@ -1,7 +1,8 @@
-body{
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #aad8aa;
   background-image: url("https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,14 +10,15 @@ body{
   line-height: 1.25;
   background-color: #D0ECE7;
 }
-
+  
 .menu{
   margin: 0;
   position: relative;
-  top: -4px;
+  top: 17px;
+  clear: both;
 }
 
-nav{
+nav {
   box-sizing: border-box;
   text-align: right;
   position: fixed;
@@ -51,20 +53,19 @@ nav ul li a{
 }
 
 .nav_bar .menu-btn{
-    display: none;
+  display: none;
 }
 
 #app-name{
-    width: 100px;
-    position: absolute;
-    left: 75px;
-    font-size: 30px;
-    top: 9px;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    z-index: 1;
-  }
+  width: 100px;
+  position: absolute;
+  left: 75px;
+  font-size: 30px;
+  top: 9px;
+  font-weight: 700;
+  color: white;
+  z-index: 1;
+}
 
 .container {
   background:rgba(19, 35, 47, 0.9);
@@ -210,7 +211,7 @@ option:first-child{
   display:inline-block;
   background:rgba(160, 179, 176, 0.25);
   color: #a0b3b0;
-  width:49.6%;
+  width:49.5%;
   height:40px;
   text-align:center;
   cursor:pointer;
@@ -244,8 +245,12 @@ option:first-child{
   display: none;
 }
 
-@media only screen and (max-width: 1050px) {
 
+@media only screen and (max-width: 1050px) {
+  /*#signup{
+    display: none;
+  }
+*/
   .nav_bar .menu-icon {
     display: block;
   }
@@ -273,9 +278,10 @@ option:first-child{
     width: 250px;
     text-align: center;
   }
-
+  
   .nav_bar ul li{
     display: block;
+    padding-bottom: 50px;
   }
 
   .nav_bar li a {
@@ -296,6 +302,7 @@ option:first-child{
     font-size: 2em;
     padding: 0 20px;
     text-decoration: none;
+    color: white;
   }
 
   .nav_bar .menu {
@@ -304,13 +311,14 @@ option:first-child{
     transition: max-height .2s ease-out;
     float: right;
   }
-  .nav_bar .menu-icon {
+   .nav_bar .menu-icon {
     cursor: pointer;
     display: inline-block;
     float: right;
     padding: 24px 110px;
     position: relative;
     user-select: none;
+    /*display: none;*/
   }
 
   .nav_bar .menu-icon .navicon {
@@ -346,7 +354,7 @@ option:first-child{
   }
 
   .nav_bar .menu-btn:checked ~ .menu {
-    max-height: 300px;
+  max-height: 300px;
   }
 
   .nav_bar .menu-btn:checked ~ .menu-icon .navicon {
@@ -366,7 +374,6 @@ option:first-child{
     top: 0;
   }
 }
-
 
 @media only screen and (max-width: 670px) {
   .category-wrap select {
@@ -411,27 +418,3 @@ option:first-child{
     width: 275px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

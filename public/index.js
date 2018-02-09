@@ -1,6 +1,6 @@
-$(function() {
-  $("#app-name").click(function(){
-    $("#signup").show();
-  }
-  })
-});
+// $(function() {
+//   $("#app-name").click(function(){
+//     $("#signup").show();
+//   }
+//   })
+// });
