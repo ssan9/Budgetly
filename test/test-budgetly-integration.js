@@ -130,7 +130,7 @@ describe("budgetly's API resource", function() {
           var datumDate = new Date(resDatum.date).getTime();
           var datDate = new Date(datum.date).getTime();
 
-          // datumDate.should.equal(datDate);
+          datumDate.should.equal(datDate);
           resDatum.amount.should.equal(datum.amount);
           resDatum.category.should.equal(datum.category);
           resDatum.description.should.equal(datum.description);
@@ -165,7 +165,7 @@ describe("budgetly's API resource", function() {
             );
           var datumDate = new Date(newDatum.date).getTime();
           var datDate = new Date(res.body.date).getTime();
-          // datumDate.should.equal(datDate);
+          datumDate.should.equal(datDate);
           res.body.id.should.not.be.null;
           res.body.amount.should.equal(parseInt(newDatum.amount));
           res.body.category.should.equal(newDatum.category);
