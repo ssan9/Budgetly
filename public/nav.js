@@ -10,13 +10,6 @@ $(function() {
     $("#signup").hide();
   } else {
     $(".menu-icon").hide();
-    
-    // $(window).resize(function() {
-    //   if($(this).width() >1050) {
-    //     $("#signup").show();
-    //   }
-    // })
-
     $("#signup").show();
   }
 
@@ -26,3 +19,8 @@ $(function() {
   });
 });
 
+// $(window).resize(function() {
+    //   if($(this).width() >1050) {
+    //     $("#signup").show();
+    //   }
+    // })

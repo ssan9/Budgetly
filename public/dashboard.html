@@ -34,7 +34,7 @@
       </div>
 
       <div class="amount-spent">
-        <div class="expenses"></div>
+        <div class="expenses" aria-live="assertive"></div>
         <p class="expense-amount">in Monthly Expenses</p>
       </div>
 
@@ -48,19 +48,20 @@
       </div>
 
       <form class="budget-form" id="budget-form" action="/" method="post">
-
         <div class="your-budget">
-
           <div class="top-row">
             <div class="field-wrap">
+              <table>
+                <tbody class="monthly-budget" aria-live="assertive">
+                </tbody>
+              </table>
+            </div>    
+          </div>
+        </div>
+      </form>
 
-          <table>
-            <tbody class="monthly-budget">
-              </tbody>
-          </table>
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="dashboard.js"></script>
-  <script type="text/javascript" src="nav.js"></script>
-        </body>
-        </html>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dashboard.js"></script>
+    <script type="text/javascript" src="nav.js"></script>
+  </body>
+</html>
