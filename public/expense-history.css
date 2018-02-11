@@ -265,13 +265,6 @@ table td{
   font-size: 20px;
 }
 
-.button{
-  /*display: inline-block;*/
-  /*font-size: 16px;*/
-  /*padding-top: 0.2%;
-  margin-left: 1.5%;*/
-}
-
 button.edit{
   width: 60px;
   background-color: #307c68;

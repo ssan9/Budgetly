@@ -2,7 +2,8 @@
 $(function() {
 var token = localStorage.getItem("token");
 
-  $("#expense-form").submit(function(e) { //taking values from input fields and also setting parameters
+  $("#expense-form").submit(function(e) { 
+  //taking values from input fields and also setting parameters
     e.preventDefault();
     let newExpense = {
       date: $("#date").val(),

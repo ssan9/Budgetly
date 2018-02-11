@@ -349,6 +349,12 @@ option:first-child{
   }
 }
 
+@media only screen and (max-width: 650px) {
+  .button-block {
+    width: 49.4%;
+  }
+}  
+
 @media only screen and (max-width: 593px) {
   .button-block {
     width: 100%;
