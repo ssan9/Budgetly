@@ -167,7 +167,7 @@ nav ul li a{
   position: relative;*/
   margin: 12.5% auto;
 }
-span#budget{
+span.budget{
   display: block;
 }
 
@@ -228,6 +228,11 @@ footer{
 footer a{
   font-size: 15px;
   font-weight: 900;
+  color: rgb(255, 255, 255);
+}
+
+footer a:hover{
+  color: rgb(0, 0, 163);
 }
 
 @media only screen and (max-width: 1050px) {

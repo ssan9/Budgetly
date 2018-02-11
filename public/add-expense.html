@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" name="description" content="An app to help you in Budgeting your Finances">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,23 +41,18 @@
 
             <div class="top-row">
               <div class="field-wrap">
-                <label for="date"></label>
-                <input type="date" name="date" id="date" class="form-expense" placeholder="Date" required autocomplete="off" />
+                <input type="date" name="date" id="date" aria-label="date" class="form-expense" placeholder="Date" required autocomplete="off" />
               </div>
 
               <div class="field-wrap">
-                <label for="amount"></label>
-
-                <input type="number" name="amount" class="form-expense" id="amount" placeholder="Amount" required autocomplete="off"/>
+                <input type="number" name="amount" class="form-expense" id="amount" aria-label="amount" placeholder="Amount" required autocomplete="off"/>
 
               </div>
             </div>
 
             <section>
               <div class="field-wrap category-wrap">
-                <label for="category">
-                </label>
-                <select name="category" id='category' class="expense-form" required>
+                <select name="category" id="category" aria-label="category" class="expense-form" required>
                   <option value="0">Category</option>
                   <option value="Gas">Gas</option>
                   <option value="Entertainment">Entertainment</option>
@@ -71,8 +66,7 @@
               </div>
             </section>
             <div class="field-wrap">
-              <label for="description"></label>
-              <input type="text" name="description" class="expense-form" id="description" placeholder="Description" required autocomplete="off"/>
+              <input type="text" name="description" class="expense-form" id="description" aria-label="description" placeholder="Description" required autocomplete="off"/>
             </div>
 
             <button type="submit" class="button button-block cancel" id="cancel">Cancel</button>

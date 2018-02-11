@@ -42,36 +42,30 @@
 
             <div class="top-row">
               <div class="field-wrap">
-                <label for="firstName"></label>
-                <input type="text" name="firstName" placeholder="First Name" class="particulars" id="firstName" required autocomplete="off" />
+                <input type="text" name="firstName" placeholder="First Name" class="particulars" id="firstName" aria-label="first name" required autocomplete="off" />
                 <!-- can we use name as first name and label for as first-name or firstName ? or they should be exactly same? -->
               </div>
 
               <div class="field-wrap">
-                <label for="lastName"></label>
-                <input type="text" name="lastName" placeholder="Last Name" class="particulars" id="lastName" required autocomplete="off"/>
+                <input type="text" name="lastName" placeholder="Last Name" class="particulars" id="lastName" aria-label="last name" required autocomplete="off"/>
               </div>
             </div>
 
             <div class="field-wrap">
-              <label for="username"></label>
-              <input type="text" name="username" placeholder="Username" class="particulars user-auth" id="username" required autocomplete="off"/>
+              <input type="text" name="username" placeholder="Username" class="particulars user-auth" id="username" aria-label="user name" required autocomplete="off"/>
             </div>
 
             <div class="field-wrap">
-              <label for="password"></label>
-              <input type="password" name="password" placeholder="Password" class="particulars user-auth" id="password" required autocomplete="off"/>
+              <input type="password" name="password" placeholder="Password" class="particulars user-auth" id="password" aria-label="password" required autocomplete="off"/>
             </div>
 
 
             <div class="field-wrap">
-              <label for="monthly-income"></label>
-              <input type="number" name="monthly-income" placeholder="Monthly Income" class="particulars income" id="income" required autocomplete="off"/>
+              <input type="number" name="monthly-income" placeholder="Monthly Income" class="particulars income" id="income" aria-label="monthly income" required autocomplete="off"/>
             </div>
 
             <div class="field-wrap">
-              <label for="monthly-budget"></label>
-              <input type="number" name="monthly-budget" placeholder="Monthly Budget" class="particulars budget" id="budget" required autocomplete="off"/>
+              <input type="number" name="monthly-budget" placeholder="Monthly Budget" class="particulars budget" id="budget" aria-label="monthly budget" required autocomplete="off"/>
             </div>
 
             <button type="submit" class="button button-block"/>Get Started</button>
@@ -90,13 +84,11 @@
           <form action="/" method="post" id="log-in">
 
             <div class="field-wrap">
-              <label for ="username"></label>
-              <input type="text"required autocomplete="off" id="username-login" placeholder="Username" class="auth"/>
+              <input type="text"required autocomplete="off" id="username-login" placeholder="Username" aria-label="user name" class="auth"/>
             </div>
 
             <div class="field-wrap">
-              <label for="password"></label>
-              <input type="password"required autocomplete="off" id="password-login" placeholder="Password" class="auth"/>
+              <input type="password"required autocomplete="off" id="password-login" placeholder="Password" aria-label="password" class="auth"/>
             </div>
 
             <!-- <p class="forgot"><a href="#">Forgot Password?</a></p> -->

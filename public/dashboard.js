@@ -43,7 +43,7 @@ $(function() {
                             </tr>
                             <tr>
                               <td class="budget" id="budget">Monthly Budget</td>
-                              <td id="monthly-budget" class="monthly-budget">$${
+                              <td id="budget-monthly" class="monthly-budget">$${
                                 data.budget
                               }</td>
                             </tr>

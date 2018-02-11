@@ -107,7 +107,7 @@ nav ul li a{
   box-shadow:0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
 
-.month{
+#month{
   width: 58%;
   display: inline-block;
 }
@@ -453,7 +453,7 @@ button.delete{
     width: 100%;
   }
 
-  .month{
+  #month{
   width: 35%;
   }
 
@@ -486,7 +486,7 @@ button.delete{
 }
 
 @media only screen and (max-width: 730px) {
-  #month{
+  .month{
     display: block;
     width: 80%;
     margin: 2% auto;
@@ -537,7 +537,7 @@ button.delete{
 }
 
 @media only screen and (max-width: 470px) {
-  #month{
+  .month{
     width: 91%;
   }
 }

@@ -38,11 +38,11 @@
               <h1>Expenses for <span id="monthly-record">all months</span></h1>
             </div>
 
-            <div id="month" class="monthly-expenses">
+            <div class="month monthly-expenses">
               <label class="switch-month">
                 Switch to Month:
               </label>
-              <input type="month" name="month" id="month" class="month">
+              <input type="month" name="month" aria-label="select month"class="month" id="month">
             </div>
 
           </div>
@@ -89,7 +89,7 @@
             <option value="Other">Other</option>
           </select>
           <input type="description" name="description" id="description" placeholder="Description" class="expense-form">
-          <input type="submit" class="save button button-block">Save</input>
+          <input type="submit" class="save button button-block" value="Save">
           <button class="cancel button button-block">Cancel</button>
         </form>
         </div>
