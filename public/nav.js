@@ -19,8 +19,3 @@ $(function() {
   });
 });
 
-// $(window).resize(function() {
-    //   if($(this).width() >1050) {
-    //     $("#signup").show();
-    //   }
-    // })

@@ -191,6 +191,10 @@ input:focus {
   width: 98.8%;
 }
 
+.user-budget{
+  width: 98.8%;
+}
+
 .field-wrap {
   position:relative;
   margin-bottom:40px;
@@ -238,21 +242,6 @@ input:focus {
 button:hover, button:focus {
   background: #155544;
 }
-
-/*.forgot {
-  margin-top:-20px;
-  text-align:right;
-}
-
-.forgot a {
-  color: #1ab188;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.forgot a:hover{
- color: #6bd5b8;
-}*/
 
 @media only screen and (max-width: 1050px) {
   .nav_bar .menu-icon {
@@ -415,3 +404,8 @@ button:hover, button:focus {
   }
 }
 
+/*@media only screen and (max-width: 400px) {
+  .button-block {
+    width: 49.8%;
+  }
+}*/

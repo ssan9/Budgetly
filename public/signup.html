@@ -7,7 +7,6 @@
   <title>Budgetly</title>
   <link href="http://meyerweb.com/eric/tools/css/reset/reset.css">
   <link rel="stylesheet" type="text/css" href="signup.css">
-  <link rel="stylesheet" href="float-grid.css" type="text/css"/>
 </head>
 <body>
   <nav role="navigation" class="nav_bar">
@@ -43,7 +42,6 @@
             <div class="top-row">
               <div class="field-wrap">
                 <input type="text" name="firstName" placeholder="First Name" class="particulars" id="firstName" aria-label="first name" required autocomplete="off" />
-                <!-- can we use name as first name and label for as first-name or firstName ? or they should be exactly same? -->
               </div>
 
               <div class="field-wrap">
@@ -61,11 +59,11 @@
 
 
             <div class="field-wrap">
-              <input type="number" name="monthly-income" placeholder="Monthly Income" class="particulars income" id="income" aria-label="monthly income" required autocomplete="off"/>
+              <input type="number" name="monthly-income" placeholder="Monthly Income" class="particulars user-budget" id="income" aria-label="monthly income" required autocomplete="off"/>
             </div>
 
             <div class="field-wrap">
-              <input type="number" name="monthly-budget" placeholder="Monthly Budget" class="particulars budget" id="budget" aria-label="monthly budget" required autocomplete="off"/>
+              <input type="number" name="monthly-budget" placeholder="Monthly Budget" class="particulars user-budget" id="budget" aria-label="monthly budget" required autocomplete="off"/>
             </div>
 
             <button type="submit" class="button button-block"/>Get Started</button>
@@ -90,8 +88,6 @@
             <div class="field-wrap">
               <input type="password"required autocomplete="off" id="password-login" placeholder="Password" aria-label="password" class="auth"/>
             </div>
-
-            <!-- <p class="forgot"><a href="#">Forgot Password?</a></p> -->
 
             <button type="submit" class="button button-block"/>Log In</button>
 

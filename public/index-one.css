@@ -247,10 +247,6 @@ option:first-child{
 
 
 @media only screen and (max-width: 1050px) {
-  /*#signup{
-    display: none;
-  }
-*/
   .nav_bar .menu-icon {
     display: block;
   }
