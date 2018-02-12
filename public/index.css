@@ -197,6 +197,28 @@ span#add-expenses{
   display: block;
 }
 
+footer{
+  text-align: center;
+  margin: 5px;
+  padding: 12px;
+  background-color: #0e9aef;
+  margin: 0 auto;
+  color: white;
+  height: 50px;
+  background-color:#267e67;
+}
+
+footer a{
+  font-size: 15px;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+}
+
+footer a:hover{
+  color: rgb(0, 0, 163);
+}
+
+
 @media only screen and (max-width: 1050px) {
   #signup{
     display: none;
