@@ -1,8 +1,6 @@
 "use strict";
 const bcrypt = require("bcryptjs");
 const mongoose = require("mongoose");
-// var jwt = require('jsonwebtoken');
-// var secret = require('../config').secret;
 
 mongoose.Promise = global.Promise;
 
@@ -34,8 +32,6 @@ UserSchema.methods.serialize = function() {
     username: this.username || "",
     firstName: this.firstName || "",
     lastName: this.lastName || ""
-    // income: this.income || 0,
-    // budget: this.budget || 0
   };
 };
 
@@ -46,25 +42,6 @@ UserSchema.methods.validatePassword = function(password) {
 UserSchema.statics.hashPassword = function(password) {
   return bcrypt.hash(password, 10);
 };
-
-// const UserBudgetSchema = mongoose.Schema({
-//   income: {
-//     type: Number,
-//     required: true,
-//     unique: true
-//   },
-//   budget: {
-//     type: Number,
-//     required: true
-//   },
-// });
-
-// UserBudgetSchema.methods.serialize = function() {
-//   return {
-//     income: this.income || "",
-//     budget: this.budget || ""
-//   };
-// };
 
 const User = mongoose.model("User", UserSchema);
 
