@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 const expenseSchema = mongoose.Schema({
   date: { type: Date },
   amount: { type: Number },
-  category: { type: String }, // what should we use for select element?
+  category: { type: String }, 
   description: { type: String },
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User" } 
 });
