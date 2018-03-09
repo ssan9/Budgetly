@@ -1,32 +1,3 @@
-
-.black-cover{
-  position:fixed;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-  background:rgba(19, 35, 47, 0.9);
-}
-
-.modal{
-  background-color: #10192A;
-  width: 40%;
-  margin: 125px auto;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-#modal-form{
-  padding-left: 40px;
-  padding-right: 40px;
-  font-size: 0;
-  margin: 0 auto;
-}
-
-.hidden{
-  display:none;
-}
-
 body{
   box-sizing: border-box;
   margin: 0;
@@ -284,6 +255,34 @@ button.delete{
 
 .delete:focus{
   background-color: #841111;
+}
+
+.black-cover{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background:rgba(19, 35, 47, 0.9);
+}
+
+.modal{
+  background-color: #10192A;
+  width: 40%;
+  margin: 125px auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#modal-form{
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 0;
+  margin: 0 auto;
+}
+
+.hidden{
+  display:none;
 }
 
 @media only screen and (max-width: 1370px) {
