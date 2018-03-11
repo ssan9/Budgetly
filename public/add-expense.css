@@ -84,18 +84,6 @@ h1 {
   margin:0 0 40px;
 }
 
-label {
-  position:absolute;
-  left:13px;
-  color:rgba(255, 255, 255, 0.5);
-  font-size:22px;
-}
-
-label#date{
-  margin-left: 120px;
-  display: inline-block;
-}
-
 input[type=number]{
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='16px' width='85px'><text x='2' y='13' fill='gray' font-size='12' font-family='arial'>$</text></svg>");
   background-repeat: no-repeat;
@@ -105,12 +93,6 @@ input.expense-form{
   height: 33px;
   font-family: Times New Roman;
 
-}
-
-label.active {
-  left:2px;
-  font-size:14px;
-  transform:translateY(45px);
 }
 
 input {
@@ -248,10 +230,6 @@ option:first-child{
 
 
 @media only screen and (max-width: 1050px) {
-  /*#signup{
-    display: none;
-  }
-*/
   .nav_bar .menu-icon {
     display: block;
   }
