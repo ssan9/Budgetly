@@ -90,7 +90,7 @@ input[type=number]{
 }
 
 input.expense-form{
-  /*height: 20px;*/
+  height: 33px;
   font-family: Times New Roman;
 
 }
