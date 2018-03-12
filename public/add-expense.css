@@ -183,11 +183,6 @@ option:first-child{
   border-color:#1ab188;
 }
 
-.button {
-  margin:0 0 20px 0;
-  font-size: 0;
-}
-
 .button-block {
   display:inline-block;
   background:rgba(160, 179, 176, 0.25);
@@ -196,6 +191,7 @@ option:first-child{
   height:40px;
   text-align:center;
   cursor:pointer;
+  margin:0 0 20px 0;
   font-size: 0;
 }
 
