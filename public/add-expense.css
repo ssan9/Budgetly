@@ -217,11 +217,6 @@ option:first-child{
   color:white;
 }
 
-.hidden{
-  display: none;
-}
-
-
 @media only screen and (max-width: 1050px) {
   .nav_bar .menu-icon {
     display: block;
