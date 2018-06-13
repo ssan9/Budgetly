@@ -65,11 +65,9 @@ $(function() {
     e.preventDefault();
     let loginInfo = {
       username: $("#username-login").val(),
-      password: $("#password-login").val(),
-      $("#username-login").val(""),
-      $("#password-login").val("")
+      password: $("#password-login").val()
     };
-
+    
     var url = "/api/auth/login";
     $.ajax({
       type: "POST",
