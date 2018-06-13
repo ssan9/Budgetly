@@ -37,6 +37,7 @@ $(function() {
       income: $("#income").val(),
       budget: $("#budget").val()
     };
+
     var url = "/api/users";
 
     $.ajax({
@@ -52,6 +53,8 @@ $(function() {
          $("#su a") .css("background-color", "rgba(160, 179, 176, 0.25)");
         $("#login").show()
         $("#lg a").css("background-color", "#307c68");
+        $("#username").val("");
+        $("#password").val("");
       },
       error: function(errMsg) {
         console.log(errMsg);
@@ -66,8 +69,7 @@ $(function() {
       username: $("#username-login").val(),
       password: $("#password-login").val()
     };
-    $("#username-login").val("");
-    $("#password-login").val("");
+
     var url = "/api/auth/login";
     $.ajax({
       type: "POST",
