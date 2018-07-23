@@ -36,25 +36,25 @@ $(function() {
 
   function showBudget(data) {
     const budgetHtml = `<tr>
-                              <td class="budget income" id="income">Monthly Income</td>
-                              <td id="monthly-income" class="monthly-budget">$${
-                                data.income
-                              }</td>
-                            </tr>
-                            <tr>
-                              <td class="budget" id="budget">Monthly Budget</td>
-                              <td id="budget-monthly" class="monthly-budget">$${
-                                data.budget
-                              }</td>
-                            </tr>
-                            <tr>
-                              <td class="budget expenses" id="expenses">Monthly Expenses</td>
-                              <td id="monthly expenses">$${data.expenses}</td>
-                            </tr>
-                            <tr>
-                              <td class="budget savings" id="savings">Savings</td>
-                              <td id="monthly savings">$${data.savings}</td>
-                            </tr>`;
+                          <td class="budget income" id="income">Monthly Income</td>
+                          <td id="monthly-income" class="monthly-budget">$${
+                            data.income
+                          }</td>
+                        </tr>
+                        <tr>
+                          <td class="budget" id="budget">Monthly Budget</td>
+                          <td id="budget-monthly" class="monthly-budget">$${
+                            data.budget
+                          }</td>
+                        </tr>
+                        <tr>
+                          <td class="budget expenses" id="expenses">Monthly Expenses</td>
+                          <td id="monthly expenses">$${data.expenses}</td>
+                        </tr>
+                        <tr>
+                          <td class="budget savings" id="savings">Savings</td>
+                          <td id="monthly savings">$${data.savings}</td>
+                        </tr>`;
 
     $(".monthly-budget").html(budgetHtml);
   }
